@@ -2,7 +2,7 @@
   {
     "name": "Hackaday",
     "url": "https://hackaday.com/blog/feed/",
-    "category": "DIY / Electronics",
+    "category": "Technology",
     "ok": true,
     "count": 7,
     "visible": 3,
@@ -13,7 +13,7 @@
   {
     "name": "BearBlog",
     "url": "https://bearblog.dev/discover/feed/",
-    "category": "Blogs",
+    "category": "Personal Blogs",
     "ok": true,
     "count": 20,
     "visible": 5,
@@ -157,9 +157,9 @@
     "name": "Retroist Podcast",
     "url": "https://api.substack.com/feed/podcast/249575.rss",
     "category": "Podcasts",
-    "ok": false,
-    "count": 0,
-    "visible": 0,
+    "ok": true,
+    "count": 366,
+    "visible": 2,
     "max_items": 2,
     "max_age_days": 30,
     "favorite": true
@@ -198,17 +198,6 @@
     "favorite": true
   },
   {
-    "name": "Book Riot",
-    "url": "https://bookriot.com/feed/",
-    "category": "Books",
-    "ok": true,
-    "count": 10,
-    "visible": 5,
-    "max_items": 5,
-    "max_age_days": 14,
-    "favorite": true
-  },
-  {
     "name": "The Paris Review",
     "url": "https://www.theparisreview.org/blog/feed/",
     "category": "Books",
@@ -227,6 +216,17 @@
     "count": 20,
     "visible": 4,
     "max_items": 4,
+    "max_age_days": 30,
+    "favorite": true
+  },
+  {
+    "name": "novelglot",
+    "url": "https://novelglot.substack.com/feed",
+    "category": "Blogs",
+    "ok": true,
+    "count": 12,
+    "visible": 2,
+    "max_items": 3,
     "max_age_days": 30,
     "favorite": true
   }

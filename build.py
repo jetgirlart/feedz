@@ -215,6 +215,26 @@ def group_articles_by_category(articles):
     return categories
 
 
+def select_top_items(articles):
+    """Pick top stories from score-sorted articles, with one story per source."""
+    used_sources = set()
+    top_items = []
+
+    for article in articles:
+        source = article["source"]
+
+        if source in used_sources:
+            continue
+
+        top_items.append(article)
+        used_sources.add(source)
+
+        if len(top_items) >= TOP_STORIES_LIMIT:
+            break
+
+    return top_items
+
+
 def article_to_json(article):
     """Convert datetime values into JSON-friendly strings."""
     return {
@@ -247,7 +267,7 @@ def render_site(articles, feed_status, feeds, now):
 
     html = template.render(
         categories=group_articles_by_category(articles),
-        top_items=articles[:TOP_STORIES_LIMIT],
+        top_items=select_top_items(articles),
         total=len(articles),
         feed_count=len(feeds),
         updated=now.strftime("%Y-%m-%d %H:%M UTC"),
