@@ -38,5 +38,65 @@
     "visible": 5,
     "max_items": 5,
     "favorite": true
+  },
+  {
+    "name": "Slow Commute Club",
+    "url": "https://www.youtube.com/feeds/videos.xml?channel_id=UC5Rh9my3NeWuLk5RxYLZDnw",
+    "category": "YouTube",
+    "ok": true,
+    "count": 15,
+    "visible": 3,
+    "max_items": 3,
+    "favorite": true
+  },
+  {
+    "name": "noodl.ist",
+    "url": "https://www.youtube.com/feeds/videos.xml?channel_id=UCLm7zWZX5TZdArkESVpV0Vg",
+    "category": "YouTube",
+    "ok": true,
+    "count": 15,
+    "visible": 3,
+    "max_items": 3,
+    "favorite": true
+  },
+  {
+    "name": "This Does Not Compute",
+    "url": "https://www.youtube.com/feeds/videos.xml?channel_id=UCEp20NgOZHmgWdbQdHSxgjw",
+    "category": "YouTube",
+    "ok": true,
+    "count": 15,
+    "visible": 3,
+    "max_items": 3,
+    "favorite": true
+  },
+  {
+    "name": "Slow Commute Club",
+    "url": "https://www.youtube.com/feeds/videos.xml?channel_id=UC5Rh9my3NeWuLk5RxYLZDnw",
+    "category": "YouTube",
+    "ok": true,
+    "count": 15,
+    "visible": 3,
+    "max_items": 3,
+    "favorite": true
+  },
+  {
+    "name": "DankPods",
+    "url": "https://www.youtube.com/feeds/videos.xml?channel_id=UC7Jwj9fkrf1adN4fMmTkpug",
+    "category": "YouTube",
+    "ok": true,
+    "count": 15,
+    "visible": 3,
+    "max_items": 3,
+    "favorite": true
+  },
+  {
+    "name": "Tolarian Community College",
+    "url": "https://www.youtube.com/feeds/videos.xml?channel_id=UC7-hR5EfgpM6oHfiGDkxfMA",
+    "category": "YouTube",
+    "ok": true,
+    "count": 15,
+    "visible": 3,
+    "max_items": 3,
+    "favorite": true
   }
 ]
