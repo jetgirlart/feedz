@@ -174,5 +174,60 @@
     "max_items": 2,
     "max_age_days": 10,
     "favorite": true
+  },
+  {
+    "name": "Texas Standard",
+    "url": "https://www.texasstandard.org/feed/",
+    "category": "Texas",
+    "ok": true,
+    "count": 300,
+    "visible": 5,
+    "max_items": 5,
+    "max_age_days": 14,
+    "favorite": true
+  },
+  {
+    "name": "Literary Hub",
+    "url": "https://lithub.com/feed/",
+    "category": "Books",
+    "ok": true,
+    "count": 10,
+    "visible": 5,
+    "max_items": 5,
+    "max_age_days": 21,
+    "favorite": true
+  },
+  {
+    "name": "Book Riot",
+    "url": "https://bookriot.com/feed/",
+    "category": "Books",
+    "ok": true,
+    "count": 10,
+    "visible": 5,
+    "max_items": 5,
+    "max_age_days": 14,
+    "favorite": true
+  },
+  {
+    "name": "The Paris Review",
+    "url": "https://www.theparisreview.org/blog/feed/",
+    "category": "Books",
+    "ok": true,
+    "count": 10,
+    "visible": 4,
+    "max_items": 4,
+    "max_age_days": 30,
+    "favorite": true
+  },
+  {
+    "name": "McSweeney's",
+    "url": "https://feeds.feedburner.com/mcsweeneys",
+    "category": "Books",
+    "ok": true,
+    "count": 20,
+    "visible": 4,
+    "max_items": 4,
+    "max_age_days": 30,
+    "favorite": true
   }
 ]
