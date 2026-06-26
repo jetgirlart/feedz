@@ -3,21 +3,25 @@
   category: DIY / Electronics
   weight: 80
   favorite: false
+  max_items: 3
 
 - name: BearBlog
   url: https://bearblog.dev/discover/feed/
   category: Blogs
   weight: 90
   favorite: true
+  max_items: 5
 
 - name: Plan D
   url: https://www.youtube.com/feeds/videos.xml?channel_id=UCPaApoLkmPqxCeZF7gjoc3w
   category: YouTube
   weight: 70
   favorite: false
+  max_items: 3
 
 - name: Hacker News
   url: https://news.ycombinator.com/rss
   category: Technology
   weight: 60
   favorite: true
+  max_items: 5
