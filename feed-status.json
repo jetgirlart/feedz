@@ -1,0 +1,30 @@
+[
+  {
+    "name": "Hackaday",
+    "url": "https://hackaday.com/blog/feed/",
+    "category": "DIY / Electronics",
+    "ok": true,
+    "count": 7
+  },
+  {
+    "name": "RetroRGB",
+    "url": "https://www.retrorgb.com/feed",
+    "category": "Retro Games",
+    "ok": true,
+    "count": 10
+  },
+  {
+    "name": "The Verge",
+    "url": "https://www.theverge.com/rss/index.xml",
+    "category": "Technology",
+    "ok": true,
+    "count": 10
+  },
+  {
+    "name": "Engadget",
+    "url": "https://www.engadget.com/rss.xml",
+    "category": "Technology",
+    "ok": true,
+    "count": 20
+  }
+]
