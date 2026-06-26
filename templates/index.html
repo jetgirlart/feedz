@@ -1,0 +1,104 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>feedz.jetgirl.art</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="static/style.css">
+  <script src="static/app.js" defer></script>
+</head>
+
+<body>
+  <header class="masthead">
+    <h1>feedz</h1>
+    <p class="sub">{{ total }} links · {{ feed_count }} feeds · updated {{ updated }}</p>
+  </header>
+
+  <div class="controls" aria-label="Feed controls">
+    <input id="search" type="search" placeholder="Search feedz..." autocomplete="off">
+    <button id="darkMode" type="button" title="Toggle dark or light mode">🌙</button>
+    <button id="markRead" type="button" title="Mark all articles read">📪</button>
+    <button id="clearRead" type="button" title="Clear read articles">📬</button>
+    <button id="randomLink" type="button">Random Article</button>
+  </div>
+
+  <section class="top" aria-labelledby="top-stories-heading">
+    <h2 id="top-stories-heading">Top Stories</h2>
+    <div class="story-list">
+      {% for item in top_items %}
+        <article
+          class="item"
+          data-link="{{ item.link }}"
+          data-title="{{ item.title|lower }}"
+          data-source="{{ item.source|lower }}"
+          data-category="{{ item.category|lower }}"
+        >
+          <a href="{{ item.link }}" target="_blank" rel="noopener noreferrer">
+            <img class="favicon" src="{{ item.favicon }}" alt="" loading="lazy">
+            <span>{{ item.title }}</span>
+          </a>
+          <p class="meta">{{ item.source }} · {{ item.category }} · {{ item.date.strftime("%b %d, %H:%M UTC") }}</p>
+        </article>
+      {% endfor %}
+    </div>
+  </section>
+
+  <div class="layout">
+    <main class="grid" aria-label="Articles by category">
+      {% for category, links in categories.items() %}
+        <section class="category" aria-labelledby="category-{{ loop.index }}">
+          <h2 id="category-{{ loop.index }}">{{ category }}</h2>
+          {% for item in links %}
+            <article
+              class="item"
+              data-link="{{ item.link }}"
+              data-title="{{ item.title|lower }}"
+              data-source="{{ item.source|lower }}"
+              data-category="{{ item.category|lower }}"
+            >
+              <a href="{{ item.link }}" target="_blank" rel="noopener noreferrer">
+                <img class="favicon" src="{{ item.favicon }}" alt="" loading="lazy">
+                <span>{{ item.title }}</span>
+              </a>
+              <p class="meta">
+                {{ item.source }}
+                {% if item.favorite %}★{% endif %}
+                · {{ item.date.strftime("%b %d, %H:%M UTC") }}
+              </p>
+            </article>
+          {% endfor %}
+        </section>
+      {% endfor %}
+    </main>
+
+    <aside class="sidebar" aria-labelledby="feed-status-heading">
+      <div class="box">
+        <h2 id="feed-status-heading">Feed Status</h2>
+        <ul class="status-list">
+          {% for feed in feed_status %}
+            <li>
+              {% if feed.ok %}
+                <span class="status-ok" aria-label="Feed ok">✓</span>
+              {% else %}
+                <span class="status-bad" aria-label="Feed error">!</span>
+              {% endif %}
+              <span>{{ feed.name }}</span>
+              <span class="status-count">{{ feed.visible }}/{{ feed.count }}</span>
+            </li>
+          {% endfor %}
+        </ul>
+      </div>
+
+      <div class="box">
+        <h2>JSON</h2>
+        <p><a href="feeds.json">feeds.json</a></p>
+        <p><a href="feed-status.json">feed-status.json</a></p>
+      </div>
+    </aside>
+  </div>
+
+  <footer>
+    Built from RSS for feedz.jetgirl.art.
+  </footer>
+</body>
+</html>
