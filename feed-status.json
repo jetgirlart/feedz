@@ -218,16 +218,5 @@
     "max_items": 4,
     "max_age_days": 30,
     "favorite": true
-  },
-  {
-    "name": "novelglot",
-    "url": "https://novelglot.substack.com/feed",
-    "category": "Blogs",
-    "ok": true,
-    "count": 12,
-    "visible": 2,
-    "max_items": 3,
-    "max_age_days": 30,
-    "favorite": true
   }
 ]
