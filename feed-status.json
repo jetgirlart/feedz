@@ -4,27 +4,39 @@
     "url": "https://hackaday.com/blog/feed/",
     "category": "DIY / Electronics",
     "ok": true,
-    "count": 7
+    "count": 7,
+    "visible": 7,
+    "max_items": 7,
+    "favorite": true
   },
   {
     "name": "RetroRGB",
     "url": "https://www.retrorgb.com/feed",
     "category": "Retro Games",
     "ok": true,
-    "count": 10
+    "count": 10,
+    "visible": 7,
+    "max_items": 7,
+    "favorite": true
   },
   {
     "name": "The Verge",
     "url": "https://www.theverge.com/rss/index.xml",
     "category": "Technology",
     "ok": true,
-    "count": 10
+    "count": 10,
+    "visible": 7,
+    "max_items": 7,
+    "favorite": false
   },
   {
     "name": "Engadget",
     "url": "https://www.engadget.com/rss.xml",
     "category": "Technology",
     "ok": true,
-    "count": 20
+    "count": 20,
+    "visible": 7,
+    "max_items": 7,
+    "favorite": false
   }
 ]

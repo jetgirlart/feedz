@@ -1,1083 +1,888 @@
-
 <!doctype html>
-<html>
+<html lang="en">
 <head>
   <meta charset="utf-8">
   <title>feedz.jetgirl.art</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
-
-  <style>
-    :root {
-      --bg: #f6f3ea;
-      --text: #111;
-      --muted: #666;
-      --line: #111;
-      --link: #0000cc;
-      --visited: #777;
-      --card: #fffdf7;
-    }
-
-    body.dark {
-      --bg: #111;
-      --text: #eee;
-      --muted: #aaa;
-      --line: #eee;
-      --link: #9db7ff;
-      --visited: #777;
-      --card: #1a1a1a;
-    }
-
-    body {
-      font-family: Arial, Helvetica, sans-serif;
-      background: var(--bg);
-      color: var(--text);
-      max-width: 1180px;
-      margin: 24px auto;
-      padding: 0 18px;
-    }
-
-    header {
-      text-align: center;
-      border-top: 6px solid var(--line);
-      border-bottom: 6px solid var(--line);
-      padding: 12px 0;
-      margin-bottom: 16px;
-    }
-
-    h1 {
-      font-family: Georgia, serif;
-      font-size: clamp(42px, 8vw, 86px);
-      margin: 0;
-      letter-spacing: -4px;
-      line-height: .9;
-    }
-
-    .sub {
-      font-size: 13px;
-      color: var(--muted);
-      margin-top: 10px;
-    }
-
-    .controls {
-      display: flex;
-      gap: 8px;
-      margin: 16px 0;
-      flex-wrap: wrap;
-      justify-content: center;
-    }
-
-    input, button {
-      font: inherit;
-      padding: 8px 10px;
-      border: 1px solid var(--line);
-      background: var(--card);
-      color: var(--text);
-    }
-
-    input {
-      min-width: 260px;
-    }
-
-    button {
-      cursor: pointer;
-      font-weight: bold;
-    }
-
-    .top {
-      border: 3px solid var(--line);
-      background: var(--card);
-      padding: 12px;
-      margin-bottom: 22px;
-    }
-
-    .top h2 {
-      text-align: center;
-      font-size: 22px;
-      margin-top: 0;
-    }
-
-    .layout {
-      display: grid;
-      grid-template-columns: 1fr 280px;
-      gap: 28px;
-    }
-
-    .grid {
-      columns: 3 240px;
-      column-gap: 28px;
-    }
-
-    section {
-      break-inside: avoid;
-      margin-bottom: 28px;
-    }
-
-    h2 {
-      font-size: 17px;
-      border-bottom: 2px solid var(--line);
-      margin-bottom: 8px;
-      text-transform: uppercase;
-    }
-
-    .item {
-      margin: 0 0 10px;
-      font-size: 15px;
-      line-height: 1.25;
-    }
-
-    .item.read {
-      opacity: .45;
-    }
-
-    .item.hidden {
-      display: none;
-    }
-
-    a {
-      color: var(--link);
-      font-weight: bold;
-      text-decoration: none;
-    }
-
-    a:visited {
-      color: var(--visited);
-    }
-
-    .meta {
-      font-size: 11px;
-      color: var(--muted);
-      margin-top: 2px;
-    }
-
-    .favicon {
-      width: 14px;
-      height: 14px;
-      vertical-align: -2px;
-      margin-right: 4px;
-    }
-
-    aside {
-      font-size: 13px;
-    }
-
-    .box {
-      border: 1px solid var(--line);
-      background: var(--card);
-      padding: 10px;
-      margin-bottom: 16px;
-    }
-
-    .status-ok {
-      color: green;
-      font-weight: bold;
-    }
-
-    .status-bad {
-      color: crimson;
-      font-weight: bold;
-    }
-
-    footer {
-      text-align: center;
-      font-size: 12px;
-      color: var(--muted);
-      border-top: 1px solid var(--line);
-      margin-top: 30px;
-      padding-top: 12px;
-    }
-
-    @media (max-width: 850px) {
-      .layout {
-        display: block;
-      }
-
-      aside {
-        margin-top: 30px;
-      }
-    }
-  </style>
+  <link rel="stylesheet" href="static/style.css">
+  <script src="static/app.js" defer></script>
 </head>
 
 <body>
-  <header>
+  <header class="masthead">
     <h1>feedz</h1>
-    <div class="sub">47 links · 4 feeds · updated 2026-06-26 21:26 UTC</div>
+    <p class="sub">28 links · 4 feeds · updated 2026-06-26 21:49 UTC</p>
   </header>
 
-  <div class="controls">
-    <input id="search" placeholder="Search feedz...">
-    <button id="darkMode">Dark Mode</button>
-    <button id="markRead">Mark All Read</button>
-    <button id="clearRead">Clear Read</button>
+  <div class="controls" aria-label="Feed controls">
+    <input id="search" type="search" placeholder="Search feedz..." autocomplete="off">
+    <button id="darkMode" type="button" title="Toggle dark or light mode">🌙</button>
+    <button id="markRead" type="button" title="Mark all articles read">📪</button>
+    <button id="clearRead" type="button" title="Clear read articles">📬</button>
+    <button id="randomLink" type="button">Random Article</button>
   </div>
 
-  <div class="top">
-    <h2>Top Stories</h2>
-    
-      <div class="item" data-link="https://hackaday.com/2026/06/26/a-custom-zigbee-touch-keypad/" data-title="a custom zigbee touch keypad" data-source="hackaday" data-category="diy / electronics">
-        <a href="https://hackaday.com/2026/06/26/a-custom-zigbee-touch-keypad/" target="_blank" rel="noopener noreferrer">
-          <img class="favicon" src="https://www.google.com/s2/favicons?domain=hackaday.com&sz=32" alt="">
-          A Custom Zigbee Touch Keypad
-        </a>
-        <div class="meta">Hackaday · DIY / Electronics · Jun 26, 20:00 UTC</div>
-      </div>
-    
-      <div class="item" data-link="https://hackaday.com/2026/06/26/reflective-lcd-slabtop-terminal-runs-homebrewed-solar-os/" data-title="reflective lcd slabtop terminal runs homebrewed solar os" data-source="hackaday" data-category="diy / electronics">
-        <a href="https://hackaday.com/2026/06/26/reflective-lcd-slabtop-terminal-runs-homebrewed-solar-os/" target="_blank" rel="noopener noreferrer">
-          <img class="favicon" src="https://www.google.com/s2/favicons?domain=hackaday.com&sz=32" alt="">
-          Reflective LCD Slabtop Terminal Runs Homebrewed Solar OS
-        </a>
-        <div class="meta">Hackaday · DIY / Electronics · Jun 26, 18:30 UTC</div>
-      </div>
-    
-      <div class="item" data-link="https://hackaday.com/2026/06/26/hackaday-podcast-episode-375-rebuilding-tech-on-our-terms-and-the-hero-nerd/" data-title="hackaday podcast episode 375: rebuilding tech on our terms and the hero nerd" data-source="hackaday" data-category="diy / electronics">
-        <a href="https://hackaday.com/2026/06/26/hackaday-podcast-episode-375-rebuilding-tech-on-our-terms-and-the-hero-nerd/" target="_blank" rel="noopener noreferrer">
-          <img class="favicon" src="https://www.google.com/s2/favicons?domain=hackaday.com&sz=32" alt="">
-          Hackaday Podcast Episode 375: Rebuilding Tech on Our Terms and the Hero Nerd
-        </a>
-        <div class="meta">Hackaday · DIY / Electronics · Jun 26, 17:00 UTC</div>
-      </div>
-    
-      <div class="item" data-link="https://hackaday.com/2026/06/26/a-gui-solution-for-esp32-web-development/" data-title="a gui solution for esp32 web development" data-source="hackaday" data-category="diy / electronics">
-        <a href="https://hackaday.com/2026/06/26/a-gui-solution-for-esp32-web-development/" target="_blank" rel="noopener noreferrer">
-          <img class="favicon" src="https://www.google.com/s2/favicons?domain=hackaday.com&sz=32" alt="">
-          A GUI Solution For ESP32 Web Development
-        </a>
-        <div class="meta">Hackaday · DIY / Electronics · Jun 26, 15:30 UTC</div>
-      </div>
-    
-      <div class="item" data-link="https://hackaday.com/2026/06/26/this-week-in-security-stealing-email-with-ai-amd-nerfs-chips-the-world-cup-nearly-hacked-and-gpsd-bugs/" data-title="this week in security: stealing email with ai, amd nerfs chips, the world cup nearly rickrolled, and gpsd bugs" data-source="hackaday" data-category="diy / electronics">
-        <a href="https://hackaday.com/2026/06/26/this-week-in-security-stealing-email-with-ai-amd-nerfs-chips-the-world-cup-nearly-hacked-and-gpsd-bugs/" target="_blank" rel="noopener noreferrer">
-          <img class="favicon" src="https://www.google.com/s2/favicons?domain=hackaday.com&sz=32" alt="">
-          This Week in Security: Stealing Email with AI, AMD Nerfs Chips, the World Cup Nearly Rickrolled, and GPSD Bugs
-        </a>
-        <div class="meta">Hackaday · DIY / Electronics · Jun 26, 14:00 UTC</div>
-      </div>
-    
-      <div class="item" data-link="https://hackaday.com/2026/06/26/alan-turings-remarkable-nearly-forgotten-voice-encryption-device/" data-title="alan turing’s remarkable, nearly-forgotten voice encryption device" data-source="hackaday" data-category="diy / electronics">
-        <a href="https://hackaday.com/2026/06/26/alan-turings-remarkable-nearly-forgotten-voice-encryption-device/" target="_blank" rel="noopener noreferrer">
-          <img class="favicon" src="https://www.google.com/s2/favicons?domain=hackaday.com&sz=32" alt="">
-          Alan Turing’s Remarkable, Nearly-Forgotten Voice Encryption Device
-        </a>
-        <div class="meta">Hackaday · DIY / Electronics · Jun 26, 11:00 UTC</div>
-      </div>
-    
-      <div class="item" data-link="https://hackaday.com/2026/06/26/this-kid-friendly-laptop-build-is-the-antidote-to-age-verification/" data-title="this kid-friendly laptop build is the antidote to age verification" data-source="hackaday" data-category="diy / electronics">
-        <a href="https://hackaday.com/2026/06/26/this-kid-friendly-laptop-build-is-the-antidote-to-age-verification/" target="_blank" rel="noopener noreferrer">
-          <img class="favicon" src="https://www.google.com/s2/favicons?domain=hackaday.com&sz=32" alt="">
-          This Kid-Friendly Laptop Build is The Antidote to Age Verification
-        </a>
-        <div class="meta">Hackaday · DIY / Electronics · Jun 26, 08:00 UTC</div>
-      </div>
-    
-      <div class="item" data-link="https://retrorgb.com/gg-aleste-3-game-gear-to-sms-patch.html" data-title="gg aleste 3 – game gear to sms patch" data-source="retrorgb" data-category="retro games">
-        <a href="https://retrorgb.com/gg-aleste-3-game-gear-to-sms-patch.html" target="_blank" rel="noopener noreferrer">
-          <img class="favicon" src="https://www.google.com/s2/favicons?domain=retrorgb.com&sz=32" alt="">
-          GG Aleste 3 – Game Gear to SMS Patch
-        </a>
-        <div class="meta">RetroRGB · Retro Games · Jun 25, 13:19 UTC</div>
-      </div>
-    
-      <div class="item" data-link="https://www.theverge.com/gadgets/952261/xreal-one-pro-1s-smart-glasses-deal-sale" data-title="xreal’s best usb-c smart glasses are $50 off, but not for long" data-source="the verge" data-category="technology">
-        <a href="https://www.theverge.com/gadgets/952261/xreal-one-pro-1s-smart-glasses-deal-sale" target="_blank" rel="noopener noreferrer">
-          <img class="favicon" src="https://www.google.com/s2/favicons?domain=theverge.com&sz=32" alt="">
-          Xreal’s best USB-C smart glasses are $50 off, but not for long
-        </a>
-        <div class="meta">The Verge · Technology · Jun 26, 21:26 UTC</div>
-      </div>
-    
-      <div class="item" data-link="https://www.theverge.com/gadgets/951081/robot-vacuum-mop-deals-amazon-prime-day-2026" data-title="the 16 best robot vacuum deals you can still get before prime day ends" data-source="the verge" data-category="technology">
-        <a href="https://www.theverge.com/gadgets/951081/robot-vacuum-mop-deals-amazon-prime-day-2026" target="_blank" rel="noopener noreferrer">
-          <img class="favicon" src="https://www.google.com/s2/favicons?domain=theverge.com&sz=32" alt="">
-          The 16 best robot vacuum deals you can still get before Prime Day ends
-        </a>
-        <div class="meta">The Verge · Technology · Jun 26, 21:26 UTC</div>
-      </div>
-    
-      <div class="item" data-link="https://www.theverge.com/gadgets/957106/prime-day-ipad-deals-apple-price-hikes" data-title="you won&#8217;t have long to get these ipad deals before apple&#8217;s price hike" data-source="the verge" data-category="technology">
-        <a href="https://www.theverge.com/gadgets/957106/prime-day-ipad-deals-apple-price-hikes" target="_blank" rel="noopener noreferrer">
-          <img class="favicon" src="https://www.google.com/s2/favicons?domain=theverge.com&sz=32" alt="">
-          You won&#8217;t have long to get these iPad deals before Apple&#8217;s price hike
-        </a>
-        <div class="meta">The Verge · Technology · Jun 26, 21:26 UTC</div>
-      </div>
-    
-      <div class="item" data-link="https://www.theverge.com/tech/957802/level-lock-layoffs-assa-abloy-kwikset-smart-lock-cloud" data-title="smart lock maker level has been gutted and its founders are out" data-source="the verge" data-category="technology">
-        <a href="https://www.theverge.com/tech/957802/level-lock-layoffs-assa-abloy-kwikset-smart-lock-cloud" target="_blank" rel="noopener noreferrer">
-          <img class="favicon" src="https://www.google.com/s2/favicons?domain=theverge.com&sz=32" alt="">
-          Smart lock maker Level has been gutted and its founders are out
-        </a>
-        <div class="meta">The Verge · Technology · Jun 26, 21:26 UTC</div>
-      </div>
-    
-      <div class="item" data-link="https://www.theverge.com/ai-artificial-intelligence/957845/openai-gpt-5-6-trump-administration-ai-preview" data-title="openai unveils gpt-5.6 amid us ai regulatory drama" data-source="the verge" data-category="technology">
-        <a href="https://www.theverge.com/ai-artificial-intelligence/957845/openai-gpt-5-6-trump-administration-ai-preview" target="_blank" rel="noopener noreferrer">
-          <img class="favicon" src="https://www.google.com/s2/favicons?domain=theverge.com&sz=32" alt="">
-          OpenAI unveils GPT-5.6 amid US AI regulatory drama
-        </a>
-        <div class="meta">The Verge · Technology · Jun 26, 21:26 UTC</div>
-      </div>
-    
-      <div class="item" data-link="https://www.theverge.com/gadgets/957791/birdbuddy-pro-solar-prime-day-deal-sale" data-title="this video bird feeder is the surprise hit of prime day" data-source="the verge" data-category="technology">
-        <a href="https://www.theverge.com/gadgets/957791/birdbuddy-pro-solar-prime-day-deal-sale" target="_blank" rel="noopener noreferrer">
-          <img class="favicon" src="https://www.google.com/s2/favicons?domain=theverge.com&sz=32" alt="">
-          This video bird feeder is the surprise hit of Prime Day
-        </a>
-        <div class="meta">The Verge · Technology · Jun 26, 21:26 UTC</div>
-      </div>
-    
-      <div class="item" data-link="https://www.theverge.com/report/957948/world-cup-us-visa-policies-trump" data-title="the beautiful shame" data-source="the verge" data-category="technology">
-        <a href="https://www.theverge.com/report/957948/world-cup-us-visa-policies-trump" target="_blank" rel="noopener noreferrer">
-          <img class="favicon" src="https://www.google.com/s2/favicons?domain=theverge.com&sz=32" alt="">
-          The beautiful shame
-        </a>
-        <div class="meta">The Verge · Technology · Jun 26, 21:26 UTC</div>
-      </div>
-    
-      <div class="item" data-link="https://www.theverge.com/gadgets/951901/prime-day-video-games-switch-playstation-xbox-pc-deal-sale" data-title="our 36 favorite gaming deals on prime day for switch, ps5, and xbox" data-source="the verge" data-category="technology">
-        <a href="https://www.theverge.com/gadgets/951901/prime-day-video-games-switch-playstation-xbox-pc-deal-sale" target="_blank" rel="noopener noreferrer">
-          <img class="favicon" src="https://www.google.com/s2/favicons?domain=theverge.com&sz=32" alt="">
-          Our 36 favorite gaming deals on Prime Day for Switch, PS5, and Xbox
-        </a>
-        <div class="meta">The Verge · Technology · Jun 26, 21:26 UTC</div>
-      </div>
-    
-      <div class="item" data-link="https://www.theverge.com/gadgets/956830/prime-day-macbook-deals-apple-price-hikes" data-title="these are the best deals you can still get on macbooks before apple&#8217;s price hike kicks in" data-source="the verge" data-category="technology">
-        <a href="https://www.theverge.com/gadgets/956830/prime-day-macbook-deals-apple-price-hikes" target="_blank" rel="noopener noreferrer">
-          <img class="favicon" src="https://www.google.com/s2/favicons?domain=theverge.com&sz=32" alt="">
-          These are the best deals you can still get on MacBooks before Apple&#8217;s price hike kicks in
-        </a>
-        <div class="meta">The Verge · Technology · Jun 26, 21:26 UTC</div>
-      </div>
-    
-      <div class="item" data-link="https://www.theverge.com/gadgets/957435/prime-day-2026-best-tech-deals-sale-day-four" data-title="it’s the last day of prime day — here are over 140 great deals to choose from" data-source="the verge" data-category="technology">
-        <a href="https://www.theverge.com/gadgets/957435/prime-day-2026-best-tech-deals-sale-day-four" target="_blank" rel="noopener noreferrer">
-          <img class="favicon" src="https://www.google.com/s2/favicons?domain=theverge.com&sz=32" alt="">
-          It’s the last day of Prime Day — here are over 140 great deals to choose from
-        </a>
-        <div class="meta">The Verge · Technology · Jun 26, 21:26 UTC</div>
-      </div>
-    
-      <div class="item" data-link="https://www.engadget.com/2202875/its-a-dumb-time-to-buy-an-xbox-even-with-the-coming-price-hike/" data-title="it's a dumb time to buy an xbox, even with the coming price hike" data-source="engadget" data-category="technology">
-        <a href="https://www.engadget.com/2202875/its-a-dumb-time-to-buy-an-xbox-even-with-the-coming-price-hike/" target="_blank" rel="noopener noreferrer">
-          <img class="favicon" src="https://www.google.com/s2/favicons?domain=engadget.com&sz=32" alt="">
-          It's a dumb time to buy an Xbox, even with the coming price hike
-        </a>
-        <div class="meta">Engadget · Technology · Jun 26, 19:42 UTC</div>
-      </div>
-    
-      <div class="item" data-link="https://retrorgb.com/svs-castlemania-pre-orders.html" data-title="svs castlemania pre-orders" data-source="retrorgb" data-category="retro games">
-        <a href="https://retrorgb.com/svs-castlemania-pre-orders.html" target="_blank" rel="noopener noreferrer">
-          <img class="favicon" src="https://www.google.com/s2/favicons?domain=retrorgb.com&sz=32" alt="">
-          SVS Castlemania Pre-Orders
-        </a>
-        <div class="meta">RetroRGB · Retro Games · Jun 24, 11:37 UTC</div>
-      </div>
-    
-  </div>
+  <section class="top" aria-labelledby="top-stories-heading">
+    <h2 id="top-stories-heading">Top Stories</h2>
+    <div class="story-list">
+      
+        <article
+          class="item"
+          data-link="https://hackaday.com/2026/06/26/a-custom-zigbee-touch-keypad/"
+          data-title="a custom zigbee touch keypad"
+          data-source="hackaday"
+          data-category="diy / electronics"
+        >
+          <a href="https://hackaday.com/2026/06/26/a-custom-zigbee-touch-keypad/" target="_blank" rel="noopener noreferrer">
+            <img class="favicon" src="https://www.google.com/s2/favicons?domain=hackaday.com&amp;sz=32" alt="" loading="lazy">
+            <span>A Custom Zigbee Touch Keypad</span>
+          </a>
+          <p class="meta">Hackaday · DIY / Electronics · Jun 26, 20:00 UTC</p>
+        </article>
+      
+        <article
+          class="item"
+          data-link="https://hackaday.com/2026/06/26/reflective-lcd-slabtop-terminal-runs-homebrewed-solar-os/"
+          data-title="reflective lcd slabtop terminal runs homebrewed solar os"
+          data-source="hackaday"
+          data-category="diy / electronics"
+        >
+          <a href="https://hackaday.com/2026/06/26/reflective-lcd-slabtop-terminal-runs-homebrewed-solar-os/" target="_blank" rel="noopener noreferrer">
+            <img class="favicon" src="https://www.google.com/s2/favicons?domain=hackaday.com&amp;sz=32" alt="" loading="lazy">
+            <span>Reflective LCD Slabtop Terminal Runs Homebrewed Solar OS</span>
+          </a>
+          <p class="meta">Hackaday · DIY / Electronics · Jun 26, 18:30 UTC</p>
+        </article>
+      
+        <article
+          class="item"
+          data-link="https://hackaday.com/2026/06/26/hackaday-podcast-episode-375-rebuilding-tech-on-our-terms-and-the-hero-nerd/"
+          data-title="hackaday podcast episode 375: rebuilding tech on our terms and the hero nerd"
+          data-source="hackaday"
+          data-category="diy / electronics"
+        >
+          <a href="https://hackaday.com/2026/06/26/hackaday-podcast-episode-375-rebuilding-tech-on-our-terms-and-the-hero-nerd/" target="_blank" rel="noopener noreferrer">
+            <img class="favicon" src="https://www.google.com/s2/favicons?domain=hackaday.com&amp;sz=32" alt="" loading="lazy">
+            <span>Hackaday Podcast Episode 375: Rebuilding Tech on Our Terms and the Hero Nerd</span>
+          </a>
+          <p class="meta">Hackaday · DIY / Electronics · Jun 26, 17:00 UTC</p>
+        </article>
+      
+        <article
+          class="item"
+          data-link="https://hackaday.com/2026/06/26/a-gui-solution-for-esp32-web-development/"
+          data-title="a gui solution for esp32 web development"
+          data-source="hackaday"
+          data-category="diy / electronics"
+        >
+          <a href="https://hackaday.com/2026/06/26/a-gui-solution-for-esp32-web-development/" target="_blank" rel="noopener noreferrer">
+            <img class="favicon" src="https://www.google.com/s2/favicons?domain=hackaday.com&amp;sz=32" alt="" loading="lazy">
+            <span>A GUI Solution For ESP32 Web Development</span>
+          </a>
+          <p class="meta">Hackaday · DIY / Electronics · Jun 26, 15:30 UTC</p>
+        </article>
+      
+        <article
+          class="item"
+          data-link="https://hackaday.com/2026/06/26/this-week-in-security-stealing-email-with-ai-amd-nerfs-chips-the-world-cup-nearly-hacked-and-gpsd-bugs/"
+          data-title="this week in security: stealing email with ai, amd nerfs chips, the world cup nearly rickrolled, and gpsd bugs"
+          data-source="hackaday"
+          data-category="diy / electronics"
+        >
+          <a href="https://hackaday.com/2026/06/26/this-week-in-security-stealing-email-with-ai-amd-nerfs-chips-the-world-cup-nearly-hacked-and-gpsd-bugs/" target="_blank" rel="noopener noreferrer">
+            <img class="favicon" src="https://www.google.com/s2/favicons?domain=hackaday.com&amp;sz=32" alt="" loading="lazy">
+            <span>This Week in Security: Stealing Email with AI, AMD Nerfs Chips, the World Cup Nearly Rickrolled, and GPSD Bugs</span>
+          </a>
+          <p class="meta">Hackaday · DIY / Electronics · Jun 26, 14:00 UTC</p>
+        </article>
+      
+        <article
+          class="item"
+          data-link="https://hackaday.com/2026/06/26/alan-turings-remarkable-nearly-forgotten-voice-encryption-device/"
+          data-title="alan turing’s remarkable, nearly-forgotten voice encryption device"
+          data-source="hackaday"
+          data-category="diy / electronics"
+        >
+          <a href="https://hackaday.com/2026/06/26/alan-turings-remarkable-nearly-forgotten-voice-encryption-device/" target="_blank" rel="noopener noreferrer">
+            <img class="favicon" src="https://www.google.com/s2/favicons?domain=hackaday.com&amp;sz=32" alt="" loading="lazy">
+            <span>Alan Turing’s Remarkable, Nearly-Forgotten Voice Encryption Device</span>
+          </a>
+          <p class="meta">Hackaday · DIY / Electronics · Jun 26, 11:00 UTC</p>
+        </article>
+      
+        <article
+          class="item"
+          data-link="https://hackaday.com/2026/06/26/this-kid-friendly-laptop-build-is-the-antidote-to-age-verification/"
+          data-title="this kid-friendly laptop build is the antidote to age verification"
+          data-source="hackaday"
+          data-category="diy / electronics"
+        >
+          <a href="https://hackaday.com/2026/06/26/this-kid-friendly-laptop-build-is-the-antidote-to-age-verification/" target="_blank" rel="noopener noreferrer">
+            <img class="favicon" src="https://www.google.com/s2/favicons?domain=hackaday.com&amp;sz=32" alt="" loading="lazy">
+            <span>This Kid-Friendly Laptop Build is The Antidote to Age Verification</span>
+          </a>
+          <p class="meta">Hackaday · DIY / Electronics · Jun 26, 08:00 UTC</p>
+        </article>
+      
+        <article
+          class="item"
+          data-link="https://retrorgb.com/gg-aleste-3-game-gear-to-sms-patch.html"
+          data-title="gg aleste 3 – game gear to sms patch"
+          data-source="retrorgb"
+          data-category="retro games"
+        >
+          <a href="https://retrorgb.com/gg-aleste-3-game-gear-to-sms-patch.html" target="_blank" rel="noopener noreferrer">
+            <img class="favicon" src="https://www.google.com/s2/favicons?domain=retrorgb.com&amp;sz=32" alt="" loading="lazy">
+            <span>GG Aleste 3 – Game Gear to SMS Patch</span>
+          </a>
+          <p class="meta">RetroRGB · Retro Games · Jun 25, 13:19 UTC</p>
+        </article>
+      
+        <article
+          class="item"
+          data-link="https://www.theverge.com/gadgets/957473/prime-day-2026-fun-gadgets-under-100-deal-sale"
+          data-title="our favorite prime day gadgets under $100 you don&amp;#8217;t need but will really want"
+          data-source="the verge"
+          data-category="technology"
+        >
+          <a href="https://www.theverge.com/gadgets/957473/prime-day-2026-fun-gadgets-under-100-deal-sale" target="_blank" rel="noopener noreferrer">
+            <img class="favicon" src="https://www.google.com/s2/favicons?domain=theverge.com&amp;sz=32" alt="" loading="lazy">
+            <span>Our favorite Prime Day gadgets under $100 you don&amp;#8217;t need but will really want</span>
+          </a>
+          <p class="meta">The Verge · Technology · Jun 26, 21:49 UTC</p>
+        </article>
+      
+        <article
+          class="item"
+          data-link="https://www.theverge.com/gadgets/957435/prime-day-2026-best-tech-deals-sale-day-four"
+          data-title="it’s the last day of prime day — here are over 140 great deals to choose from"
+          data-source="the verge"
+          data-category="technology"
+        >
+          <a href="https://www.theverge.com/gadgets/957435/prime-day-2026-best-tech-deals-sale-day-four" target="_blank" rel="noopener noreferrer">
+            <img class="favicon" src="https://www.google.com/s2/favicons?domain=theverge.com&amp;sz=32" alt="" loading="lazy">
+            <span>It’s the last day of Prime Day — here are over 140 great deals to choose from</span>
+          </a>
+          <p class="meta">The Verge · Technology · Jun 26, 21:49 UTC</p>
+        </article>
+      
+        <article
+          class="item"
+          data-link="https://www.theverge.com/gadgets/956830/prime-day-macbook-deals-apple-price-hikes"
+          data-title="these are the best deals you can still get on macbooks before apple&amp;#8217;s price hike kicks in"
+          data-source="the verge"
+          data-category="technology"
+        >
+          <a href="https://www.theverge.com/gadgets/956830/prime-day-macbook-deals-apple-price-hikes" target="_blank" rel="noopener noreferrer">
+            <img class="favicon" src="https://www.google.com/s2/favicons?domain=theverge.com&amp;sz=32" alt="" loading="lazy">
+            <span>These are the best deals you can still get on MacBooks before Apple&amp;#8217;s price hike kicks in</span>
+          </a>
+          <p class="meta">The Verge · Technology · Jun 26, 21:49 UTC</p>
+        </article>
+      
+        <article
+          class="item"
+          data-link="https://www.theverge.com/gadgets/951901/prime-day-video-games-switch-playstation-xbox-pc-deal-sale"
+          data-title="our 36 favorite gaming deals on prime day for switch, ps5, and xbox"
+          data-source="the verge"
+          data-category="technology"
+        >
+          <a href="https://www.theverge.com/gadgets/951901/prime-day-video-games-switch-playstation-xbox-pc-deal-sale" target="_blank" rel="noopener noreferrer">
+            <img class="favicon" src="https://www.google.com/s2/favicons?domain=theverge.com&amp;sz=32" alt="" loading="lazy">
+            <span>Our 36 favorite gaming deals on Prime Day for Switch, PS5, and Xbox</span>
+          </a>
+          <p class="meta">The Verge · Technology · Jun 26, 21:49 UTC</p>
+        </article>
+      
+        <article
+          class="item"
+          data-link="https://www.theverge.com/report/957948/world-cup-us-visa-policies-trump"
+          data-title="the beautiful shame"
+          data-source="the verge"
+          data-category="technology"
+        >
+          <a href="https://www.theverge.com/report/957948/world-cup-us-visa-policies-trump" target="_blank" rel="noopener noreferrer">
+            <img class="favicon" src="https://www.google.com/s2/favicons?domain=theverge.com&amp;sz=32" alt="" loading="lazy">
+            <span>The beautiful shame</span>
+          </a>
+          <p class="meta">The Verge · Technology · Jun 26, 21:49 UTC</p>
+        </article>
+      
+        <article
+          class="item"
+          data-link="https://www.theverge.com/gadgets/957791/birdbuddy-pro-solar-prime-day-deal-sale"
+          data-title="this video bird feeder is the surprise hit of prime day"
+          data-source="the verge"
+          data-category="technology"
+        >
+          <a href="https://www.theverge.com/gadgets/957791/birdbuddy-pro-solar-prime-day-deal-sale" target="_blank" rel="noopener noreferrer">
+            <img class="favicon" src="https://www.google.com/s2/favicons?domain=theverge.com&amp;sz=32" alt="" loading="lazy">
+            <span>This video bird feeder is the surprise hit of Prime Day</span>
+          </a>
+          <p class="meta">The Verge · Technology · Jun 26, 21:49 UTC</p>
+        </article>
+      
+        <article
+          class="item"
+          data-link="https://www.theverge.com/ai-artificial-intelligence/957845/openai-gpt-5-6-trump-administration-ai-preview"
+          data-title="openai unveils gpt-5.6 amid us ai regulatory drama"
+          data-source="the verge"
+          data-category="technology"
+        >
+          <a href="https://www.theverge.com/ai-artificial-intelligence/957845/openai-gpt-5-6-trump-administration-ai-preview" target="_blank" rel="noopener noreferrer">
+            <img class="favicon" src="https://www.google.com/s2/favicons?domain=theverge.com&amp;sz=32" alt="" loading="lazy">
+            <span>OpenAI unveils GPT-5.6 amid US AI regulatory drama</span>
+          </a>
+          <p class="meta">The Verge · Technology · Jun 26, 21:49 UTC</p>
+        </article>
+      
+        <article
+          class="item"
+          data-link="https://www.engadget.com/2202875/its-a-dumb-time-to-buy-an-xbox-even-with-the-coming-price-hike/"
+          data-title="it&#39;s a dumb time to buy an xbox, even with the coming price hike"
+          data-source="engadget"
+          data-category="technology"
+        >
+          <a href="https://www.engadget.com/2202875/its-a-dumb-time-to-buy-an-xbox-even-with-the-coming-price-hike/" target="_blank" rel="noopener noreferrer">
+            <img class="favicon" src="https://www.google.com/s2/favicons?domain=engadget.com&amp;sz=32" alt="" loading="lazy">
+            <span>It&#39;s a dumb time to buy an Xbox, even with the coming price hike</span>
+          </a>
+          <p class="meta">Engadget · Technology · Jun 26, 19:42 UTC</p>
+        </article>
+      
+        <article
+          class="item"
+          data-link="https://retrorgb.com/svs-castlemania-pre-orders.html"
+          data-title="svs castlemania pre-orders"
+          data-source="retrorgb"
+          data-category="retro games"
+        >
+          <a href="https://retrorgb.com/svs-castlemania-pre-orders.html" target="_blank" rel="noopener noreferrer">
+            <img class="favicon" src="https://www.google.com/s2/favicons?domain=retrorgb.com&amp;sz=32" alt="" loading="lazy">
+            <span>SVS Castlemania Pre-Orders</span>
+          </a>
+          <p class="meta">RetroRGB · Retro Games · Jun 24, 11:37 UTC</p>
+        </article>
+      
+        <article
+          class="item"
+          data-link="https://www.engadget.com/2201922/do-phone-chargers-use-electricity-when-not-plugged-in/"
+          data-title="is your phone charger wasting electricity when it&#39;s not charging?"
+          data-source="engadget"
+          data-category="technology"
+        >
+          <a href="https://www.engadget.com/2201922/do-phone-chargers-use-electricity-when-not-plugged-in/" target="_blank" rel="noopener noreferrer">
+            <img class="favicon" src="https://www.google.com/s2/favicons?domain=engadget.com&amp;sz=32" alt="" loading="lazy">
+            <span>Is your phone charger wasting electricity when it&#39;s not charging?</span>
+          </a>
+          <p class="meta">Engadget · Technology · Jun 26, 18:30 UTC</p>
+        </article>
+      
+        <article
+          class="item"
+          data-link="https://www.engadget.com/2202726/foldables-watches-and-glasses-could-be-on-the-way/"
+          data-title="what to expect at the next samsung galaxy unpacked"
+          data-source="engadget"
+          data-category="technology"
+        >
+          <a href="https://www.engadget.com/2202726/foldables-watches-and-glasses-could-be-on-the-way/" target="_blank" rel="noopener noreferrer">
+            <img class="favicon" src="https://www.google.com/s2/favicons?domain=engadget.com&amp;sz=32" alt="" loading="lazy">
+            <span>What to expect at the next Samsung Galaxy Unpacked</span>
+          </a>
+          <p class="meta">Engadget · Technology · Jun 26, 18:14 UTC</p>
+        </article>
+      
+        <article
+          class="item"
+          data-link="https://retrorgb.com/week519.html"
+          data-title="weekly roundup #519"
+          data-source="retrorgb"
+          data-category="retro games"
+        >
+          <a href="https://retrorgb.com/week519.html" target="_blank" rel="noopener noreferrer">
+            <img class="favicon" src="https://www.google.com/s2/favicons?domain=retrorgb.com&amp;sz=32" alt="" loading="lazy">
+            <span>Weekly Roundup #519</span>
+          </a>
+          <p class="meta">RetroRGB · Retro Games · Jun 24, 09:00 UTC</p>
+        </article>
+      
+    </div>
+  </section>
 
   <div class="layout">
-    <main class="grid">
+    <main class="grid" aria-label="Articles by category">
       
-        <section>
-          <h2>DIY / Electronics</h2>
+        <section class="category" aria-labelledby="category-1">
+          <h2 id="category-1">DIY / Electronics</h2>
           
-            <div class="item" data-link="https://hackaday.com/2026/06/26/a-custom-zigbee-touch-keypad/" data-title="a custom zigbee touch keypad" data-source="hackaday" data-category="diy / electronics">
+            <article
+              class="item"
+              data-link="https://hackaday.com/2026/06/26/a-custom-zigbee-touch-keypad/"
+              data-title="a custom zigbee touch keypad"
+              data-source="hackaday"
+              data-category="diy / electronics"
+            >
               <a href="https://hackaday.com/2026/06/26/a-custom-zigbee-touch-keypad/" target="_blank" rel="noopener noreferrer">
-                <img class="favicon" src="https://www.google.com/s2/favicons?domain=hackaday.com&sz=32" alt="">
-                A Custom Zigbee Touch Keypad
+                <img class="favicon" src="https://www.google.com/s2/favicons?domain=hackaday.com&amp;sz=32" alt="" loading="lazy">
+                <span>A Custom Zigbee Touch Keypad</span>
               </a>
-              <div class="meta">
+              <p class="meta">
                 Hackaday
                 ★
                 · Jun 26, 20:00 UTC
-              </div>
-            </div>
+              </p>
+            </article>
           
-            <div class="item" data-link="https://hackaday.com/2026/06/26/reflective-lcd-slabtop-terminal-runs-homebrewed-solar-os/" data-title="reflective lcd slabtop terminal runs homebrewed solar os" data-source="hackaday" data-category="diy / electronics">
+            <article
+              class="item"
+              data-link="https://hackaday.com/2026/06/26/reflective-lcd-slabtop-terminal-runs-homebrewed-solar-os/"
+              data-title="reflective lcd slabtop terminal runs homebrewed solar os"
+              data-source="hackaday"
+              data-category="diy / electronics"
+            >
               <a href="https://hackaday.com/2026/06/26/reflective-lcd-slabtop-terminal-runs-homebrewed-solar-os/" target="_blank" rel="noopener noreferrer">
-                <img class="favicon" src="https://www.google.com/s2/favicons?domain=hackaday.com&sz=32" alt="">
-                Reflective LCD Slabtop Terminal Runs Homebrewed Solar OS
+                <img class="favicon" src="https://www.google.com/s2/favicons?domain=hackaday.com&amp;sz=32" alt="" loading="lazy">
+                <span>Reflective LCD Slabtop Terminal Runs Homebrewed Solar OS</span>
               </a>
-              <div class="meta">
+              <p class="meta">
                 Hackaday
                 ★
                 · Jun 26, 18:30 UTC
-              </div>
-            </div>
+              </p>
+            </article>
           
-            <div class="item" data-link="https://hackaday.com/2026/06/26/hackaday-podcast-episode-375-rebuilding-tech-on-our-terms-and-the-hero-nerd/" data-title="hackaday podcast episode 375: rebuilding tech on our terms and the hero nerd" data-source="hackaday" data-category="diy / electronics">
+            <article
+              class="item"
+              data-link="https://hackaday.com/2026/06/26/hackaday-podcast-episode-375-rebuilding-tech-on-our-terms-and-the-hero-nerd/"
+              data-title="hackaday podcast episode 375: rebuilding tech on our terms and the hero nerd"
+              data-source="hackaday"
+              data-category="diy / electronics"
+            >
               <a href="https://hackaday.com/2026/06/26/hackaday-podcast-episode-375-rebuilding-tech-on-our-terms-and-the-hero-nerd/" target="_blank" rel="noopener noreferrer">
-                <img class="favicon" src="https://www.google.com/s2/favicons?domain=hackaday.com&sz=32" alt="">
-                Hackaday Podcast Episode 375: Rebuilding Tech on Our Terms and the Hero Nerd
+                <img class="favicon" src="https://www.google.com/s2/favicons?domain=hackaday.com&amp;sz=32" alt="" loading="lazy">
+                <span>Hackaday Podcast Episode 375: Rebuilding Tech on Our Terms and the Hero Nerd</span>
               </a>
-              <div class="meta">
+              <p class="meta">
                 Hackaday
                 ★
                 · Jun 26, 17:00 UTC
-              </div>
-            </div>
+              </p>
+            </article>
           
-            <div class="item" data-link="https://hackaday.com/2026/06/26/a-gui-solution-for-esp32-web-development/" data-title="a gui solution for esp32 web development" data-source="hackaday" data-category="diy / electronics">
+            <article
+              class="item"
+              data-link="https://hackaday.com/2026/06/26/a-gui-solution-for-esp32-web-development/"
+              data-title="a gui solution for esp32 web development"
+              data-source="hackaday"
+              data-category="diy / electronics"
+            >
               <a href="https://hackaday.com/2026/06/26/a-gui-solution-for-esp32-web-development/" target="_blank" rel="noopener noreferrer">
-                <img class="favicon" src="https://www.google.com/s2/favicons?domain=hackaday.com&sz=32" alt="">
-                A GUI Solution For ESP32 Web Development
+                <img class="favicon" src="https://www.google.com/s2/favicons?domain=hackaday.com&amp;sz=32" alt="" loading="lazy">
+                <span>A GUI Solution For ESP32 Web Development</span>
               </a>
-              <div class="meta">
+              <p class="meta">
                 Hackaday
                 ★
                 · Jun 26, 15:30 UTC
-              </div>
-            </div>
+              </p>
+            </article>
           
-            <div class="item" data-link="https://hackaday.com/2026/06/26/this-week-in-security-stealing-email-with-ai-amd-nerfs-chips-the-world-cup-nearly-hacked-and-gpsd-bugs/" data-title="this week in security: stealing email with ai, amd nerfs chips, the world cup nearly rickrolled, and gpsd bugs" data-source="hackaday" data-category="diy / electronics">
+            <article
+              class="item"
+              data-link="https://hackaday.com/2026/06/26/this-week-in-security-stealing-email-with-ai-amd-nerfs-chips-the-world-cup-nearly-hacked-and-gpsd-bugs/"
+              data-title="this week in security: stealing email with ai, amd nerfs chips, the world cup nearly rickrolled, and gpsd bugs"
+              data-source="hackaday"
+              data-category="diy / electronics"
+            >
               <a href="https://hackaday.com/2026/06/26/this-week-in-security-stealing-email-with-ai-amd-nerfs-chips-the-world-cup-nearly-hacked-and-gpsd-bugs/" target="_blank" rel="noopener noreferrer">
-                <img class="favicon" src="https://www.google.com/s2/favicons?domain=hackaday.com&sz=32" alt="">
-                This Week in Security: Stealing Email with AI, AMD Nerfs Chips, the World Cup Nearly Rickrolled, and GPSD Bugs
+                <img class="favicon" src="https://www.google.com/s2/favicons?domain=hackaday.com&amp;sz=32" alt="" loading="lazy">
+                <span>This Week in Security: Stealing Email with AI, AMD Nerfs Chips, the World Cup Nearly Rickrolled, and GPSD Bugs</span>
               </a>
-              <div class="meta">
+              <p class="meta">
                 Hackaday
                 ★
                 · Jun 26, 14:00 UTC
-              </div>
-            </div>
+              </p>
+            </article>
           
-            <div class="item" data-link="https://hackaday.com/2026/06/26/alan-turings-remarkable-nearly-forgotten-voice-encryption-device/" data-title="alan turing’s remarkable, nearly-forgotten voice encryption device" data-source="hackaday" data-category="diy / electronics">
+            <article
+              class="item"
+              data-link="https://hackaday.com/2026/06/26/alan-turings-remarkable-nearly-forgotten-voice-encryption-device/"
+              data-title="alan turing’s remarkable, nearly-forgotten voice encryption device"
+              data-source="hackaday"
+              data-category="diy / electronics"
+            >
               <a href="https://hackaday.com/2026/06/26/alan-turings-remarkable-nearly-forgotten-voice-encryption-device/" target="_blank" rel="noopener noreferrer">
-                <img class="favicon" src="https://www.google.com/s2/favicons?domain=hackaday.com&sz=32" alt="">
-                Alan Turing’s Remarkable, Nearly-Forgotten Voice Encryption Device
+                <img class="favicon" src="https://www.google.com/s2/favicons?domain=hackaday.com&amp;sz=32" alt="" loading="lazy">
+                <span>Alan Turing’s Remarkable, Nearly-Forgotten Voice Encryption Device</span>
               </a>
-              <div class="meta">
+              <p class="meta">
                 Hackaday
                 ★
                 · Jun 26, 11:00 UTC
-              </div>
-            </div>
+              </p>
+            </article>
           
-            <div class="item" data-link="https://hackaday.com/2026/06/26/this-kid-friendly-laptop-build-is-the-antidote-to-age-verification/" data-title="this kid-friendly laptop build is the antidote to age verification" data-source="hackaday" data-category="diy / electronics">
+            <article
+              class="item"
+              data-link="https://hackaday.com/2026/06/26/this-kid-friendly-laptop-build-is-the-antidote-to-age-verification/"
+              data-title="this kid-friendly laptop build is the antidote to age verification"
+              data-source="hackaday"
+              data-category="diy / electronics"
+            >
               <a href="https://hackaday.com/2026/06/26/this-kid-friendly-laptop-build-is-the-antidote-to-age-verification/" target="_blank" rel="noopener noreferrer">
-                <img class="favicon" src="https://www.google.com/s2/favicons?domain=hackaday.com&sz=32" alt="">
-                This Kid-Friendly Laptop Build is The Antidote to Age Verification
+                <img class="favicon" src="https://www.google.com/s2/favicons?domain=hackaday.com&amp;sz=32" alt="" loading="lazy">
+                <span>This Kid-Friendly Laptop Build is The Antidote to Age Verification</span>
               </a>
-              <div class="meta">
+              <p class="meta">
                 Hackaday
                 ★
                 · Jun 26, 08:00 UTC
-              </div>
-            </div>
+              </p>
+            </article>
           
         </section>
       
-        <section>
-          <h2>Retro Games</h2>
+        <section class="category" aria-labelledby="category-2">
+          <h2 id="category-2">Retro Games</h2>
           
-            <div class="item" data-link="https://retrorgb.com/gg-aleste-3-game-gear-to-sms-patch.html" data-title="gg aleste 3 – game gear to sms patch" data-source="retrorgb" data-category="retro games">
+            <article
+              class="item"
+              data-link="https://retrorgb.com/gg-aleste-3-game-gear-to-sms-patch.html"
+              data-title="gg aleste 3 – game gear to sms patch"
+              data-source="retrorgb"
+              data-category="retro games"
+            >
               <a href="https://retrorgb.com/gg-aleste-3-game-gear-to-sms-patch.html" target="_blank" rel="noopener noreferrer">
-                <img class="favicon" src="https://www.google.com/s2/favicons?domain=retrorgb.com&sz=32" alt="">
-                GG Aleste 3 – Game Gear to SMS Patch
+                <img class="favicon" src="https://www.google.com/s2/favicons?domain=retrorgb.com&amp;sz=32" alt="" loading="lazy">
+                <span>GG Aleste 3 – Game Gear to SMS Patch</span>
               </a>
-              <div class="meta">
+              <p class="meta">
                 RetroRGB
                 ★
                 · Jun 25, 13:19 UTC
-              </div>
-            </div>
+              </p>
+            </article>
           
-            <div class="item" data-link="https://retrorgb.com/svs-castlemania-pre-orders.html" data-title="svs castlemania pre-orders" data-source="retrorgb" data-category="retro games">
+            <article
+              class="item"
+              data-link="https://retrorgb.com/svs-castlemania-pre-orders.html"
+              data-title="svs castlemania pre-orders"
+              data-source="retrorgb"
+              data-category="retro games"
+            >
               <a href="https://retrorgb.com/svs-castlemania-pre-orders.html" target="_blank" rel="noopener noreferrer">
-                <img class="favicon" src="https://www.google.com/s2/favicons?domain=retrorgb.com&sz=32" alt="">
-                SVS Castlemania Pre-Orders
+                <img class="favicon" src="https://www.google.com/s2/favicons?domain=retrorgb.com&amp;sz=32" alt="" loading="lazy">
+                <span>SVS Castlemania Pre-Orders</span>
               </a>
-              <div class="meta">
+              <p class="meta">
                 RetroRGB
                 ★
                 · Jun 24, 11:37 UTC
-              </div>
-            </div>
+              </p>
+            </article>
           
-            <div class="item" data-link="https://retrorgb.com/week519.html" data-title="weekly roundup #519" data-source="retrorgb" data-category="retro games">
+            <article
+              class="item"
+              data-link="https://retrorgb.com/week519.html"
+              data-title="weekly roundup #519"
+              data-source="retrorgb"
+              data-category="retro games"
+            >
               <a href="https://retrorgb.com/week519.html" target="_blank" rel="noopener noreferrer">
-                <img class="favicon" src="https://www.google.com/s2/favicons?domain=retrorgb.com&sz=32" alt="">
-                Weekly Roundup #519
+                <img class="favicon" src="https://www.google.com/s2/favicons?domain=retrorgb.com&amp;sz=32" alt="" loading="lazy">
+                <span>Weekly Roundup #519</span>
               </a>
-              <div class="meta">
+              <p class="meta">
                 RetroRGB
                 ★
                 · Jun 24, 09:00 UTC
-              </div>
-            </div>
+              </p>
+            </article>
           
-            <div class="item" data-link="https://retrorgb.com/new-home-for-redump.html" data-title="new home for redump" data-source="retrorgb" data-category="retro games">
+            <article
+              class="item"
+              data-link="https://retrorgb.com/new-home-for-redump.html"
+              data-title="new home for redump"
+              data-source="retrorgb"
+              data-category="retro games"
+            >
               <a href="https://retrorgb.com/new-home-for-redump.html" target="_blank" rel="noopener noreferrer">
-                <img class="favicon" src="https://www.google.com/s2/favicons?domain=retrorgb.com&sz=32" alt="">
-                New Home for Redump
+                <img class="favicon" src="https://www.google.com/s2/favicons?domain=retrorgb.com&amp;sz=32" alt="" loading="lazy">
+                <span>New Home for Redump</span>
               </a>
-              <div class="meta">
+              <p class="meta">
                 RetroRGB
                 ★
                 · Jun 23, 14:42 UTC
-              </div>
-            </div>
+              </p>
+            </article>
           
-            <div class="item" data-link="https://retrorgb.com/retro-game-restore-status-update.html" data-title="retro game restore: status update" data-source="retrorgb" data-category="retro games">
+            <article
+              class="item"
+              data-link="https://retrorgb.com/retro-game-restore-status-update.html"
+              data-title="retro game restore: status update"
+              data-source="retrorgb"
+              data-category="retro games"
+            >
               <a href="https://retrorgb.com/retro-game-restore-status-update.html" target="_blank" rel="noopener noreferrer">
-                <img class="favicon" src="https://www.google.com/s2/favicons?domain=retrorgb.com&sz=32" alt="">
-                Retro Game Restore: Status Update
+                <img class="favicon" src="https://www.google.com/s2/favicons?domain=retrorgb.com&amp;sz=32" alt="" loading="lazy">
+                <span>Retro Game Restore: Status Update</span>
               </a>
-              <div class="meta">
+              <p class="meta">
                 RetroRGB
                 ★
                 · Jun 23, 14:12 UTC
-              </div>
-            </div>
+              </p>
+            </article>
           
-            <div class="item" data-link="https://retrorgb.com/doom64kb-ported-to-neo-geo-with-two-working-levels.html" data-title="doom64kb ported to neo geo with two working levels" data-source="retrorgb" data-category="retro games">
+            <article
+              class="item"
+              data-link="https://retrorgb.com/doom64kb-ported-to-neo-geo-with-two-working-levels.html"
+              data-title="doom64kb ported to neo geo with two working levels"
+              data-source="retrorgb"
+              data-category="retro games"
+            >
               <a href="https://retrorgb.com/doom64kb-ported-to-neo-geo-with-two-working-levels.html" target="_blank" rel="noopener noreferrer">
-                <img class="favicon" src="https://www.google.com/s2/favicons?domain=retrorgb.com&sz=32" alt="">
-                Doom64KB Ported to Neo Geo with Two Working Levels
+                <img class="favicon" src="https://www.google.com/s2/favicons?domain=retrorgb.com&amp;sz=32" alt="" loading="lazy">
+                <span>Doom64KB Ported to Neo Geo with Two Working Levels</span>
               </a>
-              <div class="meta">
+              <p class="meta">
                 RetroRGB
                 ★
                 · Jun 21, 23:31 UTC
-              </div>
-            </div>
+              </p>
+            </article>
           
-            <div class="item" data-link="https://retrorgb.com/arcstation-installation-demo.html" data-title="arcstation: installation & demo" data-source="retrorgb" data-category="retro games">
+            <article
+              class="item"
+              data-link="https://retrorgb.com/arcstation-installation-demo.html"
+              data-title="arcstation: installation &amp; demo"
+              data-source="retrorgb"
+              data-category="retro games"
+            >
               <a href="https://retrorgb.com/arcstation-installation-demo.html" target="_blank" rel="noopener noreferrer">
-                <img class="favicon" src="https://www.google.com/s2/favicons?domain=retrorgb.com&sz=32" alt="">
-                ArcStation: Installation & Demo
+                <img class="favicon" src="https://www.google.com/s2/favicons?domain=retrorgb.com&amp;sz=32" alt="" loading="lazy">
+                <span>ArcStation: Installation &amp; Demo</span>
               </a>
-              <div class="meta">
+              <p class="meta">
                 RetroRGB
                 ★
                 · Jun 20, 13:03 UTC
-              </div>
-            </div>
-          
-            <div class="item" data-link="https://retrorgb.com/cassette-mechanism-myth-debunked.html" data-title="cassette mechanism myth debunked" data-source="retrorgb" data-category="retro games">
-              <a href="https://retrorgb.com/cassette-mechanism-myth-debunked.html" target="_blank" rel="noopener noreferrer">
-                <img class="favicon" src="https://www.google.com/s2/favicons?domain=retrorgb.com&sz=32" alt="">
-                Cassette Mechanism Myth Debunked
-              </a>
-              <div class="meta">
-                RetroRGB
-                ★
-                · Jun 20, 12:50 UTC
-              </div>
-            </div>
-          
-            <div class="item" data-link="https://retrorgb.com/recompilation-of-castlevania-for-the-nintendo-64.html" data-title="recompilation of castlevania for the nintendo 64" data-source="retrorgb" data-category="retro games">
-              <a href="https://retrorgb.com/recompilation-of-castlevania-for-the-nintendo-64.html" target="_blank" rel="noopener noreferrer">
-                <img class="favicon" src="https://www.google.com/s2/favicons?domain=retrorgb.com&sz=32" alt="">
-                Recompilation of Castlevania for the Nintendo 64
-              </a>
-              <div class="meta">
-                RetroRGB
-                ★
-                · Jun 18, 13:54 UTC
-              </div>
-            </div>
-          
-            <div class="item" data-link="https://retrorgb.com/retrotink-4k-official-new-menu.html" data-title="retrotink 4k official new menu" data-source="retrorgb" data-category="retro games">
-              <a href="https://retrorgb.com/retrotink-4k-official-new-menu.html" target="_blank" rel="noopener noreferrer">
-                <img class="favicon" src="https://www.google.com/s2/favicons?domain=retrorgb.com&sz=32" alt="">
-                RetroTINK 4K Official New Menu
-              </a>
-              <div class="meta">
-                RetroRGB
-                ★
-                · Jun 17, 23:13 UTC
-              </div>
-            </div>
+              </p>
+            </article>
           
         </section>
       
-        <section>
-          <h2>Technology</h2>
+        <section class="category" aria-labelledby="category-3">
+          <h2 id="category-3">Technology</h2>
           
-            <div class="item" data-link="https://www.theverge.com/gadgets/952261/xreal-one-pro-1s-smart-glasses-deal-sale" data-title="xreal’s best usb-c smart glasses are $50 off, but not for long" data-source="the verge" data-category="technology">
-              <a href="https://www.theverge.com/gadgets/952261/xreal-one-pro-1s-smart-glasses-deal-sale" target="_blank" rel="noopener noreferrer">
-                <img class="favicon" src="https://www.google.com/s2/favicons?domain=theverge.com&sz=32" alt="">
-                Xreal’s best USB-C smart glasses are $50 off, but not for long
+            <article
+              class="item"
+              data-link="https://www.theverge.com/gadgets/957473/prime-day-2026-fun-gadgets-under-100-deal-sale"
+              data-title="our favorite prime day gadgets under $100 you don&amp;#8217;t need but will really want"
+              data-source="the verge"
+              data-category="technology"
+            >
+              <a href="https://www.theverge.com/gadgets/957473/prime-day-2026-fun-gadgets-under-100-deal-sale" target="_blank" rel="noopener noreferrer">
+                <img class="favicon" src="https://www.google.com/s2/favicons?domain=theverge.com&amp;sz=32" alt="" loading="lazy">
+                <span>Our favorite Prime Day gadgets under $100 you don&amp;#8217;t need but will really want</span>
               </a>
-              <div class="meta">
+              <p class="meta">
                 The Verge
                 
-                · Jun 26, 21:26 UTC
-              </div>
-            </div>
+                · Jun 26, 21:49 UTC
+              </p>
+            </article>
           
-            <div class="item" data-link="https://www.theverge.com/gadgets/951081/robot-vacuum-mop-deals-amazon-prime-day-2026" data-title="the 16 best robot vacuum deals you can still get before prime day ends" data-source="the verge" data-category="technology">
-              <a href="https://www.theverge.com/gadgets/951081/robot-vacuum-mop-deals-amazon-prime-day-2026" target="_blank" rel="noopener noreferrer">
-                <img class="favicon" src="https://www.google.com/s2/favicons?domain=theverge.com&sz=32" alt="">
-                The 16 best robot vacuum deals you can still get before Prime Day ends
-              </a>
-              <div class="meta">
-                The Verge
-                
-                · Jun 26, 21:26 UTC
-              </div>
-            </div>
-          
-            <div class="item" data-link="https://www.theverge.com/gadgets/957106/prime-day-ipad-deals-apple-price-hikes" data-title="you won&#8217;t have long to get these ipad deals before apple&#8217;s price hike" data-source="the verge" data-category="technology">
-              <a href="https://www.theverge.com/gadgets/957106/prime-day-ipad-deals-apple-price-hikes" target="_blank" rel="noopener noreferrer">
-                <img class="favicon" src="https://www.google.com/s2/favicons?domain=theverge.com&sz=32" alt="">
-                You won&#8217;t have long to get these iPad deals before Apple&#8217;s price hike
-              </a>
-              <div class="meta">
-                The Verge
-                
-                · Jun 26, 21:26 UTC
-              </div>
-            </div>
-          
-            <div class="item" data-link="https://www.theverge.com/tech/957802/level-lock-layoffs-assa-abloy-kwikset-smart-lock-cloud" data-title="smart lock maker level has been gutted and its founders are out" data-source="the verge" data-category="technology">
-              <a href="https://www.theverge.com/tech/957802/level-lock-layoffs-assa-abloy-kwikset-smart-lock-cloud" target="_blank" rel="noopener noreferrer">
-                <img class="favicon" src="https://www.google.com/s2/favicons?domain=theverge.com&sz=32" alt="">
-                Smart lock maker Level has been gutted and its founders are out
-              </a>
-              <div class="meta">
-                The Verge
-                
-                · Jun 26, 21:26 UTC
-              </div>
-            </div>
-          
-            <div class="item" data-link="https://www.theverge.com/ai-artificial-intelligence/957845/openai-gpt-5-6-trump-administration-ai-preview" data-title="openai unveils gpt-5.6 amid us ai regulatory drama" data-source="the verge" data-category="technology">
-              <a href="https://www.theverge.com/ai-artificial-intelligence/957845/openai-gpt-5-6-trump-administration-ai-preview" target="_blank" rel="noopener noreferrer">
-                <img class="favicon" src="https://www.google.com/s2/favicons?domain=theverge.com&sz=32" alt="">
-                OpenAI unveils GPT-5.6 amid US AI regulatory drama
-              </a>
-              <div class="meta">
-                The Verge
-                
-                · Jun 26, 21:26 UTC
-              </div>
-            </div>
-          
-            <div class="item" data-link="https://www.theverge.com/gadgets/957791/birdbuddy-pro-solar-prime-day-deal-sale" data-title="this video bird feeder is the surprise hit of prime day" data-source="the verge" data-category="technology">
-              <a href="https://www.theverge.com/gadgets/957791/birdbuddy-pro-solar-prime-day-deal-sale" target="_blank" rel="noopener noreferrer">
-                <img class="favicon" src="https://www.google.com/s2/favicons?domain=theverge.com&sz=32" alt="">
-                This video bird feeder is the surprise hit of Prime Day
-              </a>
-              <div class="meta">
-                The Verge
-                
-                · Jun 26, 21:26 UTC
-              </div>
-            </div>
-          
-            <div class="item" data-link="https://www.theverge.com/report/957948/world-cup-us-visa-policies-trump" data-title="the beautiful shame" data-source="the verge" data-category="technology">
-              <a href="https://www.theverge.com/report/957948/world-cup-us-visa-policies-trump" target="_blank" rel="noopener noreferrer">
-                <img class="favicon" src="https://www.google.com/s2/favicons?domain=theverge.com&sz=32" alt="">
-                The beautiful shame
-              </a>
-              <div class="meta">
-                The Verge
-                
-                · Jun 26, 21:26 UTC
-              </div>
-            </div>
-          
-            <div class="item" data-link="https://www.theverge.com/gadgets/951901/prime-day-video-games-switch-playstation-xbox-pc-deal-sale" data-title="our 36 favorite gaming deals on prime day for switch, ps5, and xbox" data-source="the verge" data-category="technology">
-              <a href="https://www.theverge.com/gadgets/951901/prime-day-video-games-switch-playstation-xbox-pc-deal-sale" target="_blank" rel="noopener noreferrer">
-                <img class="favicon" src="https://www.google.com/s2/favicons?domain=theverge.com&sz=32" alt="">
-                Our 36 favorite gaming deals on Prime Day for Switch, PS5, and Xbox
-              </a>
-              <div class="meta">
-                The Verge
-                
-                · Jun 26, 21:26 UTC
-              </div>
-            </div>
-          
-            <div class="item" data-link="https://www.theverge.com/gadgets/956830/prime-day-macbook-deals-apple-price-hikes" data-title="these are the best deals you can still get on macbooks before apple&#8217;s price hike kicks in" data-source="the verge" data-category="technology">
-              <a href="https://www.theverge.com/gadgets/956830/prime-day-macbook-deals-apple-price-hikes" target="_blank" rel="noopener noreferrer">
-                <img class="favicon" src="https://www.google.com/s2/favicons?domain=theverge.com&sz=32" alt="">
-                These are the best deals you can still get on MacBooks before Apple&#8217;s price hike kicks in
-              </a>
-              <div class="meta">
-                The Verge
-                
-                · Jun 26, 21:26 UTC
-              </div>
-            </div>
-          
-            <div class="item" data-link="https://www.theverge.com/gadgets/957435/prime-day-2026-best-tech-deals-sale-day-four" data-title="it’s the last day of prime day — here are over 140 great deals to choose from" data-source="the verge" data-category="technology">
+            <article
+              class="item"
+              data-link="https://www.theverge.com/gadgets/957435/prime-day-2026-best-tech-deals-sale-day-four"
+              data-title="it’s the last day of prime day — here are over 140 great deals to choose from"
+              data-source="the verge"
+              data-category="technology"
+            >
               <a href="https://www.theverge.com/gadgets/957435/prime-day-2026-best-tech-deals-sale-day-four" target="_blank" rel="noopener noreferrer">
-                <img class="favicon" src="https://www.google.com/s2/favicons?domain=theverge.com&sz=32" alt="">
-                It’s the last day of Prime Day — here are over 140 great deals to choose from
+                <img class="favicon" src="https://www.google.com/s2/favicons?domain=theverge.com&amp;sz=32" alt="" loading="lazy">
+                <span>It’s the last day of Prime Day — here are over 140 great deals to choose from</span>
               </a>
-              <div class="meta">
+              <p class="meta">
                 The Verge
                 
-                · Jun 26, 21:26 UTC
-              </div>
-            </div>
+                · Jun 26, 21:49 UTC
+              </p>
+            </article>
           
-            <div class="item" data-link="https://www.engadget.com/2202875/its-a-dumb-time-to-buy-an-xbox-even-with-the-coming-price-hike/" data-title="it's a dumb time to buy an xbox, even with the coming price hike" data-source="engadget" data-category="technology">
-              <a href="https://www.engadget.com/2202875/its-a-dumb-time-to-buy-an-xbox-even-with-the-coming-price-hike/" target="_blank" rel="noopener noreferrer">
-                <img class="favicon" src="https://www.google.com/s2/favicons?domain=engadget.com&sz=32" alt="">
-                It's a dumb time to buy an Xbox, even with the coming price hike
+            <article
+              class="item"
+              data-link="https://www.theverge.com/gadgets/956830/prime-day-macbook-deals-apple-price-hikes"
+              data-title="these are the best deals you can still get on macbooks before apple&amp;#8217;s price hike kicks in"
+              data-source="the verge"
+              data-category="technology"
+            >
+              <a href="https://www.theverge.com/gadgets/956830/prime-day-macbook-deals-apple-price-hikes" target="_blank" rel="noopener noreferrer">
+                <img class="favicon" src="https://www.google.com/s2/favicons?domain=theverge.com&amp;sz=32" alt="" loading="lazy">
+                <span>These are the best deals you can still get on MacBooks before Apple&amp;#8217;s price hike kicks in</span>
               </a>
-              <div class="meta">
+              <p class="meta">
+                The Verge
+                
+                · Jun 26, 21:49 UTC
+              </p>
+            </article>
+          
+            <article
+              class="item"
+              data-link="https://www.theverge.com/gadgets/951901/prime-day-video-games-switch-playstation-xbox-pc-deal-sale"
+              data-title="our 36 favorite gaming deals on prime day for switch, ps5, and xbox"
+              data-source="the verge"
+              data-category="technology"
+            >
+              <a href="https://www.theverge.com/gadgets/951901/prime-day-video-games-switch-playstation-xbox-pc-deal-sale" target="_blank" rel="noopener noreferrer">
+                <img class="favicon" src="https://www.google.com/s2/favicons?domain=theverge.com&amp;sz=32" alt="" loading="lazy">
+                <span>Our 36 favorite gaming deals on Prime Day for Switch, PS5, and Xbox</span>
+              </a>
+              <p class="meta">
+                The Verge
+                
+                · Jun 26, 21:49 UTC
+              </p>
+            </article>
+          
+            <article
+              class="item"
+              data-link="https://www.theverge.com/report/957948/world-cup-us-visa-policies-trump"
+              data-title="the beautiful shame"
+              data-source="the verge"
+              data-category="technology"
+            >
+              <a href="https://www.theverge.com/report/957948/world-cup-us-visa-policies-trump" target="_blank" rel="noopener noreferrer">
+                <img class="favicon" src="https://www.google.com/s2/favicons?domain=theverge.com&amp;sz=32" alt="" loading="lazy">
+                <span>The beautiful shame</span>
+              </a>
+              <p class="meta">
+                The Verge
+                
+                · Jun 26, 21:49 UTC
+              </p>
+            </article>
+          
+            <article
+              class="item"
+              data-link="https://www.theverge.com/gadgets/957791/birdbuddy-pro-solar-prime-day-deal-sale"
+              data-title="this video bird feeder is the surprise hit of prime day"
+              data-source="the verge"
+              data-category="technology"
+            >
+              <a href="https://www.theverge.com/gadgets/957791/birdbuddy-pro-solar-prime-day-deal-sale" target="_blank" rel="noopener noreferrer">
+                <img class="favicon" src="https://www.google.com/s2/favicons?domain=theverge.com&amp;sz=32" alt="" loading="lazy">
+                <span>This video bird feeder is the surprise hit of Prime Day</span>
+              </a>
+              <p class="meta">
+                The Verge
+                
+                · Jun 26, 21:49 UTC
+              </p>
+            </article>
+          
+            <article
+              class="item"
+              data-link="https://www.theverge.com/ai-artificial-intelligence/957845/openai-gpt-5-6-trump-administration-ai-preview"
+              data-title="openai unveils gpt-5.6 amid us ai regulatory drama"
+              data-source="the verge"
+              data-category="technology"
+            >
+              <a href="https://www.theverge.com/ai-artificial-intelligence/957845/openai-gpt-5-6-trump-administration-ai-preview" target="_blank" rel="noopener noreferrer">
+                <img class="favicon" src="https://www.google.com/s2/favicons?domain=theverge.com&amp;sz=32" alt="" loading="lazy">
+                <span>OpenAI unveils GPT-5.6 amid US AI regulatory drama</span>
+              </a>
+              <p class="meta">
+                The Verge
+                
+                · Jun 26, 21:49 UTC
+              </p>
+            </article>
+          
+            <article
+              class="item"
+              data-link="https://www.engadget.com/2202875/its-a-dumb-time-to-buy-an-xbox-even-with-the-coming-price-hike/"
+              data-title="it&#39;s a dumb time to buy an xbox, even with the coming price hike"
+              data-source="engadget"
+              data-category="technology"
+            >
+              <a href="https://www.engadget.com/2202875/its-a-dumb-time-to-buy-an-xbox-even-with-the-coming-price-hike/" target="_blank" rel="noopener noreferrer">
+                <img class="favicon" src="https://www.google.com/s2/favicons?domain=engadget.com&amp;sz=32" alt="" loading="lazy">
+                <span>It&#39;s a dumb time to buy an Xbox, even with the coming price hike</span>
+              </a>
+              <p class="meta">
                 Engadget
                 
                 · Jun 26, 19:42 UTC
-              </div>
-            </div>
+              </p>
+            </article>
           
-            <div class="item" data-link="https://www.engadget.com/2201922/do-phone-chargers-use-electricity-when-not-plugged-in/" data-title="is your phone charger wasting electricity when it's not charging?" data-source="engadget" data-category="technology">
+            <article
+              class="item"
+              data-link="https://www.engadget.com/2201922/do-phone-chargers-use-electricity-when-not-plugged-in/"
+              data-title="is your phone charger wasting electricity when it&#39;s not charging?"
+              data-source="engadget"
+              data-category="technology"
+            >
               <a href="https://www.engadget.com/2201922/do-phone-chargers-use-electricity-when-not-plugged-in/" target="_blank" rel="noopener noreferrer">
-                <img class="favicon" src="https://www.google.com/s2/favicons?domain=engadget.com&sz=32" alt="">
-                Is your phone charger wasting electricity when it's not charging?
+                <img class="favicon" src="https://www.google.com/s2/favicons?domain=engadget.com&amp;sz=32" alt="" loading="lazy">
+                <span>Is your phone charger wasting electricity when it&#39;s not charging?</span>
               </a>
-              <div class="meta">
+              <p class="meta">
                 Engadget
                 
                 · Jun 26, 18:30 UTC
-              </div>
-            </div>
+              </p>
+            </article>
           
-            <div class="item" data-link="https://www.engadget.com/2202726/foldables-watches-and-glasses-could-be-on-the-way/" data-title="what to expect at the next samsung galaxy unpacked" data-source="engadget" data-category="technology">
+            <article
+              class="item"
+              data-link="https://www.engadget.com/2202726/foldables-watches-and-glasses-could-be-on-the-way/"
+              data-title="what to expect at the next samsung galaxy unpacked"
+              data-source="engadget"
+              data-category="technology"
+            >
               <a href="https://www.engadget.com/2202726/foldables-watches-and-glasses-could-be-on-the-way/" target="_blank" rel="noopener noreferrer">
-                <img class="favicon" src="https://www.google.com/s2/favicons?domain=engadget.com&sz=32" alt="">
-                What to expect at the next Samsung Galaxy Unpacked
+                <img class="favicon" src="https://www.google.com/s2/favicons?domain=engadget.com&amp;sz=32" alt="" loading="lazy">
+                <span>What to expect at the next Samsung Galaxy Unpacked</span>
               </a>
-              <div class="meta">
+              <p class="meta">
                 Engadget
                 
                 · Jun 26, 18:14 UTC
-              </div>
-            </div>
+              </p>
+            </article>
           
-            <div class="item" data-link="https://www.engadget.com/2202497/samsung-will-start-charging-for-smartthings-api-access/" data-title="samsung will start charging for smartthings api access" data-source="engadget" data-category="technology">
+            <article
+              class="item"
+              data-link="https://www.engadget.com/2202497/samsung-will-start-charging-for-smartthings-api-access/"
+              data-title="samsung will start charging for smartthings api access"
+              data-source="engadget"
+              data-category="technology"
+            >
               <a href="https://www.engadget.com/2202497/samsung-will-start-charging-for-smartthings-api-access/" target="_blank" rel="noopener noreferrer">
-                <img class="favicon" src="https://www.google.com/s2/favicons?domain=engadget.com&sz=32" alt="">
-                Samsung will start charging for SmartThings API access
+                <img class="favicon" src="https://www.google.com/s2/favicons?domain=engadget.com&amp;sz=32" alt="" loading="lazy">
+                <span>Samsung will start charging for SmartThings API access</span>
               </a>
-              <div class="meta">
+              <p class="meta">
                 Engadget
                 
                 · Jun 26, 15:36 UTC
-              </div>
-            </div>
+              </p>
+            </article>
           
-            <div class="item" data-link="https://www.engadget.com/2201195/solar-maximum-tech-damage-space-weather/" data-title="not all tech survives solar storms, here's what's most at risk" data-source="engadget" data-category="technology">
+            <article
+              class="item"
+              data-link="https://www.engadget.com/2201195/solar-maximum-tech-damage-space-weather/"
+              data-title="not all tech survives solar storms, here&#39;s what&#39;s most at risk"
+              data-source="engadget"
+              data-category="technology"
+            >
               <a href="https://www.engadget.com/2201195/solar-maximum-tech-damage-space-weather/" target="_blank" rel="noopener noreferrer">
-                <img class="favicon" src="https://www.google.com/s2/favicons?domain=engadget.com&sz=32" alt="">
-                Not all tech survives solar storms, here's what's most at risk
+                <img class="favicon" src="https://www.google.com/s2/favicons?domain=engadget.com&amp;sz=32" alt="" loading="lazy">
+                <span>Not all tech survives solar storms, here&#39;s what&#39;s most at risk</span>
               </a>
-              <div class="meta">
+              <p class="meta">
                 Engadget
                 
                 · Jun 26, 13:30 UTC
-              </div>
-            </div>
+              </p>
+            </article>
           
-            <div class="item" data-link="https://www.engadget.com/2202288/volkswagen-reportedly-plans-to-cut-100000-jobs/" data-title="volkswagen reportedly plans to cut 100,000 jobs" data-source="engadget" data-category="technology">
+            <article
+              class="item"
+              data-link="https://www.engadget.com/2202288/volkswagen-reportedly-plans-to-cut-100000-jobs/"
+              data-title="volkswagen reportedly plans to cut 100,000 jobs"
+              data-source="engadget"
+              data-category="technology"
+            >
               <a href="https://www.engadget.com/2202288/volkswagen-reportedly-plans-to-cut-100000-jobs/" target="_blank" rel="noopener noreferrer">
-                <img class="favicon" src="https://www.google.com/s2/favicons?domain=engadget.com&sz=32" alt="">
-                Volkswagen reportedly plans to cut 100,000 jobs
+                <img class="favicon" src="https://www.google.com/s2/favicons?domain=engadget.com&amp;sz=32" alt="" loading="lazy">
+                <span>Volkswagen reportedly plans to cut 100,000 jobs</span>
               </a>
-              <div class="meta">
+              <p class="meta">
                 Engadget
                 
                 · Jun 26, 13:08 UTC
-              </div>
-            </div>
+              </p>
+            </article>
           
-            <div class="item" data-link="https://www.engadget.com/2202255/australia-social-media-ban-still-not-effective/" data-title="australia's social media ban may not be that effective, study finds" data-source="engadget" data-category="technology">
+            <article
+              class="item"
+              data-link="https://www.engadget.com/2202255/australia-social-media-ban-still-not-effective/"
+              data-title="australia&#39;s social media ban may not be that effective, study finds"
+              data-source="engadget"
+              data-category="technology"
+            >
               <a href="https://www.engadget.com/2202255/australia-social-media-ban-still-not-effective/" target="_blank" rel="noopener noreferrer">
-                <img class="favicon" src="https://www.google.com/s2/favicons?domain=engadget.com&sz=32" alt="">
-                Australia's social media ban may not be that effective, study finds
+                <img class="favicon" src="https://www.google.com/s2/favicons?domain=engadget.com&amp;sz=32" alt="" loading="lazy">
+                <span>Australia&#39;s social media ban may not be that effective, study finds</span>
               </a>
-              <div class="meta">
+              <p class="meta">
                 Engadget
                 
                 · Jun 26, 12:01 UTC
-              </div>
-            </div>
-          
-            <div class="item" data-link="https://www.engadget.com/2202230/prices-rocket-up-on-xboxes-macbooks-ipads-and-more/" data-title="the morning after: prices rocket up on xboxes, macbooks, ipads and more" data-source="engadget" data-category="technology">
-              <a href="https://www.engadget.com/2202230/prices-rocket-up-on-xboxes-macbooks-ipads-and-more/" target="_blank" rel="noopener noreferrer">
-                <img class="favicon" src="https://www.google.com/s2/favicons?domain=engadget.com&sz=32" alt="">
-                The Morning After: Prices rocket up on Xboxes, MacBooks, iPads and more
-              </a>
-              <div class="meta">
-                Engadget
-                
-                · Jun 26, 11:30 UTC
-              </div>
-            </div>
-          
-            <div class="item" data-link="https://www.engadget.com/2202239/nasa-tess-cotton-candy-planet-discovery/" data-title="nasa's tess spacecraft finds two 'cotton candy' planets in one system" data-source="engadget" data-category="technology">
-              <a href="https://www.engadget.com/2202239/nasa-tess-cotton-candy-planet-discovery/" target="_blank" rel="noopener noreferrer">
-                <img class="favicon" src="https://www.google.com/s2/favicons?domain=engadget.com&sz=32" alt="">
-                NASA's TESS spacecraft finds two 'cotton candy' planets in one system
-              </a>
-              <div class="meta">
-                Engadget
-                
-                · Jun 26, 11:09 UTC
-              </div>
-            </div>
-          
-            <div class="item" data-link="https://www.engadget.com/2202234/careless-people-sarah-wynn-wiliams-sues-meta/" data-title="'careless people' author accuses meta of 'punishing' whistleblower" data-source="engadget" data-category="technology">
-              <a href="https://www.engadget.com/2202234/careless-people-sarah-wynn-wiliams-sues-meta/" target="_blank" rel="noopener noreferrer">
-                <img class="favicon" src="https://www.google.com/s2/favicons?domain=engadget.com&sz=32" alt="">
-                'Careless People' author accuses Meta of 'punishing' whistleblower
-              </a>
-              <div class="meta">
-                Engadget
-                
-                · Jun 26, 10:19 UTC
-              </div>
-            </div>
-          
-            <div class="item" data-link="https://www.engadget.com/2202231/californa-launches-ai-job-loss-tracker/" data-title="california launches tracker for ai-related job losses" data-source="engadget" data-category="technology">
-              <a href="https://www.engadget.com/2202231/californa-launches-ai-job-loss-tracker/" target="_blank" rel="noopener noreferrer">
-                <img class="favicon" src="https://www.google.com/s2/favicons?domain=engadget.com&sz=32" alt="">
-                California launches tracker for AI-related job losses
-              </a>
-              <div class="meta">
-                Engadget
-                
-                · Jun 26, 09:56 UTC
-              </div>
-            </div>
-          
-            <div class="item" data-link="https://www.engadget.com/2202221/youtube-shorts-nixes-dislikes-adds-double-playback-speed/" data-title="youtube shorts nixes 'dislikes' and lets you double the playback speed" data-source="engadget" data-category="technology">
-              <a href="https://www.engadget.com/2202221/youtube-shorts-nixes-dislikes-adds-double-playback-speed/" target="_blank" rel="noopener noreferrer">
-                <img class="favicon" src="https://www.google.com/s2/favicons?domain=engadget.com&sz=32" alt="">
-                YouTube Shorts nixes 'dislikes' and lets you double the playback speed
-              </a>
-              <div class="meta">
-                Engadget
-                
-                · Jun 26, 08:46 UTC
-              </div>
-            </div>
-          
-            <div class="item" data-link="https://www.engadget.com/2202129/openai-will-initially-only-release-chatgpt-5-6-to-government-approved-customers/" data-title="openai will initially only release chatgpt 5.6 to government-approved customers" data-source="engadget" data-category="technology">
-              <a href="https://www.engadget.com/2202129/openai-will-initially-only-release-chatgpt-5-6-to-government-approved-customers/" target="_blank" rel="noopener noreferrer">
-                <img class="favicon" src="https://www.google.com/s2/favicons?domain=engadget.com&sz=32" alt="">
-                OpenAI will initially only release ChatGPT 5.6 to government-approved customers
-              </a>
-              <div class="meta">
-                Engadget
-                
-                · Jun 25, 22:48 UTC
-              </div>
-            </div>
-          
-            <div class="item" data-link="https://www.engadget.com/2202099/the-most-popular-grok-feature-is-apparently-exactly-what-you-think/" data-title="the most popular grok feature is, apparently, exactly what you think" data-source="engadget" data-category="technology">
-              <a href="https://www.engadget.com/2202099/the-most-popular-grok-feature-is-apparently-exactly-what-you-think/" target="_blank" rel="noopener noreferrer">
-                <img class="favicon" src="https://www.google.com/s2/favicons?domain=engadget.com&sz=32" alt="">
-                The most popular Grok feature is, apparently, exactly what you think
-              </a>
-              <div class="meta">
-                Engadget
-                
-                · Jun 25, 21:57 UTC
-              </div>
-            </div>
-          
-            <div class="item" data-link="https://www.engadget.com/2202085/commodore-has-dropped-the-price-of-its-retro-phone-by-100-ahead-of-preorders/" data-title="commodore has dropped the price of its retro phone by $100 ahead of preorders" data-source="engadget" data-category="technology">
-              <a href="https://www.engadget.com/2202085/commodore-has-dropped-the-price-of-its-retro-phone-by-100-ahead-of-preorders/" target="_blank" rel="noopener noreferrer">
-                <img class="favicon" src="https://www.google.com/s2/favicons?domain=engadget.com&sz=32" alt="">
-                Commodore has dropped the price of its retro phone by $100 ahead of preorders
-              </a>
-              <div class="meta">
-                Engadget
-                
-                · Jun 25, 21:34 UTC
-              </div>
-            </div>
-          
-            <div class="item" data-link="https://www.engadget.com/2201940/notion-mail-is-shutting-down/" data-title="notion mail is shutting down" data-source="engadget" data-category="technology">
-              <a href="https://www.engadget.com/2201940/notion-mail-is-shutting-down/" target="_blank" rel="noopener noreferrer">
-                <img class="favicon" src="https://www.google.com/s2/favicons?domain=engadget.com&sz=32" alt="">
-                Notion Mail is shutting down
-              </a>
-              <div class="meta">
-                Engadget
-                
-                · Jun 25, 19:41 UTC
-              </div>
-            </div>
-          
-            <div class="item" data-link="https://www.engadget.com/2201931/spain-will-require-carriers-to-keep-mobile-networks-live-during-power-outages/" data-title="spain will require carriers to keep mobile networks live during power outages" data-source="engadget" data-category="technology">
-              <a href="https://www.engadget.com/2201931/spain-will-require-carriers-to-keep-mobile-networks-live-during-power-outages/" target="_blank" rel="noopener noreferrer">
-                <img class="favicon" src="https://www.google.com/s2/favicons?domain=engadget.com&sz=32" alt="">
-                Spain will require carriers to keep mobile networks live during power outages
-              </a>
-              <div class="meta">
-                Engadget
-                
-                · Jun 25, 19:33 UTC
-              </div>
-            </div>
-          
-            <div class="item" data-link="https://www.engadget.com/2201905/polestar-wont-be-able-to-sell-its-cars-in-the-us-next-year/" data-title="polestar won't be able to sell its cars in the us next year" data-source="engadget" data-category="technology">
-              <a href="https://www.engadget.com/2201905/polestar-wont-be-able-to-sell-its-cars-in-the-us-next-year/" target="_blank" rel="noopener noreferrer">
-                <img class="favicon" src="https://www.google.com/s2/favicons?domain=engadget.com&sz=32" alt="">
-                Polestar won't be able to sell its cars in the US next year
-              </a>
-              <div class="meta">
-                Engadget
-                
-                · Jun 25, 19:07 UTC
-              </div>
-            </div>
-          
-            <div class="item" data-link="https://www.engadget.com/2201878/retroids-pocket-nova-is-a-very-capable-43-handheld-that-costs-dollar229/" data-title="retroid's pocket nova is a very capable 4:3 handheld that costs $229" data-source="engadget" data-category="technology">
-              <a href="https://www.engadget.com/2201878/retroids-pocket-nova-is-a-very-capable-43-handheld-that-costs-dollar229/" target="_blank" rel="noopener noreferrer">
-                <img class="favicon" src="https://www.google.com/s2/favicons?domain=engadget.com&sz=32" alt="">
-                Retroid's Pocket Nova is a very capable 4:3 handheld that costs $229
-              </a>
-              <div class="meta">
-                Engadget
-                
-                · Jun 25, 18:51 UTC
-              </div>
-            </div>
-          
-            <div class="item" data-link="https://www.engadget.com/2201848/its-time-to-make-do-and-mend/" data-title="as everything gets more expensive, it's time to make do and mend" data-source="engadget" data-category="technology">
-              <a href="https://www.engadget.com/2201848/its-time-to-make-do-and-mend/" target="_blank" rel="noopener noreferrer">
-                <img class="favicon" src="https://www.google.com/s2/favicons?domain=engadget.com&sz=32" alt="">
-                As everything gets more expensive, it's time to make do and mend
-              </a>
-              <div class="meta">
-                Engadget
-                
-                · Jun 25, 18:31 UTC
-              </div>
-            </div>
+              </p>
+            </article>
           
         </section>
       
     </main>
 
-    <aside>
+    <aside class="sidebar" aria-labelledby="feed-status-heading">
       <div class="box">
-        <h2>Feed Status</h2>
-        
-          <div>
-            
-              <span class="status-ok">✓</span>
-            
-            Hackaday — 7
-          </div>
-        
-          <div>
-            
-              <span class="status-ok">✓</span>
-            
-            RetroRGB — 10
-          </div>
-        
-          <div>
-            
-              <span class="status-ok">✓</span>
-            
-            The Verge — 10
-          </div>
-        
-          <div>
-            
-              <span class="status-ok">✓</span>
-            
-            Engadget — 20
-          </div>
-        
+        <h2 id="feed-status-heading">Feed Status</h2>
+        <ul class="status-list">
+          
+            <li>
+              
+                <span class="status-ok" aria-label="Feed ok">✓</span>
+              
+              <span>Hackaday</span>
+              <span class="status-count">7/7</span>
+            </li>
+          
+            <li>
+              
+                <span class="status-ok" aria-label="Feed ok">✓</span>
+              
+              <span>RetroRGB</span>
+              <span class="status-count">7/10</span>
+            </li>
+          
+            <li>
+              
+                <span class="status-ok" aria-label="Feed ok">✓</span>
+              
+              <span>The Verge</span>
+              <span class="status-count">7/10</span>
+            </li>
+          
+            <li>
+              
+                <span class="status-ok" aria-label="Feed ok">✓</span>
+              
+              <span>Engadget</span>
+              <span class="status-count">7/20</span>
+            </li>
+          
+        </ul>
       </div>
 
       <div class="box">
-        <h2>Random</h2>
-        <button id="randomLink">Random Article</button>
+        <h2>JSON</h2>
+        <p><a href="feeds.json">feeds.json</a></p>
+        <p><a href="feed-status.json">feed-status.json</a></p>
       </div>
     </aside>
   </div>
 
   <footer>
-    Built from RSS. JSON: <code>feeds.json</code>.
+    Built from RSS for feedz.jetgirl.art.
   </footer>
-
-  <script>
-    const readKey = "feedz_read_links";
-    const darkKey = "feedz_dark_mode";
-
-    function getReadLinks() {
-      return JSON.parse(localStorage.getItem(readKey) || "[]");
-    }
-
-    function saveReadLinks(links) {
-      localStorage.setItem(readKey, JSON.stringify([...new Set(links)]));
-    }
-
-    function applyReadState() {
-      const readLinks = getReadLinks();
-      document.querySelectorAll(".item").forEach(item => {
-        if (readLinks.includes(item.dataset.link)) {
-          item.classList.add("read");
-        } else {
-          item.classList.remove("read");
-        }
-      });
-    }
-
-    document.querySelectorAll(".item a").forEach(link => {
-      link.addEventListener("click", () => {
-        const readLinks = getReadLinks();
-        readLinks.push(link.href);
-        saveReadLinks(readLinks);
-        applyReadState();
-      });
-    });
-
-    document.getElementById("search").addEventListener("input", e => {
-      const q = e.target.value.toLowerCase();
-
-      document.querySelectorAll(".item").forEach(item => {
-        const haystack = [
-          item.dataset.title,
-          item.dataset.source,
-          item.dataset.category
-        ].join(" ");
-
-        item.classList.toggle("hidden", !haystack.includes(q));
-      });
-    });
-
-    document.getElementById("markRead").addEventListener("click", () => {
-      const links = [...document.querySelectorAll(".item")].map(item => item.dataset.link);
-      saveReadLinks(links);
-      applyReadState();
-    });
-
-    document.getElementById("clearRead").addEventListener("click", () => {
-      localStorage.removeItem(readKey);
-      applyReadState();
-    });
-
-    document.getElementById("darkMode").addEventListener("click", () => {
-      document.body.classList.toggle("dark");
-      localStorage.setItem(darkKey, document.body.classList.contains("dark") ? "1" : "0");
-    });
-
-    if (localStorage.getItem(darkKey) === "1") {
-      document.body.classList.add("dark");
-    }
-
-    document.getElementById("randomLink").addEventListener("click", () => {
-      const links = [...document.querySelectorAll(".item a")];
-      const pick = links[Math.floor(Math.random() * links.length)];
-      if (pick) window.open(pick.href, "_blank");
-    });
-
-    applyReadState();
-  </script>
 </body>
 </html>
