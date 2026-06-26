@@ -2,18 +2,22 @@
   url: https://hackaday.com/blog/feed/
   category: DIY / Electronics
   weight: 80
+  favorite: true
 
 - name: RetroRGB
   url: https://www.retrorgb.com/feed
   category: Retro Games
-  weight: 85
+  weight: 90
+  favorite: true
 
-- name: Anime News Network
-  url: https://www.animenewsnetwork.com/all/rss.xml
-  category: Manga / Anime
+- name: The Verge
+  url: https://www.theverge.com/rss/index.xml
+  category: Technology
   weight: 70
+  favorite: false
 
-- name: BikeRumor
-  url: https://bikerumor.com/feed/
-  category: Bikes
-  weight: 65
+- name: Engadget
+  url: https://www.engadget.com/rss.xml
+  category: Technology
+  weight: 60
+  favorite: false
