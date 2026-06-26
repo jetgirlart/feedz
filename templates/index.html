@@ -85,28 +85,15 @@
       {% endfor %}
     </main>
 
-    <aside class="sidebar" aria-labelledby="feed-status-heading">
+    <aside class="sidebar" aria-labelledby="jet-links-heading">
       <div class="box">
-        <h2 id="feed-status-heading">Feed Status</h2>
-        <ul class="status-list">
-          {% for feed in feed_status %}
-            <li>
-              {% if feed.ok %}
-                <span class="status-ok" aria-label="Feed ok">✓</span>
-              {% else %}
-                <span class="status-bad" aria-label="Feed error">!</span>
-              {% endif %}
-              <span>{{ feed.name }}</span>
-              <span class="status-count">{{ feed.visible }}/{{ feed.count }}</span>
-            </li>
-          {% endfor %}
+        <h2 id="jet-links-heading">Jet Links</h2>
+        <ul class="manual-links">
+          {# Add permanent links here. Example:
+          <li><a href="https://example.com">Example Link</a></li>
+          #}
+          <li><a href="https://jetgirl.art">jetgirl.art</a></li>
         </ul>
-      </div>
-
-      <div class="box">
-        <h2>JSON</h2>
-        <p><a href="feeds.json">feeds.json</a></p>
-        <p><a href="feed-status.json">feed-status.json</a></p>
       </div>
     </aside>
   </div>

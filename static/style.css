@@ -204,34 +204,12 @@ a:focus-visible {
   margin: 8px 0;
 }
 
-.status-list {
+.manual-links {
   display: grid;
   gap: 6px;
   margin: 0;
   padding: 0;
   list-style: none;
-}
-
-.status-list li {
-  display: grid;
-  grid-template-columns: auto 1fr auto;
-  gap: 6px;
-  align-items: baseline;
-}
-
-.status-ok {
-  color: green;
-  font-weight: bold;
-}
-
-.status-bad {
-  color: crimson;
-  font-weight: bold;
-}
-
-.status-count {
-  color: var(--muted);
-  font-size: 11px;
 }
 
 footer {
