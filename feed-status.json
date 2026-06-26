@@ -7,7 +7,7 @@
     "count": 7,
     "visible": 3,
     "max_items": 3,
-    "max_age_days": 14,
+    "max_age_days": 3,
     "favorite": false
   },
   {
@@ -18,7 +18,7 @@
     "count": 20,
     "visible": 5,
     "max_items": 5,
-    "max_age_days": 14,
+    "max_age_days": 7,
     "favorite": true
   },
   {
@@ -29,7 +29,7 @@
     "count": 15,
     "visible": 3,
     "max_items": 3,
-    "max_age_days": 14,
+    "max_age_days": 15,
     "favorite": false
   },
   {
@@ -40,7 +40,7 @@
     "count": 30,
     "visible": 5,
     "max_items": 5,
-    "max_age_days": 14,
+    "max_age_days": 3,
     "favorite": true
   },
   {
@@ -51,7 +51,7 @@
     "count": 15,
     "visible": 3,
     "max_items": 3,
-    "max_age_days": 14,
+    "max_age_days": 30,
     "favorite": true
   },
   {
@@ -62,7 +62,7 @@
     "count": 15,
     "visible": 3,
     "max_items": 3,
-    "max_age_days": 14,
+    "max_age_days": 5,
     "favorite": true
   },
   {
@@ -73,7 +73,7 @@
     "count": 15,
     "visible": 3,
     "max_items": 3,
-    "max_age_days": 14,
+    "max_age_days": 30,
     "favorite": true
   },
   {
@@ -84,7 +84,7 @@
     "count": 15,
     "visible": 3,
     "max_items": 3,
-    "max_age_days": 14,
+    "max_age_days": 30,
     "favorite": true
   },
   {
@@ -95,7 +95,7 @@
     "count": 15,
     "visible": 3,
     "max_items": 3,
-    "max_age_days": 14,
+    "max_age_days": 15,
     "favorite": true
   },
   {
@@ -106,7 +106,7 @@
     "count": 15,
     "visible": 3,
     "max_items": 3,
-    "max_age_days": 14,
+    "max_age_days": 7,
     "favorite": true
   }
 ]
