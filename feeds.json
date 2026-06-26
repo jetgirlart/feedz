@@ -5,7 +5,9 @@
     "source": "Hackaday",
     "category": "DIY / Electronics",
     "date": "2026-06-26T20:00:54+00:00",
-    "score": 78.64
+    "score": 103.57,
+    "favicon": "https://www.google.com/s2/favicons?domain=hackaday.com&sz=32",
+    "favorite": true
   },
   {
     "title": "Reflective LCD Slabtop Terminal Runs Homebrewed Solar OS",
@@ -13,7 +15,9 @@
     "source": "Hackaday",
     "category": "DIY / Electronics",
     "date": "2026-06-26T18:30:02+00:00",
-    "score": 77.12
+    "score": 102.06,
+    "favicon": "https://www.google.com/s2/favicons?domain=hackaday.com&sz=32",
+    "favorite": true
   },
   {
     "title": "Hackaday Podcast Episode 375: Rebuilding Tech on Our Terms and the Hero Nerd",
@@ -21,7 +25,9 @@
     "source": "Hackaday",
     "category": "DIY / Electronics",
     "date": "2026-06-26T17:00:01+00:00",
-    "score": 75.62
+    "score": 100.56,
+    "favicon": "https://www.google.com/s2/favicons?domain=hackaday.com&sz=32",
+    "favorite": true
   },
   {
     "title": "A GUI Solution For ESP32 Web Development",
@@ -29,7 +35,9 @@
     "source": "Hackaday",
     "category": "DIY / Electronics",
     "date": "2026-06-26T15:30:54+00:00",
-    "score": 74.14
+    "score": 99.07,
+    "favicon": "https://www.google.com/s2/favicons?domain=hackaday.com&sz=32",
+    "favorite": true
   },
   {
     "title": "This Week in Security: Stealing Email with AI, AMD Nerfs Chips, the World Cup Nearly Rickrolled, and GPSD Bugs",
@@ -37,7 +45,9 @@
     "source": "Hackaday",
     "category": "DIY / Electronics",
     "date": "2026-06-26T14:00:30+00:00",
-    "score": 72.63
+    "score": 97.57,
+    "favicon": "https://www.google.com/s2/favicons?domain=hackaday.com&sz=32",
+    "favorite": true
   },
   {
     "title": "Alan Turing\u2019s Remarkable, Nearly-Forgotten Voice Encryption Device",
@@ -45,23 +55,9 @@
     "source": "Hackaday",
     "category": "DIY / Electronics",
     "date": "2026-06-26T11:00:47+00:00",
-    "score": 69.64
-  },
-  {
-    "title": "The Summer 2026 Anime Trailer Watch Party Premieres Monday!",
-    "link": "https://www.animenewsnetwork.com/watch/2026-06-24/the-summer-2026-anime-trailer-party-premieres-monday/.238902",
-    "source": "Anime News Network",
-    "category": "Manga / Anime",
-    "date": "2026-06-26T20:30:00+00:00",
-    "score": 69.12
-  },
-  {
-    "title": "Rent-A-Girlfriend Anime Gets 6th Season",
-    "link": "https://www.animenewsnetwork.com/news/2026-06-26/rent-a-girlfriend-anime-gets-6th-season/.238997",
-    "source": "Anime News Network",
-    "category": "Manga / Anime",
-    "date": "2026-06-26T18:15:16+00:00",
-    "score": 66.88
+    "score": 94.57,
+    "favicon": "https://www.google.com/s2/favicons?domain=hackaday.com&sz=32",
+    "favorite": true
   },
   {
     "title": "This Kid-Friendly Laptop Build is The Antidote to Age Verification",
@@ -69,191 +65,9 @@
     "source": "Hackaday",
     "category": "DIY / Electronics",
     "date": "2026-06-26T08:00:13+00:00",
-    "score": 66.63
-  },
-  {
-    "title": "Eleceed TV Anime Reveals Key Visual, Delayed 2027 Debut",
-    "link": "https://www.animenewsnetwork.com/news/2026-06-26/eleceed-tv-anime-reveals-key-visual-delayed-2027-debut/.238996",
-    "source": "Anime News Network",
-    "category": "Manga / Anime",
-    "date": "2026-06-26T17:20:42+00:00",
-    "score": 65.97
-  },
-  {
-    "title": "Perfect Addiction 'Light Anime' Debuts on July 8",
-    "link": "https://www.animenewsnetwork.com/daily-briefs/2026-06-26/perfect-addiction-light-anime-debuts-on-july-8/.238991",
-    "source": "Anime News Network",
-    "category": "Manga / Anime",
-    "date": "2026-06-26T16:53:14+00:00",
-    "score": 65.51
-  },
-  {
-    "title": "Splatoon Raiders Is Looking To Be A Great Single Player Experiance",
-    "link": "https://www.animenewsnetwork.com/feature/2026-06-26/splatoon-raiders-is-looking-to-be-a-great-single-player-experiance/.238995",
-    "source": "Anime News Network",
-    "category": "Manga / Anime",
-    "date": "2026-06-26T16:46:15+00:00",
-    "score": 65.39
-  },
-  {
-    "title": "New Hokuto no Ken -Fist of the North Star- Anime's 2nd Part Premieres in 2027",
-    "link": "https://www.animenewsnetwork.com/news/2026-06-26/new-hokuto-no-ken-fist-of-the-north-star-anime-2nd-part-premieres-in-2027/.238994",
-    "source": "Anime News Network",
-    "category": "Manga / Anime",
-    "date": "2026-06-26T16:39:23+00:00",
-    "score": 65.28
-  },
-  {
-    "title": "Record of Ragnarok Anime Gets 4th Season",
-    "link": "https://www.animenewsnetwork.com/news/2026-06-26/record-of-ragnarok-anime-gets-4th-season/.238993",
-    "source": "Anime News Network",
-    "category": "Manga / Anime",
-    "date": "2026-06-26T16:31:00+00:00",
-    "score": 65.14
-  },
-  {
-    "title": "Snowball Earth Anime Gets 2nd Season",
-    "link": "https://www.animenewsnetwork.com/news/2026-06-26/snowball-earth-anime-gets-2nd-season/.238992",
-    "source": "Anime News Network",
-    "category": "Manga / Anime",
-    "date": "2026-06-26T16:09:26+00:00",
-    "score": 64.78
-  },
-  {
-    "title": "Your Anime Rankings - Best of Spring 2026, June 17-23",
-    "link": "https://www.animenewsnetwork.com/weekly-ranking/2026/spring/.238989",
-    "source": "Anime News Network",
-    "category": "Manga / Anime",
-    "date": "2026-06-26T16:00:00+00:00",
-    "score": 64.62
-  },
-  {
-    "title": "The Salty Koharu Has a Soft Spot for Me Anime's Promo Video Reveals Cast, October Premiere",
-    "link": "https://www.animenewsnetwork.com/news/2026-06-26/the-salty-koharu-has-a-soft-spot-for-me-anime-promo-video-reveals-cast-october-premiere/.238986",
-    "source": "Anime News Network",
-    "category": "Manga / Anime",
-    "date": "2026-06-26T15:42:12+00:00",
-    "score": 64.33
-  },
-  {
-    "title": "Bandai Namco Announces 'Tekken! Cartoon' Project With Trailer",
-    "link": "https://www.animenewsnetwork.com/news/2026-06-26/bandai-namco-announces-tekken-cartoon-project-with-trailer/.238988",
-    "source": "Anime News Network",
-    "category": "Manga / Anime",
-    "date": "2026-06-26T14:55:50+00:00",
-    "score": 63.55
-  },
-  {
-    "title": "Webtoon Lumine to Receive Animated Series From Webtoon Productions, OuiDo! Productions",
-    "link": "https://www.animenewsnetwork.com/news/2026-06-26/webtoon-lumine-to-receive-animated-series-from-webtoon-productions-ouido-productions/.238971",
-    "source": "Anime News Network",
-    "category": "Manga / Anime",
-    "date": "2026-06-26T14:15:00+00:00",
-    "score": 62.87
-  },
-  {
-    "title": "This Week in Games - A Very 35th Birthday for Sonic The Hedgehog",
-    "link": "https://www.animenewsnetwork.com/this-week-in-games/2026-06-26/a-very-35th-birthday-for-sonic-the-hedgehog/.238865",
-    "source": "Anime News Network",
-    "category": "Manga / Anime",
-    "date": "2026-06-26T14:00:00+00:00",
-    "score": 62.62
-  },
-  {
-    "title": "Wolf Tooth Launches More Affordable Performance Series CTRL and Waveform Pedals",
-    "link": "https://bikerumor.com/wolf-tooth-launches-more-affordable-performance-series-ctrl-and-waveform-pedals/",
-    "source": "BikeRumor",
-    "category": "Bikes",
-    "date": "2026-06-26T18:57:35+00:00",
-    "score": 62.58
-  },
-  {
-    "title": "Dr. STONE SCIENCE FUTURE \u2012 Episode 37",
-    "link": "https://www.animenewsnetwork.com/review/dr-stone-science-future/episode-37/.238984",
-    "source": "Anime News Network",
-    "category": "Manga / Anime",
-    "date": "2026-06-26T13:30:00+00:00",
-    "score": 62.12
-  },
-  {
-    "title": "New Studio Intelligent Animation to Adapt 2 Tapas Webtoons Into Animated Series",
-    "link": "https://www.animenewsnetwork.com/news/2026-06-26/new-studio-intelligent-animation-to-adapt-2-tapas-webtoons-into-animated-series/.238973",
-    "source": "Anime News Network",
-    "category": "Manga / Anime",
-    "date": "2026-06-26T13:15:00+00:00",
-    "score": 61.87
-  },
-  {
-    "title": "The Worst Anime of Spring 2026",
-    "link": "https://www.animenewsnetwork.com/seasonal/2026/spring/.237623",
-    "source": "Anime News Network",
-    "category": "Manga / Anime",
-    "date": "2026-06-26T13:00:00+00:00",
-    "score": 61.62
-  },
-  {
-    "title": "The Warrior Princess and the Barbaric King \u2012 Episodes 11-12",
-    "link": "https://www.animenewsnetwork.com/review/the-warrior-princess-and-the-barbaric-king/episodes-11-12/.238942",
-    "source": "Anime News Network",
-    "category": "Manga / Anime",
-    "date": "2026-06-26T12:30:00+00:00",
-    "score": 61.12
-  },
-  {
-    "title": "Toei's Eterna Animation Brand Streams Trailer for Foxing: Kitsun\u00e9-tsuki Anime",
-    "link": "https://www.animenewsnetwork.com/news/2026-06-26/toei-eterna-animation-brand-streams-trailer-for-foxing-kitsune-tsuki-anime/.238981",
-    "source": "Anime News Network",
-    "category": "Manga / Anime",
-    "date": "2026-06-26T11:41:32+00:00",
-    "score": 60.32
-  },
-  {
-    "title": "Magical Explorer Anime Casts M.A.O as Nanami",
-    "link": "https://www.animenewsnetwork.com/news/2026-06-26/magical-explorer-anime-casts-m.a.o-as-nanami/.238980",
-    "source": "Anime News Network",
-    "category": "Manga / Anime",
-    "date": "2026-06-26T11:17:46+00:00",
-    "score": 59.92
-  },
-  {
-    "title": "Massive Hope EVO V6 Ti Brakes Get Mono Edition Celebrating 20 Years, Plus New Slotted Rotors",
-    "link": "https://bikerumor.com/hope-evo-v6ti-brakes-t-slotted-vented-mtb-brake-rotor/",
-    "source": "BikeRumor",
-    "category": "Bikes",
-    "date": "2026-06-26T15:41:46+00:00",
-    "score": 59.32
-  },
-  {
-    "title": "Sekiro: No Defeat Anime Reveals Theatrical Trailer",
-    "link": "https://www.animenewsnetwork.com/news/2026-06-26/sekiro-no-defeat-anime-reveals-theatrical-trailer/.238978",
-    "source": "Anime News Network",
-    "category": "Manga / Anime",
-    "date": "2026-06-26T10:04:45+00:00",
-    "score": 58.7
-  },
-  {
-    "title": "PNW Components Get High with New Range High Rise Handlebar",
-    "link": "https://bikerumor.com/pnw-components-get-high-with-new-range-high-rise-handlebar/",
-    "source": "BikeRumor",
-    "category": "Bikes",
-    "date": "2026-06-26T13:01:00+00:00",
-    "score": 56.64
-  },
-  {
-    "title": "Giveaway! Win 1 of 3 Pairs of LOOK X-Series Gravel Pedals!",
-    "link": "https://bikerumor.com/look-x-series-gravel-pedal-giveaway/",
-    "source": "BikeRumor",
-    "category": "Bikes",
-    "date": "2026-06-26T12:00:00+00:00",
-    "score": 55.62
-  },
-  {
-    "title": "Ritchey Streamlines Premium Carbon Bike Bits Under SuperLogic Name",
-    "link": "https://bikerumor.com/ritchey-streamlines-premium-carbon-bike-bits-under-superlogic-name/",
-    "source": "BikeRumor",
-    "category": "Bikes",
-    "date": "2026-06-26T11:41:00+00:00",
-    "score": 55.31
+    "score": 91.56,
+    "favicon": "https://www.google.com/s2/favicons?domain=hackaday.com&sz=32",
+    "favorite": true
   },
   {
     "title": "GG Aleste 3 \u2013 Game Gear to SMS Patch",
@@ -261,47 +75,119 @@
     "source": "RetroRGB",
     "category": "Retro Games",
     "date": "2026-06-25T13:19:29+00:00",
-    "score": 52.95
+    "score": 82.88,
+    "favicon": "https://www.google.com/s2/favicons?domain=retrorgb.com&sz=32",
+    "favorite": true
   },
   {
-    "title": "KS Wants You to Rage Harder with the Updated Rage-i 2.0 Dropper Post",
-    "link": "https://bikerumor.com/ks-wants-you-to-rage-harder-with-the-updated-rage-i-2-0-dropper-post/",
-    "source": "BikeRumor",
-    "category": "Bikes",
-    "date": "2026-06-26T07:00:00+00:00",
-    "score": 50.62
+    "title": "Xreal\u2019s best USB-C smart glasses are $50 off, but not for long",
+    "link": "https://www.theverge.com/gadgets/952261/xreal-one-pro-1s-smart-glasses-deal-sale",
+    "source": "The Verge",
+    "category": "Technology",
+    "date": "2026-06-26T21:26:36.569906+00:00",
+    "score": 70.0,
+    "favicon": "https://www.google.com/s2/favicons?domain=theverge.com&sz=32",
+    "favorite": false
   },
   {
-    "title": "Intend Elevator Dropper Post Drops Soon, As Their Most Affordable Moving Part Yet!",
-    "link": "https://bikerumor.com/intend-elevator-dropper-post-drops-soon-as-their-most-affordable-moving-part-yet/",
-    "source": "BikeRumor",
-    "category": "Bikes",
-    "date": "2026-06-26T05:45:00+00:00",
-    "score": 49.37
+    "title": "The 16 best robot vacuum deals you can still get before Prime Day ends",
+    "link": "https://www.theverge.com/gadgets/951081/robot-vacuum-mop-deals-amazon-prime-day-2026",
+    "source": "The Verge",
+    "category": "Technology",
+    "date": "2026-06-26T21:26:36.569901+00:00",
+    "score": 70.0,
+    "favicon": "https://www.google.com/s2/favicons?domain=theverge.com&sz=32",
+    "favorite": false
   },
   {
-    "title": "Ergon at Eurobike: New Handlebar Tapes, MTB Grips, and Another Bike Fit Tool",
-    "link": "https://bikerumor.com/ergon-at-eurobike-new-handlebar-tapes-mtb-grips-and-another-bike-fit-tool/",
-    "source": "BikeRumor",
-    "category": "Bikes",
-    "date": "2026-06-26T04:00:00+00:00",
-    "score": 47.62
+    "title": "You won&#8217;t have long to get these iPad deals before Apple&#8217;s price hike",
+    "link": "https://www.theverge.com/gadgets/957106/prime-day-ipad-deals-apple-price-hikes",
+    "source": "The Verge",
+    "category": "Technology",
+    "date": "2026-06-26T21:26:36.569896+00:00",
+    "score": 70.0,
+    "favicon": "https://www.google.com/s2/favicons?domain=theverge.com&sz=32",
+    "favorite": false
   },
   {
-    "title": "Berk Cesta EU Carbon Road Bike Is Handmade In Slovenia & Surprisingly Affordable",
-    "link": "https://bikerumor.com/berk-cesta-eu-carbon-road-bike-is-handmade-in-slovenia-surprisingly-affordable/",
-    "source": "BikeRumor",
-    "category": "Bikes",
-    "date": "2026-06-25T21:44:05+00:00",
-    "score": 41.36
+    "title": "Smart lock maker Level has been gutted and its founders are out",
+    "link": "https://www.theverge.com/tech/957802/level-lock-layoffs-assa-abloy-kwikset-smart-lock-cloud",
+    "source": "The Verge",
+    "category": "Technology",
+    "date": "2026-06-26T21:26:36.569891+00:00",
+    "score": 70.0,
+    "favicon": "https://www.google.com/s2/favicons?domain=theverge.com&sz=32",
+    "favorite": false
   },
   {
-    "title": "Pinarello, Pharrell, & Louis Vuitton made a 7.3kg DOGMA F for the Fashion Week Peloton",
-    "link": "https://bikerumor.com/pinarello-pharrell-louis-vuitton-made-a-7-3kg-dogma-f/",
-    "source": "BikeRumor",
-    "category": "Bikes",
-    "date": "2026-06-25T16:11:06+00:00",
-    "score": 35.81
+    "title": "OpenAI unveils GPT-5.6 amid US AI regulatory drama",
+    "link": "https://www.theverge.com/ai-artificial-intelligence/957845/openai-gpt-5-6-trump-administration-ai-preview",
+    "source": "The Verge",
+    "category": "Technology",
+    "date": "2026-06-26T21:26:36.569886+00:00",
+    "score": 70.0,
+    "favicon": "https://www.google.com/s2/favicons?domain=theverge.com&sz=32",
+    "favorite": false
+  },
+  {
+    "title": "This video bird feeder is the surprise hit of Prime Day",
+    "link": "https://www.theverge.com/gadgets/957791/birdbuddy-pro-solar-prime-day-deal-sale",
+    "source": "The Verge",
+    "category": "Technology",
+    "date": "2026-06-26T21:26:36.569880+00:00",
+    "score": 70.0,
+    "favicon": "https://www.google.com/s2/favicons?domain=theverge.com&sz=32",
+    "favorite": false
+  },
+  {
+    "title": "The beautiful shame",
+    "link": "https://www.theverge.com/report/957948/world-cup-us-visa-policies-trump",
+    "source": "The Verge",
+    "category": "Technology",
+    "date": "2026-06-26T21:26:36.569875+00:00",
+    "score": 70.0,
+    "favicon": "https://www.google.com/s2/favicons?domain=theverge.com&sz=32",
+    "favorite": false
+  },
+  {
+    "title": "Our 36 favorite gaming deals on Prime Day for Switch, PS5, and Xbox",
+    "link": "https://www.theverge.com/gadgets/951901/prime-day-video-games-switch-playstation-xbox-pc-deal-sale",
+    "source": "The Verge",
+    "category": "Technology",
+    "date": "2026-06-26T21:26:36.569869+00:00",
+    "score": 70.0,
+    "favicon": "https://www.google.com/s2/favicons?domain=theverge.com&sz=32",
+    "favorite": false
+  },
+  {
+    "title": "These are the best deals you can still get on MacBooks before Apple&#8217;s price hike kicks in",
+    "link": "https://www.theverge.com/gadgets/956830/prime-day-macbook-deals-apple-price-hikes",
+    "source": "The Verge",
+    "category": "Technology",
+    "date": "2026-06-26T21:26:36.569862+00:00",
+    "score": 70.0,
+    "favicon": "https://www.google.com/s2/favicons?domain=theverge.com&sz=32",
+    "favorite": false
+  },
+  {
+    "title": "It\u2019s the last day of Prime Day \u2014 here are over 140 great deals to choose from",
+    "link": "https://www.theverge.com/gadgets/957435/prime-day-2026-best-tech-deals-sale-day-four",
+    "source": "The Verge",
+    "category": "Technology",
+    "date": "2026-06-26T21:26:36.569846+00:00",
+    "score": 70.0,
+    "favicon": "https://www.google.com/s2/favicons?domain=theverge.com&sz=32",
+    "favorite": false
+  },
+  {
+    "title": "It's a dumb time to buy an Xbox, even with the coming price hike",
+    "link": "https://www.engadget.com/2202875/its-a-dumb-time-to-buy-an-xbox-even-with-the-coming-price-hike/",
+    "source": "Engadget",
+    "category": "Technology",
+    "date": "2026-06-26T19:42:31+00:00",
+    "score": 58.27,
+    "favicon": "https://www.google.com/s2/favicons?domain=engadget.com&sz=32",
+    "favorite": false
   },
   {
     "title": "SVS Castlemania Pre-Orders",
@@ -309,7 +195,29 @@
     "source": "RetroRGB",
     "category": "Retro Games",
     "date": "2026-06-24T11:37:54+00:00",
-    "score": 27.26
+    "score": 57.19,
+    "favicon": "https://www.google.com/s2/favicons?domain=retrorgb.com&sz=32",
+    "favorite": true
+  },
+  {
+    "title": "Is your phone charger wasting electricity when it's not charging?",
+    "link": "https://www.engadget.com/2201922/do-phone-chargers-use-electricity-when-not-plugged-in/",
+    "source": "Engadget",
+    "category": "Technology",
+    "date": "2026-06-26T18:30:00+00:00",
+    "score": 57.06,
+    "favicon": "https://www.google.com/s2/favicons?domain=engadget.com&sz=32",
+    "favorite": false
+  },
+  {
+    "title": "What to expect at the next Samsung Galaxy Unpacked",
+    "link": "https://www.engadget.com/2202726/foldables-watches-and-glasses-could-be-on-the-way/",
+    "source": "Engadget",
+    "category": "Technology",
+    "date": "2026-06-26T18:14:45+00:00",
+    "score": 56.8,
+    "favicon": "https://www.google.com/s2/favicons?domain=engadget.com&sz=32",
+    "favorite": false
   },
   {
     "title": "Weekly Roundup #519",
@@ -317,7 +225,119 @@
     "source": "RetroRGB",
     "category": "Retro Games",
     "date": "2026-06-24T09:00:39+00:00",
-    "score": 24.63
+    "score": 54.57,
+    "favicon": "https://www.google.com/s2/favicons?domain=retrorgb.com&sz=32",
+    "favorite": true
+  },
+  {
+    "title": "Samsung will start charging for SmartThings API access",
+    "link": "https://www.engadget.com/2202497/samsung-will-start-charging-for-smartthings-api-access/",
+    "source": "Engadget",
+    "category": "Technology",
+    "date": "2026-06-26T15:36:15+00:00",
+    "score": 54.16,
+    "favicon": "https://www.google.com/s2/favicons?domain=engadget.com&sz=32",
+    "favorite": false
+  },
+  {
+    "title": "Not all tech survives solar storms, here's what's most at risk",
+    "link": "https://www.engadget.com/2201195/solar-maximum-tech-damage-space-weather/",
+    "source": "Engadget",
+    "category": "Technology",
+    "date": "2026-06-26T13:30:00+00:00",
+    "score": 52.06,
+    "favicon": "https://www.google.com/s2/favicons?domain=engadget.com&sz=32",
+    "favorite": false
+  },
+  {
+    "title": "Volkswagen reportedly plans to cut 100,000 jobs",
+    "link": "https://www.engadget.com/2202288/volkswagen-reportedly-plans-to-cut-100000-jobs/",
+    "source": "Engadget",
+    "category": "Technology",
+    "date": "2026-06-26T13:08:00+00:00",
+    "score": 51.69,
+    "favicon": "https://www.google.com/s2/favicons?domain=engadget.com&sz=32",
+    "favorite": false
+  },
+  {
+    "title": "Australia's social media ban may not be that effective, study finds",
+    "link": "https://www.engadget.com/2202255/australia-social-media-ban-still-not-effective/",
+    "source": "Engadget",
+    "category": "Technology",
+    "date": "2026-06-26T12:01:47+00:00",
+    "score": 50.59,
+    "favicon": "https://www.google.com/s2/favicons?domain=engadget.com&sz=32",
+    "favorite": false
+  },
+  {
+    "title": "The Morning After: Prices rocket up on Xboxes, MacBooks, iPads and more",
+    "link": "https://www.engadget.com/2202230/prices-rocket-up-on-xboxes-macbooks-ipads-and-more/",
+    "source": "Engadget",
+    "category": "Technology",
+    "date": "2026-06-26T11:30:00+00:00",
+    "score": 50.06,
+    "favicon": "https://www.google.com/s2/favicons?domain=engadget.com&sz=32",
+    "favorite": false
+  },
+  {
+    "title": "NASA's TESS spacecraft finds two 'cotton candy' planets in one system",
+    "link": "https://www.engadget.com/2202239/nasa-tess-cotton-candy-planet-discovery/",
+    "source": "Engadget",
+    "category": "Technology",
+    "date": "2026-06-26T11:09:10+00:00",
+    "score": 49.71,
+    "favicon": "https://www.google.com/s2/favicons?domain=engadget.com&sz=32",
+    "favorite": false
+  },
+  {
+    "title": "'Careless People' author accuses Meta of 'punishing' whistleblower",
+    "link": "https://www.engadget.com/2202234/careless-people-sarah-wynn-wiliams-sues-meta/",
+    "source": "Engadget",
+    "category": "Technology",
+    "date": "2026-06-26T10:19:45+00:00",
+    "score": 48.89,
+    "favicon": "https://www.google.com/s2/favicons?domain=engadget.com&sz=32",
+    "favorite": false
+  },
+  {
+    "title": "California launches tracker for AI-related job losses",
+    "link": "https://www.engadget.com/2202231/californa-launches-ai-job-loss-tracker/",
+    "source": "Engadget",
+    "category": "Technology",
+    "date": "2026-06-26T09:56:33+00:00",
+    "score": 48.5,
+    "favicon": "https://www.google.com/s2/favicons?domain=engadget.com&sz=32",
+    "favorite": false
+  },
+  {
+    "title": "YouTube Shorts nixes 'dislikes' and lets you double the playback speed",
+    "link": "https://www.engadget.com/2202221/youtube-shorts-nixes-dislikes-adds-double-playback-speed/",
+    "source": "Engadget",
+    "category": "Technology",
+    "date": "2026-06-26T08:46:20+00:00",
+    "score": 47.33,
+    "favicon": "https://www.google.com/s2/favicons?domain=engadget.com&sz=32",
+    "favorite": false
+  },
+  {
+    "title": "OpenAI will initially only release ChatGPT 5.6 to government-approved customers",
+    "link": "https://www.engadget.com/2202129/openai-will-initially-only-release-chatgpt-5-6-to-government-approved-customers/",
+    "source": "Engadget",
+    "category": "Technology",
+    "date": "2026-06-25T22:48:26+00:00",
+    "score": 37.36,
+    "favicon": "https://www.google.com/s2/favicons?domain=engadget.com&sz=32",
+    "favorite": false
+  },
+  {
+    "title": "The most popular Grok feature is, apparently, exactly what you think",
+    "link": "https://www.engadget.com/2202099/the-most-popular-grok-feature-is-apparently-exactly-what-you-think/",
+    "source": "Engadget",
+    "category": "Technology",
+    "date": "2026-06-25T21:57:41+00:00",
+    "score": 36.52,
+    "favicon": "https://www.google.com/s2/favicons?domain=engadget.com&sz=32",
+    "favorite": false
   },
   {
     "title": "New Home for Redump",
@@ -325,7 +345,19 @@
     "source": "RetroRGB",
     "category": "Retro Games",
     "date": "2026-06-23T14:42:06+00:00",
-    "score": 6.33
+    "score": 36.26,
+    "favicon": "https://www.google.com/s2/favicons?domain=retrorgb.com&sz=32",
+    "favorite": true
+  },
+  {
+    "title": "Commodore has dropped the price of its retro phone by $100 ahead of preorders",
+    "link": "https://www.engadget.com/2202085/commodore-has-dropped-the-price-of-its-retro-phone-by-100-ahead-of-preorders/",
+    "source": "Engadget",
+    "category": "Technology",
+    "date": "2026-06-25T21:34:43+00:00",
+    "score": 36.14,
+    "favicon": "https://www.google.com/s2/favicons?domain=engadget.com&sz=32",
+    "favorite": false
   },
   {
     "title": "Retro Game Restore: Status Update",
@@ -333,7 +365,59 @@
     "source": "RetroRGB",
     "category": "Retro Games",
     "date": "2026-06-23T14:12:26+00:00",
-    "score": 5.83
+    "score": 35.76,
+    "favicon": "https://www.google.com/s2/favicons?domain=retrorgb.com&sz=32",
+    "favorite": true
+  },
+  {
+    "title": "Notion Mail is shutting down",
+    "link": "https://www.engadget.com/2201940/notion-mail-is-shutting-down/",
+    "source": "Engadget",
+    "category": "Technology",
+    "date": "2026-06-25T19:41:24+00:00",
+    "score": 34.25,
+    "favicon": "https://www.google.com/s2/favicons?domain=engadget.com&sz=32",
+    "favorite": false
+  },
+  {
+    "title": "Spain will require carriers to keep mobile networks live during power outages",
+    "link": "https://www.engadget.com/2201931/spain-will-require-carriers-to-keep-mobile-networks-live-during-power-outages/",
+    "source": "Engadget",
+    "category": "Technology",
+    "date": "2026-06-25T19:33:12+00:00",
+    "score": 34.11,
+    "favicon": "https://www.google.com/s2/favicons?domain=engadget.com&sz=32",
+    "favorite": false
+  },
+  {
+    "title": "Polestar won't be able to sell its cars in the US next year",
+    "link": "https://www.engadget.com/2201905/polestar-wont-be-able-to-sell-its-cars-in-the-us-next-year/",
+    "source": "Engadget",
+    "category": "Technology",
+    "date": "2026-06-25T19:07:32+00:00",
+    "score": 33.68,
+    "favicon": "https://www.google.com/s2/favicons?domain=engadget.com&sz=32",
+    "favorite": false
+  },
+  {
+    "title": "Retroid's Pocket Nova is a very capable 4:3 handheld that costs $229",
+    "link": "https://www.engadget.com/2201878/retroids-pocket-nova-is-a-very-capable-43-handheld-that-costs-dollar229/",
+    "source": "Engadget",
+    "category": "Technology",
+    "date": "2026-06-25T18:51:50+00:00",
+    "score": 33.42,
+    "favicon": "https://www.google.com/s2/favicons?domain=engadget.com&sz=32",
+    "favorite": false
+  },
+  {
+    "title": "As everything gets more expensive, it's time to make do and mend",
+    "link": "https://www.engadget.com/2201848/its-time-to-make-do-and-mend/",
+    "source": "Engadget",
+    "category": "Technology",
+    "date": "2026-06-25T18:31:37+00:00",
+    "score": 33.08,
+    "favicon": "https://www.google.com/s2/favicons?domain=engadget.com&sz=32",
+    "favorite": false
   },
   {
     "title": "Doom64KB Ported to Neo Geo with Two Working Levels",
@@ -341,7 +425,9 @@
     "source": "RetroRGB",
     "category": "Retro Games",
     "date": "2026-06-21T23:31:32+00:00",
-    "score": -32.85
+    "score": -2.92,
+    "favicon": "https://www.google.com/s2/favicons?domain=retrorgb.com&sz=32",
+    "favorite": true
   },
   {
     "title": "ArcStation: Installation & Demo",
@@ -349,7 +435,9 @@
     "source": "RetroRGB",
     "category": "Retro Games",
     "date": "2026-06-20T13:03:25+00:00",
-    "score": -67.32
+    "score": -37.39,
+    "favicon": "https://www.google.com/s2/favicons?domain=retrorgb.com&sz=32",
+    "favorite": true
   },
   {
     "title": "Cassette Mechanism Myth Debunked",
@@ -357,7 +445,9 @@
     "source": "RetroRGB",
     "category": "Retro Games",
     "date": "2026-06-20T12:50:07+00:00",
-    "score": -67.54
+    "score": -37.61,
+    "favicon": "https://www.google.com/s2/favicons?domain=retrorgb.com&sz=32",
+    "favorite": true
   },
   {
     "title": "Recompilation of Castlevania for the Nintendo 64",
@@ -365,7 +455,9 @@
     "source": "RetroRGB",
     "category": "Retro Games",
     "date": "2026-06-18T13:54:54+00:00",
-    "score": -114.46
+    "score": -84.53,
+    "favicon": "https://www.google.com/s2/favicons?domain=retrorgb.com&sz=32",
+    "favorite": true
   },
   {
     "title": "RetroTINK 4K Official New Menu",
@@ -373,6 +465,8 @@
     "source": "RetroRGB",
     "category": "Retro Games",
     "date": "2026-06-17T23:13:16+00:00",
-    "score": -129.16
+    "score": -99.22,
+    "favicon": "https://www.google.com/s2/favicons?domain=retrorgb.com&sz=32",
+    "favorite": true
   }
 ]
