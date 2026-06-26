@@ -108,5 +108,71 @@
     "max_items": 3,
     "max_age_days": 7,
     "favorite": true
+  },
+  {
+    "name": "Decoder Ring",
+    "url": "https://feeds.acast.com/public/shows/decoder-ring",
+    "category": "Podcasts",
+    "ok": true,
+    "count": 156,
+    "visible": 1,
+    "max_items": 2,
+    "max_age_days": 15,
+    "favorite": true
+  },
+  {
+    "name": "Radiolab",
+    "url": "https://www.wnycstudios.org/feeds/shows/radiolab",
+    "category": "Podcasts",
+    "ok": true,
+    "count": 17,
+    "visible": 2,
+    "max_items": 2,
+    "max_age_days": 15,
+    "favorite": true
+  },
+  {
+    "name": "Darknet Diaries",
+    "url": "https://feeds.megaphone.fm/darknetdiaries",
+    "category": "Podcasts",
+    "ok": true,
+    "count": 175,
+    "visible": 1,
+    "max_items": 2,
+    "max_age_days": 30,
+    "favorite": true
+  },
+  {
+    "name": "The Empty Bowl",
+    "url": "https://anchor.fm/s/6ccfb04/podcast/rss",
+    "category": "Podcasts",
+    "ok": true,
+    "count": 131,
+    "visible": 1,
+    "max_items": 2,
+    "max_age_days": 30,
+    "favorite": true
+  },
+  {
+    "name": "Retroist Podcast",
+    "url": "https://api.substack.com/feed/podcast/249575.rss",
+    "category": "Podcasts",
+    "ok": false,
+    "count": 0,
+    "visible": 0,
+    "max_items": 2,
+    "max_age_days": 30,
+    "favorite": true
+  },
+  {
+    "name": "MTG Drive to Work",
+    "url": "https://feeds.transistor.fm/magic-the-gathering-drive-to-work-podcast",
+    "category": "Podcasts",
+    "ok": true,
+    "count": 1358,
+    "visible": 2,
+    "max_items": 2,
+    "max_age_days": 10,
+    "favorite": true
   }
 ]
