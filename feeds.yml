@@ -25,3 +25,45 @@
   weight: 60
   favorite: true
   max_items: 5
+
+- name: Slow Commute Club
+  url: https://www.youtube.com/feeds/videos.xml?channel_id=UC5Rh9my3NeWuLk5RxYLZDnw
+  category: YouTube
+  weight: 85
+  favorite: true
+  max_items: 3
+
+- name: noodl.ist
+  url: https://www.youtube.com/feeds/videos.xml?channel_id=UCLm7zWZX5TZdArkESVpV0Vg
+  category: YouTube
+  weight: 100
+  favorite: true
+  max_items: 3
+
+- name: This Does Not Compute
+  url: https://www.youtube.com/feeds/videos.xml?channel_id=UCEp20NgOZHmgWdbQdHSxgjw
+  category: YouTube
+  weight: 95
+  favorite: true
+  max_items: 3
+
+- name: Slow Commute Club
+  url: https://www.youtube.com/feeds/videos.xml?channel_id=UC5Rh9my3NeWuLk5RxYLZDnw
+  category: YouTube
+  weight: 90
+  favorite: true
+  max_items: 3
+
+- name: DankPods
+  url: https://www.youtube.com/feeds/videos.xml?channel_id=UC7Jwj9fkrf1adN4fMmTkpug
+  category: YouTube
+  weight: 90
+  favorite: true
+  max_items: 3
+
+- name: Tolarian Community College
+  url: https://www.youtube.com/feeds/videos.xml?channel_id=UC7-hR5EfgpM6oHfiGDkxfMA
+  category: YouTube
+  weight: 90
+  favorite: true
+  max_items: 3
