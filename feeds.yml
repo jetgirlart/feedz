@@ -8,6 +8,7 @@
   weight: 80
   favorite: false
   max_items: 3
+  max_age_days: 3
 
 - name: BearBlog
   url: https://bearblog.dev/discover/feed/
@@ -15,6 +16,7 @@
   weight: 90
   favorite: true
   max_items: 5
+  max_age_days: 7
 
 - name: Plan D
   url: https://www.youtube.com/feeds/videos.xml?channel_id=UCPaApoLkmPqxCeZF7gjoc3w
@@ -22,6 +24,7 @@
   weight: 70
   favorite: false
   max_items: 3
+  max_age_days: 15
 
 - name: Hacker News
   url: https://news.ycombinator.com/rss
@@ -29,6 +32,7 @@
   weight: 60
   favorite: true
   max_items: 5
+  max_age_days: 3
 
 - name: Slow Commute Club
   url: https://www.youtube.com/feeds/videos.xml?channel_id=UC5Rh9my3NeWuLk5RxYLZDnw
@@ -36,6 +40,7 @@
   weight: 85
   favorite: true
   max_items: 3
+  max_age_days: 30
 
 - name: noodl.ist
   url: https://www.youtube.com/feeds/videos.xml?channel_id=UCLm7zWZX5TZdArkESVpV0Vg
@@ -43,6 +48,7 @@
   weight: 100
   favorite: true
   max_items: 3
+  max_age_days: 5
 
 - name: This Does Not Compute
   url: https://www.youtube.com/feeds/videos.xml?channel_id=UCEp20NgOZHmgWdbQdHSxgjw
@@ -50,6 +56,7 @@
   weight: 95
   favorite: true
   max_items: 3
+  max_age_days: 30
 
 - name: Slow Commute Club
   url: https://www.youtube.com/feeds/videos.xml?channel_id=UC5Rh9my3NeWuLk5RxYLZDnw
@@ -57,6 +64,7 @@
   weight: 90
   favorite: true
   max_items: 3
+  max_age_days: 30
 
 - name: DankPods
   url: https://www.youtube.com/feeds/videos.xml?channel_id=UC7Jwj9fkrf1adN4fMmTkpug
@@ -64,6 +72,7 @@
   weight: 90
   favorite: true
   max_items: 3
+  max_age_days: 15
 
 - name: Tolarian Community College
   url: https://www.youtube.com/feeds/videos.xml?channel_id=UC7-hR5EfgpM6oHfiGDkxfMA
@@ -71,3 +80,4 @@
   weight: 90
   favorite: true
   max_items: 3
+  max_age_days: 7
