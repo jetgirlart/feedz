@@ -181,9 +181,12 @@ a:focus-visible {
 .thumbnail {
   flex: 0 0 48px;
   width: 48px;
-  height: auto;
+  min-width: 48px;
+  max-width: 48px;
+  height: 27px;
   margin-right: 6px;
   border: 1px solid var(--line);
+  object-fit: cover;
 }
 
 .sidebar {
