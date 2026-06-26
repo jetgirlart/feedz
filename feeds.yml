@@ -81,3 +81,51 @@
   favorite: true
   max_items: 3
   max_age_days: 7
+
+- name: Decoder Ring
+  url: https://feeds.acast.com/public/shows/decoder-ring
+  category: Podcasts
+  weight: 90
+  favorite: true
+  max_items: 2
+  max_age_days: 15
+
+- name: Radiolab
+  url: https://www.wnycstudios.org/feeds/shows/radiolab
+  category: Podcasts
+  weight: 95
+  favorite: true
+  max_items: 2
+  max_age_days: 15
+
+- name: Darknet Diaries
+  url: https://feeds.megaphone.fm/darknetdiaries
+  category: Podcasts
+  weight: 95
+  favorite: true
+  max_items: 2
+  max_age_days: 30
+
+- name: The Empty Bowl
+  url: https://anchor.fm/s/6ccfb04/podcast/rss
+  category: Podcasts
+  weight: 90
+  favorite: true
+  max_items: 2
+  max_age_days: 30
+
+- name: Retroist Podcast
+  url: https://api.substack.com/feed/podcast/249575.rss
+  category: Podcasts
+  weight: 90
+  favorite: true
+  max_items: 2
+  max_age_days: 30
+
+- name: MTG Drive to Work
+  url: https://feeds.transistor.fm/magic-the-gathering-drive-to-work-podcast
+  category: Podcasts
+  weight: 95
+  favorite: true
+  max_items: 2
+  max_age_days: 10
