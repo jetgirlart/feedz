@@ -5,8 +5,8 @@
     "category": "DIY / Electronics",
     "ok": true,
     "count": 7,
-    "visible": 7,
-    "max_items": 7,
+    "visible": 3,
+    "max_items": 3,
     "favorite": false
   },
   {
@@ -15,8 +15,8 @@
     "category": "Blogs",
     "ok": true,
     "count": 20,
-    "visible": 7,
-    "max_items": 7,
+    "visible": 5,
+    "max_items": 5,
     "favorite": true
   },
   {
@@ -25,8 +25,8 @@
     "category": "YouTube",
     "ok": true,
     "count": 15,
-    "visible": 7,
-    "max_items": 7,
+    "visible": 3,
+    "max_items": 3,
     "favorite": false
   },
   {
@@ -35,8 +35,8 @@
     "category": "Technology",
     "ok": true,
     "count": 30,
-    "visible": 7,
-    "max_items": 7,
+    "visible": 5,
+    "max_items": 5,
     "favorite": true
   }
 ]
