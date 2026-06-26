@@ -129,3 +129,43 @@
   favorite: true
   max_items: 2
   max_age_days: 10
+
+- name: Texas Standard
+  url: https://www.texasstandard.org/feed/
+  category: Texas
+  weight: 95
+  favorite: true
+  max_items: 5
+  max_age_days: 14
+
+- name: Literary Hub
+  url: https://lithub.com/feed/
+  category: Books
+  weight: 95
+  favorite: true
+  max_items: 5
+  max_age_days: 21
+  
+- name: Book Riot
+  url: https://bookriot.com/feed/
+  category: Books
+  weight: 90
+  favorite: true
+  max_items: 5
+  max_age_days: 14
+
+- name: The Paris Review
+  url: https://www.theparisreview.org/blog/feed/
+  category: Books
+  weight: 90
+  favorite: true
+  max_items: 4
+  max_age_days: 30
+
+- name: McSweeney's
+  url: https://feeds.feedburner.com/mcsweeneys
+  category: Books
+  weight: 85
+  favorite: true
+  max_items: 4
+  max_age_days: 30
