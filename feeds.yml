@@ -4,7 +4,7 @@
 
 - name: Hackaday
   url: https://hackaday.com/blog/feed/
-  category: DIY / Electronics
+  category: Technology
   weight: 80
   favorite: false
   max_items: 3
@@ -12,7 +12,7 @@
 
 - name: BearBlog
   url: https://bearblog.dev/discover/feed/
-  category: Blogs
+  category: Personal Blogs
   weight: 90
   favorite: true
   max_items: 5
@@ -145,14 +145,6 @@
   favorite: true
   max_items: 5
   max_age_days: 21
-  
-- name: Book Riot
-  url: https://bookriot.com/feed/
-  category: Books
-  weight: 90
-  favorite: true
-  max_items: 5
-  max_age_days: 14
 
 - name: The Paris Review
   url: https://www.theparisreview.org/blog/feed/
@@ -168,4 +160,12 @@
   weight: 85
   favorite: true
   max_items: 4
+  max_age_days: 30
+
+- name: novelglot
+  url: https://novelglot.substack.com/feed
+  category: Blogs
+  weight: 95
+  favorite: true
+  max_items: 3
   max_age_days: 30
