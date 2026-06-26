@@ -7,6 +7,7 @@
     "count": 7,
     "visible": 3,
     "max_items": 3,
+    "max_age_days": 14,
     "favorite": false
   },
   {
@@ -17,6 +18,7 @@
     "count": 20,
     "visible": 5,
     "max_items": 5,
+    "max_age_days": 14,
     "favorite": true
   },
   {
@@ -27,6 +29,7 @@
     "count": 15,
     "visible": 3,
     "max_items": 3,
+    "max_age_days": 14,
     "favorite": false
   },
   {
@@ -37,6 +40,7 @@
     "count": 30,
     "visible": 5,
     "max_items": 5,
+    "max_age_days": 14,
     "favorite": true
   },
   {
@@ -47,6 +51,7 @@
     "count": 15,
     "visible": 3,
     "max_items": 3,
+    "max_age_days": 14,
     "favorite": true
   },
   {
@@ -57,6 +62,7 @@
     "count": 15,
     "visible": 3,
     "max_items": 3,
+    "max_age_days": 14,
     "favorite": true
   },
   {
@@ -67,6 +73,7 @@
     "count": 15,
     "visible": 3,
     "max_items": 3,
+    "max_age_days": 14,
     "favorite": true
   },
   {
@@ -77,6 +84,7 @@
     "count": 15,
     "visible": 3,
     "max_items": 3,
+    "max_age_days": 14,
     "favorite": true
   },
   {
@@ -87,6 +95,7 @@
     "count": 15,
     "visible": 3,
     "max_items": 3,
+    "max_age_days": 14,
     "favorite": true
   },
   {
@@ -97,6 +106,7 @@
     "count": 15,
     "visible": 3,
     "max_items": 3,
+    "max_age_days": 14,
     "favorite": true
   }
 ]

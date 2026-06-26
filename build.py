@@ -19,6 +19,7 @@ OUTPUT_STATUS_JSON = BASE_DIR / "feed-status.json"
 DEFAULT_CATEGORY = "Other"
 DEFAULT_WEIGHT = 50
 DEFAULT_MAX_ITEMS = 7
+DEFAULT_MAX_AGE_DAYS = 14
 FAVORITE_BONUS = 25
 TOP_STORIES_LIMIT = 20
 
@@ -41,6 +42,7 @@ def read_feeds():
 def clean_feed_config(feed):
     """Fill in defaults for optional feed settings."""
     max_items = feed.get("max_items", DEFAULT_MAX_ITEMS)
+    max_age_days = feed.get("max_age_days", DEFAULT_MAX_AGE_DAYS)
     weight = feed.get("weight", DEFAULT_WEIGHT)
 
     try:
@@ -50,6 +52,14 @@ def clean_feed_config(feed):
 
     if max_items < 1:
         max_items = DEFAULT_MAX_ITEMS
+
+    try:
+        max_age_days = int(max_age_days)
+    except (TypeError, ValueError):
+        max_age_days = DEFAULT_MAX_AGE_DAYS
+
+    if max_age_days <= 0:
+        max_age_days = DEFAULT_MAX_AGE_DAYS
 
     try:
         weight = float(weight)
@@ -63,6 +73,7 @@ def clean_feed_config(feed):
         "weight": weight,
         "favorite": bool(feed.get("favorite", False)),
         "max_items": max_items,
+        "max_age_days": max_age_days,
     }
 
 
@@ -127,11 +138,14 @@ def youtube_thumbnail_url(category, link):
     return f"https://img.youtube.com/vi/{video_id}/mqdefault.jpg"
 
 
-def score_article(feed, published_at, now):
-    """Score an article from its feed weight and age in hours."""
+def article_age_hours(published_at, now):
+    """Return the age of an article in hours."""
     age_hours = (now - published_at).total_seconds() / 3600
-    age_hours = max(0, age_hours)
+    return max(0, age_hours)
 
+
+def score_article(feed, age_hours):
+    """Score an article from its feed weight and age in hours."""
     weight = float(feed["weight"])
     if feed["favorite"]:
         weight += FAVORITE_BONUS
@@ -139,9 +153,8 @@ def score_article(feed, published_at, now):
     return weight - age_hours
 
 
-def build_article(feed, entry, now):
+def build_article(feed, entry, published_at, age_hours):
     """Turn one parsed RSS entry into the article shape used by the site."""
-    published_at = parse_feed_date(entry)
     link = entry.get("link", "#")
 
     return {
@@ -150,7 +163,7 @@ def build_article(feed, entry, now):
         "source": feed["name"],
         "category": feed["category"],
         "date": published_at,
-        "score": score_article(feed, published_at, now),
+        "score": score_article(feed, age_hours),
         "favicon": favicon_url(feed["url"]),
         "favorite": feed["favorite"],
         "thumbnail": youtube_thumbnail_url(feed["category"], link),
@@ -162,22 +175,34 @@ def fetch_feed_articles(feed, now):
     parsed = feedparser.parse(feed["url"])
     entries = parsed.entries or []
 
+    lookahead = max(feed["max_items"], FEED_LOOKAHEAD)
+    articles = []
+
+    for entry in entries[:lookahead]:
+        published_at = parse_feed_date(entry)
+        age_hours = article_age_hours(published_at, now)
+
+        if age_hours > feed["max_age_days"] * 24:
+            continue
+
+        articles.append(build_article(feed, entry, published_at, age_hours))
+
+    articles.sort(key=lambda article: article["score"], reverse=True)
+    visible_articles = articles[: feed["max_items"]]
+
     status = {
         "name": feed["name"],
         "url": feed["url"],
         "category": feed["category"],
         "ok": not parsed.bozo and len(entries) > 0,
         "count": len(entries),
-        "visible": min(feed["max_items"], len(entries)),
+        "visible": len(visible_articles),
         "max_items": feed["max_items"],
+        "max_age_days": feed["max_age_days"],
         "favorite": feed["favorite"],
     }
 
-    lookahead = max(feed["max_items"], FEED_LOOKAHEAD)
-    articles = [build_article(feed, entry, now) for entry in entries[:lookahead]]
-    articles.sort(key=lambda article: article["score"], reverse=True)
-
-    return articles[: feed["max_items"]], status
+    return visible_articles, status
 
 
 def group_articles_by_category(articles):
