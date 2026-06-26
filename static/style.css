@@ -179,10 +179,10 @@ a:focus-visible {
 }
 
 .thumbnail {
-  flex: 0 0 72px;
-  width: 72px;
+  flex: 0 0 48px;
+  width: 48px;
   height: auto;
-  margin-right: 8px;
+  margin-right: 6px;
   border: 1px solid var(--line);
 }
 
