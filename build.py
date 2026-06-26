@@ -2,7 +2,7 @@ import json
 from datetime import datetime, timezone
 from email.utils import parsedate_to_datetime
 from pathlib import Path
-from urllib.parse import urlparse
+from urllib.parse import parse_qs, urlparse
 
 import feedparser
 import yaml
@@ -95,6 +95,38 @@ def favicon_url(feed_url):
     return f"https://www.google.com/s2/favicons?domain={domain}&sz=32"
 
 
+def youtube_video_id(link):
+    """Extract a YouTube video ID from common YouTube URL formats."""
+    parsed = urlparse(link)
+    host = parsed.netloc.lower().removeprefix("www.")
+    path_parts = [part for part in parsed.path.split("/") if part]
+
+    if host == "youtu.be" and path_parts:
+        return path_parts[0]
+
+    if host in {"youtube.com", "m.youtube.com", "youtube-nocookie.com"}:
+        query_video_id = parse_qs(parsed.query).get("v", [None])[0]
+        if query_video_id:
+            return query_video_id
+
+        if len(path_parts) >= 2 and path_parts[0] in {"embed", "shorts", "live"}:
+            return path_parts[1]
+
+    return None
+
+
+def youtube_thumbnail_url(category, link):
+    """Return a YouTube thumbnail URL only for feeds in the YouTube category."""
+    if category != "YouTube":
+        return None
+
+    video_id = youtube_video_id(link)
+    if not video_id:
+        return None
+
+    return f"https://img.youtube.com/vi/{video_id}/mqdefault.jpg"
+
+
 def score_article(feed, published_at, now):
     """Score an article from its feed weight and age in hours."""
     age_hours = (now - published_at).total_seconds() / 3600
@@ -110,16 +142,18 @@ def score_article(feed, published_at, now):
 def build_article(feed, entry, now):
     """Turn one parsed RSS entry into the article shape used by the site."""
     published_at = parse_feed_date(entry)
+    link = entry.get("link", "#")
 
     return {
         "title": entry.get("title", "Untitled"),
-        "link": entry.get("link", "#"),
+        "link": link,
         "source": feed["name"],
         "category": feed["category"],
         "date": published_at,
         "score": score_article(feed, published_at, now),
         "favicon": favicon_url(feed["url"]),
         "favorite": feed["favorite"],
+        "thumbnail": youtube_thumbnail_url(feed["category"], link),
     }
 
 
@@ -167,6 +201,7 @@ def article_to_json(article):
         "score": round(article["score"], 2),
         "favicon": article["favicon"],
         "favorite": article["favorite"],
+        "thumbnail": article["thumbnail"],
     }
 
 

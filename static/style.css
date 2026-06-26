@@ -133,6 +133,15 @@ button:focus-visible {
   line-height: 1.25;
 }
 
+.item-row {
+  display: flex;
+  align-items: flex-start;
+}
+
+.item-copy {
+  min-width: 0;
+}
+
 .item.read {
   opacity: 0.45;
 }
@@ -167,6 +176,14 @@ a:focus-visible {
   height: 14px;
   margin-right: 4px;
   vertical-align: -2px;
+}
+
+.thumbnail {
+  flex: 0 0 72px;
+  width: 72px;
+  height: auto;
+  margin-right: 8px;
+  border: 1px solid var(--line);
 }
 
 .sidebar {

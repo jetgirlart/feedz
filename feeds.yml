@@ -12,7 +12,7 @@
 
 - name: Plan D
   url: https://www.youtube.com/feeds/videos.xml?channel_id=UCPaApoLkmPqxCeZF7gjoc3w
-  category: Youtube
+  category: YouTube
   weight: 70
   favorite: false
 

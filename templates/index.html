@@ -33,11 +33,18 @@
           data-source="{{ item.source|lower }}"
           data-category="{{ item.category|lower }}"
         >
-          <a href="{{ item.link }}" target="_blank" rel="noopener noreferrer">
-            <img class="favicon" src="{{ item.favicon }}" alt="" loading="lazy">
-            <span>{{ item.title }}</span>
-          </a>
-          <p class="meta">{{ item.source }} · {{ item.category }} · {{ item.date.strftime("%b %d, %H:%M UTC") }}</p>
+          <div class="item-row">
+            {% if item.thumbnail %}
+              <img class="thumbnail" src="{{ item.thumbnail }}" alt="" loading="lazy" onerror="this.style.display='none'">
+            {% endif %}
+            <div class="item-copy">
+              <a href="{{ item.link }}" target="_blank" rel="noopener noreferrer">
+                <img class="favicon" src="{{ item.favicon }}" alt="" loading="lazy">
+                <span>{{ item.title }}</span>
+              </a>
+              <p class="meta">{{ item.source }} · {{ item.category }} · {{ item.date.strftime("%b %d, %H:%M UTC") }}</p>
+            </div>
+          </div>
         </article>
       {% endfor %}
     </div>
@@ -56,15 +63,22 @@
               data-source="{{ item.source|lower }}"
               data-category="{{ item.category|lower }}"
             >
-              <a href="{{ item.link }}" target="_blank" rel="noopener noreferrer">
-                <img class="favicon" src="{{ item.favicon }}" alt="" loading="lazy">
-                <span>{{ item.title }}</span>
-              </a>
-              <p class="meta">
-                {{ item.source }}
-                {% if item.favorite %}★{% endif %}
-                · {{ item.date.strftime("%b %d, %H:%M UTC") }}
-              </p>
+              <div class="item-row">
+                {% if item.thumbnail %}
+                  <img class="thumbnail" src="{{ item.thumbnail }}" alt="" loading="lazy" onerror="this.style.display='none'">
+                {% endif %}
+                <div class="item-copy">
+                  <a href="{{ item.link }}" target="_blank" rel="noopener noreferrer">
+                    <img class="favicon" src="{{ item.favicon }}" alt="" loading="lazy">
+                    <span>{{ item.title }}</span>
+                  </a>
+                  <p class="meta">
+                    {{ item.source }}
+                    {% if item.favorite %}★{% endif %}
+                    · {{ item.date.strftime("%b %d, %H:%M UTC") }}
+                  </p>
+                </div>
+              </div>
             </article>
           {% endfor %}
         </section>
