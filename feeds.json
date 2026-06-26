@@ -1,13 +1,153 @@
 [
   {
+    "title": "How to stand against high temperatures",
+    "link": "https://whateverthewindbrings.com/how-to-stand-against-high-temperatures/",
+    "source": "BearBlog",
+    "category": "Blogs",
+    "date": "2026-06-26T21:58:45.021529+00:00",
+    "score": 115.0,
+    "favicon": "https://www.google.com/s2/favicons?domain=bearblog.dev&sz=32",
+    "favorite": true
+  },
+  {
+    "title": "Please don't use an LLM to communicate with other human beings.",
+    "link": "https://florio.dev/dont-use-llm-communication/",
+    "source": "BearBlog",
+    "category": "Blogs",
+    "date": "2026-06-26T21:58:45.021551+00:00",
+    "score": 115.0,
+    "favicon": "https://www.google.com/s2/favicons?domain=bearblog.dev&sz=32",
+    "favorite": true
+  },
+  {
+    "title": "What I Learned About Relationships After Being With My Wife For 8 Years",
+    "link": "https://blog.absurdpirate.com/what-i-learned-about-relationships-after-being-with-my-wife-for-8-years/",
+    "source": "BearBlog",
+    "category": "Blogs",
+    "date": "2026-06-26T21:58:45.021561+00:00",
+    "score": 115.0,
+    "favicon": "https://www.google.com/s2/favicons?domain=bearblog.dev&sz=32",
+    "favorite": true
+  },
+  {
+    "title": "Thoughts on the heatwave",
+    "link": "https://at-the-cafe.bearblog.dev/thoughts-on-the-heatwave/",
+    "source": "BearBlog",
+    "category": "Blogs",
+    "date": "2026-06-26T21:58:45.021568+00:00",
+    "score": 115.0,
+    "favicon": "https://www.google.com/s2/favicons?domain=bearblog.dev&sz=32",
+    "favorite": true
+  },
+  {
+    "title": "I <3 Little Free Libraries",
+    "link": "https://nataliewrites.lol/i-3-little-free-libraries/",
+    "source": "BearBlog",
+    "category": "Blogs",
+    "date": "2026-06-26T21:58:45.021575+00:00",
+    "score": 115.0,
+    "favicon": "https://www.google.com/s2/favicons?domain=bearblog.dev&sz=32",
+    "favorite": true
+  },
+  {
+    "title": "we don't need facebook",
+    "link": "https://rnotte.art/we-dont-need-facebook/",
+    "source": "BearBlog",
+    "category": "Blogs",
+    "date": "2026-06-26T21:58:45.021583+00:00",
+    "score": 115.0,
+    "favicon": "https://www.google.com/s2/favicons?domain=bearblog.dev&sz=32",
+    "favorite": true
+  },
+  {
+    "title": "I Have Small Boobs —  No, My Boyfriend Is Not a Pedophile.",
+    "link": "https://samwigglesworth.bearblog.dev/new-post-new-new-new-new-new-new/",
+    "source": "BearBlog",
+    "category": "Blogs",
+    "date": "2026-06-26T21:58:45.021589+00:00",
+    "score": 115.0,
+    "favicon": "https://www.google.com/s2/favicons?domain=bearblog.dev&sz=32",
+    "favorite": true
+  },
+  {
+    "title": "The National Parks Were Reportedly Told to Stay Silent on Deaths",
+    "link": "https://www.outsideonline.com/outdoor-adventure/environment/nps-internal-memo-deaths/?link_source=ta_first_comment&taid=6a3dae4f4d2dce00016deef8&utm_content=trueanthem&utm_medium=social&utm_source=facebook",
+    "source": "Hacker News",
+    "category": "Technology",
+    "date": "2026-06-26T21:19:20+00:00",
+    "score": 84.34,
+    "favicon": "https://www.google.com/s2/favicons?domain=news.ycombinator.com&sz=32",
+    "favorite": true
+  },
+  {
+    "title": "A C++ implementation of a fast hash map and hash set using hopscotch hashing",
+    "link": "https://github.com/Tessil/hopscotch-map",
+    "source": "Hacker News",
+    "category": "Technology",
+    "date": "2026-06-26T21:18:28+00:00",
+    "score": 84.33,
+    "favicon": "https://www.google.com/s2/favicons?domain=news.ycombinator.com&sz=32",
+    "favorite": true
+  },
+  {
+    "title": "The gap between open weights LLMs and closed source LLMs",
+    "link": "https://blog.doubleword.ai/frontier-os-llm",
+    "source": "Hacker News",
+    "category": "Technology",
+    "date": "2026-06-26T21:14:47+00:00",
+    "score": 84.27,
+    "favicon": "https://www.google.com/s2/favicons?domain=news.ycombinator.com&sz=32",
+    "favorite": true
+  },
+  {
+    "title": "We Can Still Stop California's 3D Printer Surveillance Scheme",
+    "link": "https://www.eff.org/deeplinks/2026/06/we-can-still-stop-californias-3d-printer-surveillance-scheme",
+    "source": "Hacker News",
+    "category": "Technology",
+    "date": "2026-06-26T21:13:50+00:00",
+    "score": 84.25,
+    "favicon": "https://www.google.com/s2/favicons?domain=news.ycombinator.com&sz=32",
+    "favorite": true
+  },
+  {
+    "title": "Hightouch (YC S19) Is Hiring",
+    "link": "https://hightouch.com/careers#open-positions",
+    "source": "Hacker News",
+    "category": "Technology",
+    "date": "2026-06-26T21:00:50+00:00",
+    "score": 84.03,
+    "favicon": "https://www.google.com/s2/favicons?domain=news.ycombinator.com&sz=32",
+    "favorite": true
+  },
+  {
+    "title": "PlayStation Is Deleting 551 Movies from Customers' Accounts",
+    "link": "https://kotaku.com/playstation-store-movies-digital-studio-canal-terminator-2000711013",
+    "source": "Hacker News",
+    "category": "Technology",
+    "date": "2026-06-26T20:07:18+00:00",
+    "score": 83.14,
+    "favicon": "https://www.google.com/s2/favicons?domain=news.ycombinator.com&sz=32",
+    "favorite": true
+  },
+  {
+    "title": "Long Wave radio era set to end with Droitwich switch-off",
+    "link": "https://www.bbc.com/news/articles/c74yn7v7k4qo",
+    "source": "Hacker News",
+    "category": "Technology",
+    "date": "2026-06-26T19:12:20+00:00",
+    "score": 82.23,
+    "favicon": "https://www.google.com/s2/favicons?domain=news.ycombinator.com&sz=32",
+    "favorite": true
+  },
+  {
     "title": "A Custom Zigbee Touch Keypad",
     "link": "https://hackaday.com/2026/06/26/a-custom-zigbee-touch-keypad/",
     "source": "Hackaday",
     "category": "DIY / Electronics",
     "date": "2026-06-26T20:00:54+00:00",
-    "score": 103.18,
+    "score": 78.04,
     "favicon": "https://www.google.com/s2/favicons?domain=hackaday.com&sz=32",
-    "favorite": true
+    "favorite": false
   },
   {
     "title": "Reflective LCD Slabtop Terminal Runs Homebrewed Solar OS",
@@ -15,9 +155,9 @@
     "source": "Hackaday",
     "category": "DIY / Electronics",
     "date": "2026-06-26T18:30:02+00:00",
-    "score": 101.67,
+    "score": 76.52,
     "favicon": "https://www.google.com/s2/favicons?domain=hackaday.com&sz=32",
-    "favorite": true
+    "favorite": false
   },
   {
     "title": "Hackaday Podcast Episode 375: Rebuilding Tech on Our Terms and the Hero Nerd",
@@ -25,9 +165,9 @@
     "source": "Hackaday",
     "category": "DIY / Electronics",
     "date": "2026-06-26T17:00:01+00:00",
-    "score": 100.17,
+    "score": 75.02,
     "favicon": "https://www.google.com/s2/favicons?domain=hackaday.com&sz=32",
-    "favorite": true
+    "favorite": false
   },
   {
     "title": "A GUI Solution For ESP32 Web Development",
@@ -35,9 +175,9 @@
     "source": "Hackaday",
     "category": "DIY / Electronics",
     "date": "2026-06-26T15:30:54+00:00",
-    "score": 98.68,
+    "score": 73.54,
     "favicon": "https://www.google.com/s2/favicons?domain=hackaday.com&sz=32",
-    "favorite": true
+    "favorite": false
   },
   {
     "title": "This Week in Security: Stealing Email with AI, AMD Nerfs Chips, the World Cup Nearly Rickrolled, and GPSD Bugs",
@@ -45,9 +185,79 @@
     "source": "Hackaday",
     "category": "DIY / Electronics",
     "date": "2026-06-26T14:00:30+00:00",
-    "score": 97.18,
+    "score": 72.03,
     "favicon": "https://www.google.com/s2/favicons?domain=hackaday.com&sz=32",
-    "favorite": true
+    "favorite": false
+  },
+  {
+    "title": "방충망 교체 3만원으로 해결하기✨",
+    "link": "https://www.youtube.com/shorts/LAtXHf0vNK4",
+    "source": "Plan D",
+    "category": "Youtube",
+    "date": "2026-06-26T21:58:45.164785+00:00",
+    "score": 70.0,
+    "favicon": "https://www.google.com/s2/favicons?domain=youtube.com&sz=32",
+    "favorite": false
+  },
+  {
+    "title": "입맛회복! 😋새콤매콤 여름메뉴 만들어먹는 자취일상. 몸보신 전복파티│광장시장, 서촌 나들이",
+    "link": "https://www.youtube.com/watch?v=1S-a9mMhbpg",
+    "source": "Plan D",
+    "category": "Youtube",
+    "date": "2026-06-26T21:58:45.164807+00:00",
+    "score": 70.0,
+    "favicon": "https://www.google.com/s2/favicons?domain=youtube.com&sz=32",
+    "favorite": false
+  },
+  {
+    "title": "동대문 원단쇼핑🛍️ 레이스치마 만들어입고🧵 장보는 일상. 플리마켓 구경, 김풍 초장파스타 꽃다발 오징어튀김, 우트마켓",
+    "link": "https://www.youtube.com/watch?v=r7ph41r-dpU",
+    "source": "Plan D",
+    "category": "Youtube",
+    "date": "2026-06-26T21:58:45.164815+00:00",
+    "score": 70.0,
+    "favicon": "https://www.google.com/s2/favicons?domain=youtube.com&sz=32",
+    "favorite": false
+  },
+  {
+    "title": "반묶음 가시머리 만드는 법 ✨",
+    "link": "https://www.youtube.com/shorts/TYK99CAeWIc",
+    "source": "Plan D",
+    "category": "Youtube",
+    "date": "2026-06-26T21:58:45.164822+00:00",
+    "score": 70.0,
+    "favicon": "https://www.google.com/s2/favicons?domain=youtube.com&sz=32",
+    "favorite": false
+  },
+  {
+    "title": "하루 꽉채워🥾 남대문 투어하는 자취일상.그릇, 꽃, 약 다양하게 쇼핑하기🛍️  덕수궁 밤의 석조전 탐방, 불닭냉면",
+    "link": "https://www.youtube.com/watch?v=WRe6dyG7Uq0",
+    "source": "Plan D",
+    "category": "Youtube",
+    "date": "2026-06-26T21:58:45.164829+00:00",
+    "score": 70.0,
+    "favicon": "https://www.google.com/s2/favicons?domain=youtube.com&sz=32",
+    "favorite": false
+  },
+  {
+    "title": "다이소템으로 구축 화장실 정리하기🫧",
+    "link": "https://www.youtube.com/shorts/unIEfxhNA-w",
+    "source": "Plan D",
+    "category": "Youtube",
+    "date": "2026-06-26T21:58:45.164835+00:00",
+    "score": 70.0,
+    "favicon": "https://www.google.com/s2/favicons?domain=youtube.com&sz=32",
+    "favorite": false
+  },
+  {
+    "title": "갑자기 빵에 꽂힌🥐 자취일상. 빵떡파티🎉 황치즈 마들렌 굽고 베이커리페어 가는 브이로그. 서촌 나들이",
+    "link": "https://www.youtube.com/watch?v=BaKF3waMawE",
+    "source": "Plan D",
+    "category": "Youtube",
+    "date": "2026-06-26T21:58:45.164842+00:00",
+    "score": 70.0,
+    "favicon": "https://www.google.com/s2/favicons?domain=youtube.com&sz=32",
+    "favorite": false
   },
   {
     "title": "Alan Turing’s Remarkable, Nearly-Forgotten Voice Encryption Device",
@@ -55,9 +265,9 @@
     "source": "Hackaday",
     "category": "DIY / Electronics",
     "date": "2026-06-26T11:00:47+00:00",
-    "score": 94.18,
+    "score": 69.03,
     "favicon": "https://www.google.com/s2/favicons?domain=hackaday.com&sz=32",
-    "favorite": true
+    "favorite": false
   },
   {
     "title": "This Kid-Friendly Laptop Build is The Antidote to Age Verification",
@@ -65,218 +275,8 @@
     "source": "Hackaday",
     "category": "DIY / Electronics",
     "date": "2026-06-26T08:00:13+00:00",
-    "score": 91.17,
+    "score": 66.02,
     "favicon": "https://www.google.com/s2/favicons?domain=hackaday.com&sz=32",
-    "favorite": true
-  },
-  {
-    "title": "GG Aleste 3 – Game Gear to SMS Patch",
-    "link": "https://retrorgb.com/gg-aleste-3-game-gear-to-sms-patch.html",
-    "source": "RetroRGB",
-    "category": "Retro Games",
-    "date": "2026-06-25T13:19:29+00:00",
-    "score": 82.49,
-    "favicon": "https://www.google.com/s2/favicons?domain=retrorgb.com&sz=32",
-    "favorite": true
-  },
-  {
-    "title": "Our favorite Prime Day gadgets under $100 you don&#8217;t need but will really want",
-    "link": "https://www.theverge.com/gadgets/957473/prime-day-2026-fun-gadgets-under-100-deal-sale",
-    "source": "The Verge",
-    "category": "Technology",
-    "date": "2026-06-26T21:49:52.469597+00:00",
-    "score": 70.0,
-    "favicon": "https://www.google.com/s2/favicons?domain=theverge.com&sz=32",
     "favorite": false
-  },
-  {
-    "title": "It’s the last day of Prime Day — here are over 140 great deals to choose from",
-    "link": "https://www.theverge.com/gadgets/957435/prime-day-2026-best-tech-deals-sale-day-four",
-    "source": "The Verge",
-    "category": "Technology",
-    "date": "2026-06-26T21:49:52.469622+00:00",
-    "score": 70.0,
-    "favicon": "https://www.google.com/s2/favicons?domain=theverge.com&sz=32",
-    "favorite": false
-  },
-  {
-    "title": "These are the best deals you can still get on MacBooks before Apple&#8217;s price hike kicks in",
-    "link": "https://www.theverge.com/gadgets/956830/prime-day-macbook-deals-apple-price-hikes",
-    "source": "The Verge",
-    "category": "Technology",
-    "date": "2026-06-26T21:49:52.469632+00:00",
-    "score": 70.0,
-    "favicon": "https://www.google.com/s2/favicons?domain=theverge.com&sz=32",
-    "favorite": false
-  },
-  {
-    "title": "Our 36 favorite gaming deals on Prime Day for Switch, PS5, and Xbox",
-    "link": "https://www.theverge.com/gadgets/951901/prime-day-video-games-switch-playstation-xbox-pc-deal-sale",
-    "source": "The Verge",
-    "category": "Technology",
-    "date": "2026-06-26T21:49:52.469639+00:00",
-    "score": 70.0,
-    "favicon": "https://www.google.com/s2/favicons?domain=theverge.com&sz=32",
-    "favorite": false
-  },
-  {
-    "title": "The beautiful shame",
-    "link": "https://www.theverge.com/report/957948/world-cup-us-visa-policies-trump",
-    "source": "The Verge",
-    "category": "Technology",
-    "date": "2026-06-26T21:49:52.469646+00:00",
-    "score": 70.0,
-    "favicon": "https://www.google.com/s2/favicons?domain=theverge.com&sz=32",
-    "favorite": false
-  },
-  {
-    "title": "This video bird feeder is the surprise hit of Prime Day",
-    "link": "https://www.theverge.com/gadgets/957791/birdbuddy-pro-solar-prime-day-deal-sale",
-    "source": "The Verge",
-    "category": "Technology",
-    "date": "2026-06-26T21:49:52.469653+00:00",
-    "score": 70.0,
-    "favicon": "https://www.google.com/s2/favicons?domain=theverge.com&sz=32",
-    "favorite": false
-  },
-  {
-    "title": "OpenAI unveils GPT-5.6 amid US AI regulatory drama",
-    "link": "https://www.theverge.com/ai-artificial-intelligence/957845/openai-gpt-5-6-trump-administration-ai-preview",
-    "source": "The Verge",
-    "category": "Technology",
-    "date": "2026-06-26T21:49:52.469660+00:00",
-    "score": 70.0,
-    "favicon": "https://www.google.com/s2/favicons?domain=theverge.com&sz=32",
-    "favorite": false
-  },
-  {
-    "title": "It's a dumb time to buy an Xbox, even with the coming price hike",
-    "link": "https://www.engadget.com/2202875/its-a-dumb-time-to-buy-an-xbox-even-with-the-coming-price-hike/",
-    "source": "Engadget",
-    "category": "Technology",
-    "date": "2026-06-26T19:42:31+00:00",
-    "score": 57.88,
-    "favicon": "https://www.google.com/s2/favicons?domain=engadget.com&sz=32",
-    "favorite": false
-  },
-  {
-    "title": "SVS Castlemania Pre-Orders",
-    "link": "https://retrorgb.com/svs-castlemania-pre-orders.html",
-    "source": "RetroRGB",
-    "category": "Retro Games",
-    "date": "2026-06-24T11:37:54+00:00",
-    "score": 56.8,
-    "favicon": "https://www.google.com/s2/favicons?domain=retrorgb.com&sz=32",
-    "favorite": true
-  },
-  {
-    "title": "Is your phone charger wasting electricity when it's not charging?",
-    "link": "https://www.engadget.com/2201922/do-phone-chargers-use-electricity-when-not-plugged-in/",
-    "source": "Engadget",
-    "category": "Technology",
-    "date": "2026-06-26T18:30:00+00:00",
-    "score": 56.67,
-    "favicon": "https://www.google.com/s2/favicons?domain=engadget.com&sz=32",
-    "favorite": false
-  },
-  {
-    "title": "What to expect at the next Samsung Galaxy Unpacked",
-    "link": "https://www.engadget.com/2202726/foldables-watches-and-glasses-could-be-on-the-way/",
-    "source": "Engadget",
-    "category": "Technology",
-    "date": "2026-06-26T18:14:45+00:00",
-    "score": 56.42,
-    "favicon": "https://www.google.com/s2/favicons?domain=engadget.com&sz=32",
-    "favorite": false
-  },
-  {
-    "title": "Weekly Roundup #519",
-    "link": "https://retrorgb.com/week519.html",
-    "source": "RetroRGB",
-    "category": "Retro Games",
-    "date": "2026-06-24T09:00:39+00:00",
-    "score": 54.18,
-    "favicon": "https://www.google.com/s2/favicons?domain=retrorgb.com&sz=32",
-    "favorite": true
-  },
-  {
-    "title": "Samsung will start charging for SmartThings API access",
-    "link": "https://www.engadget.com/2202497/samsung-will-start-charging-for-smartthings-api-access/",
-    "source": "Engadget",
-    "category": "Technology",
-    "date": "2026-06-26T15:36:15+00:00",
-    "score": 53.77,
-    "favicon": "https://www.google.com/s2/favicons?domain=engadget.com&sz=32",
-    "favorite": false
-  },
-  {
-    "title": "Not all tech survives solar storms, here's what's most at risk",
-    "link": "https://www.engadget.com/2201195/solar-maximum-tech-damage-space-weather/",
-    "source": "Engadget",
-    "category": "Technology",
-    "date": "2026-06-26T13:30:00+00:00",
-    "score": 51.67,
-    "favicon": "https://www.google.com/s2/favicons?domain=engadget.com&sz=32",
-    "favorite": false
-  },
-  {
-    "title": "Volkswagen reportedly plans to cut 100,000 jobs",
-    "link": "https://www.engadget.com/2202288/volkswagen-reportedly-plans-to-cut-100000-jobs/",
-    "source": "Engadget",
-    "category": "Technology",
-    "date": "2026-06-26T13:08:00+00:00",
-    "score": 51.3,
-    "favicon": "https://www.google.com/s2/favicons?domain=engadget.com&sz=32",
-    "favorite": false
-  },
-  {
-    "title": "Australia's social media ban may not be that effective, study finds",
-    "link": "https://www.engadget.com/2202255/australia-social-media-ban-still-not-effective/",
-    "source": "Engadget",
-    "category": "Technology",
-    "date": "2026-06-26T12:01:47+00:00",
-    "score": 50.2,
-    "favicon": "https://www.google.com/s2/favicons?domain=engadget.com&sz=32",
-    "favorite": false
-  },
-  {
-    "title": "New Home for Redump",
-    "link": "https://retrorgb.com/new-home-for-redump.html",
-    "source": "RetroRGB",
-    "category": "Retro Games",
-    "date": "2026-06-23T14:42:06+00:00",
-    "score": 35.87,
-    "favicon": "https://www.google.com/s2/favicons?domain=retrorgb.com&sz=32",
-    "favorite": true
-  },
-  {
-    "title": "Retro Game Restore: Status Update",
-    "link": "https://retrorgb.com/retro-game-restore-status-update.html",
-    "source": "RetroRGB",
-    "category": "Retro Games",
-    "date": "2026-06-23T14:12:26+00:00",
-    "score": 35.38,
-    "favicon": "https://www.google.com/s2/favicons?domain=retrorgb.com&sz=32",
-    "favorite": true
-  },
-  {
-    "title": "Doom64KB Ported to Neo Geo with Two Working Levels",
-    "link": "https://retrorgb.com/doom64kb-ported-to-neo-geo-with-two-working-levels.html",
-    "source": "RetroRGB",
-    "category": "Retro Games",
-    "date": "2026-06-21T23:31:32+00:00",
-    "score": -3.31,
-    "favicon": "https://www.google.com/s2/favicons?domain=retrorgb.com&sz=32",
-    "favorite": true
-  },
-  {
-    "title": "ArcStation: Installation & Demo",
-    "link": "https://retrorgb.com/arcstation-installation-demo.html",
-    "source": "RetroRGB",
-    "category": "Retro Games",
-    "date": "2026-06-20T13:03:25+00:00",
-    "score": -37.77,
-    "favicon": "https://www.google.com/s2/favicons?domain=retrorgb.com&sz=32",
-    "favorite": true
   }
 ]

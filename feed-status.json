@@ -7,36 +7,36 @@
     "count": 7,
     "visible": 7,
     "max_items": 7,
-    "favorite": true
-  },
-  {
-    "name": "RetroRGB",
-    "url": "https://www.retrorgb.com/feed",
-    "category": "Retro Games",
-    "ok": true,
-    "count": 10,
-    "visible": 7,
-    "max_items": 7,
-    "favorite": true
-  },
-  {
-    "name": "The Verge",
-    "url": "https://www.theverge.com/rss/index.xml",
-    "category": "Technology",
-    "ok": true,
-    "count": 10,
-    "visible": 7,
-    "max_items": 7,
     "favorite": false
   },
   {
-    "name": "Engadget",
-    "url": "https://www.engadget.com/rss.xml",
-    "category": "Technology",
+    "name": "BearBlog",
+    "url": "https://bearblog.dev/discover/feed/",
+    "category": "Blogs",
     "ok": true,
     "count": 20,
     "visible": 7,
     "max_items": 7,
+    "favorite": true
+  },
+  {
+    "name": "Plan D",
+    "url": "https://www.youtube.com/feeds/videos.xml?channel_id=UCPaApoLkmPqxCeZF7gjoc3w",
+    "category": "Youtube",
+    "ok": true,
+    "count": 15,
+    "visible": 7,
+    "max_items": 7,
     "favorite": false
+  },
+  {
+    "name": "Hacker News",
+    "url": "https://news.ycombinator.com/rss",
+    "category": "Technology",
+    "ok": true,
+    "count": 30,
+    "visible": 7,
+    "max_items": 7,
+    "favorite": true
   }
 ]
