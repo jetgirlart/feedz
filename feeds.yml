@@ -2,22 +2,22 @@
   url: https://hackaday.com/blog/feed/
   category: DIY / Electronics
   weight: 80
-  favorite: true
+  favorite: false
 
-- name: RetroRGB
-  url: https://www.retrorgb.com/feed
-  category: Retro Games
+- name: BearBlog
+  url: https://bearblog.dev/discover/feed/
+  category: Blogs
   weight: 90
   favorite: true
 
-- name: The Verge
-  url: https://www.theverge.com/rss/index.xml
-  category: Technology
+- name: Plan D
+  url: https://www.youtube.com/feeds/videos.xml?channel_id=UCPaApoLkmPqxCeZF7gjoc3w
+  category: Youtube
   weight: 70
   favorite: false
 
-- name: Engadget
-  url: https://www.engadget.com/rss.xml
+- name: Hacker News
+  url: https://news.ycombinator.com/rss
   category: Technology
   weight: 60
-  favorite: false
+  favorite: true
