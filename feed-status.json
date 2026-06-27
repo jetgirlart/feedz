@@ -238,5 +238,89 @@
     "max_age_days": 30,
     "top_max": 1,
     "favorite": true
+  },
+  {
+    "name": "r/xbiking",
+    "url": "https://www.reddit.com/r/xbiking/new/.rss",
+    "category": "Reddit",
+    "ok": true,
+    "count": 25,
+    "visible": 2,
+    "max_items": 2,
+    "max_age_days": 3,
+    "top_max": 1,
+    "favorite": true
+  },
+  {
+    "name": "r/headphones",
+    "url": "https://www.reddit.com/r/headphones/new/.rss",
+    "category": "Reddit",
+    "ok": false,
+    "count": 0,
+    "visible": 0,
+    "max_items": 2,
+    "max_age_days": 3,
+    "top_max": 1,
+    "favorite": true
+  },
+  {
+    "name": "r/meshtastic",
+    "url": "https://www.reddit.com/r/meshtastic/new/.rss",
+    "category": "Reddit",
+    "ok": false,
+    "count": 0,
+    "visible": 0,
+    "max_items": 2,
+    "max_age_days": 3,
+    "top_max": 1,
+    "favorite": true
+  },
+  {
+    "name": "r/pwnagotchi",
+    "url": "https://www.reddit.com/r/pwnagotchi/new/.rss",
+    "category": "Reddit",
+    "ok": false,
+    "count": 0,
+    "visible": 0,
+    "max_items": 2,
+    "max_age_days": 3,
+    "top_max": 1,
+    "favorite": true
+  },
+  {
+    "name": "r/mtg",
+    "url": "https://www.reddit.com/r/mtg/new/.rss",
+    "category": "Reddit",
+    "ok": false,
+    "count": 0,
+    "visible": 0,
+    "max_items": 2,
+    "max_age_days": 3,
+    "top_max": 1,
+    "favorite": true
+  },
+  {
+    "name": "r/coffee",
+    "url": "https://www.reddit.com/r/coffee/new/.rss",
+    "category": "Reddit",
+    "ok": false,
+    "count": 0,
+    "visible": 0,
+    "max_items": 2,
+    "max_age_days": 3,
+    "top_max": 1,
+    "favorite": true
+  },
+  {
+    "name": "r/zines",
+    "url": "https://www.reddit.com/r/zines/new/.rss",
+    "category": "Reddit",
+    "ok": false,
+    "count": 0,
+    "visible": 0,
+    "max_items": 2,
+    "max_age_days": 3,
+    "top_max": 1,
+    "favorite": true
   }
 ]
