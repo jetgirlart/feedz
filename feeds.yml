@@ -164,3 +164,58 @@
   favorite: true
   max_items: 3
   max_age_days: 30
+- name: r/xbiking
+  url: https://www.reddit.com/r/xbiking/new/.rss
+  category: Reddit
+  weight: 90
+  favorite: true
+  max_items: 2
+  max_age_days: 3
+
+- name: r/headphones
+  url: https://www.reddit.com/r/headphones/new/.rss
+  category: Reddit
+  weight: 85
+  favorite: true
+  max_items: 2
+  max_age_days: 3
+
+- name: r/meshtastic
+  url: https://www.reddit.com/r/meshtastic/new/.rss
+  category: Reddit
+  weight: 90
+  favorite: true
+  max_items: 2
+  max_age_days: 3
+
+- name: r/pwnagotchi
+  url: https://www.reddit.com/r/pwnagotchi/new/.rss
+  category: Reddit
+  weight: 85
+  favorite: true
+  max_items: 2
+  max_age_days: 3
+
+- name: r/mtg
+  url: https://www.reddit.com/r/mtg/new/.rss
+  category: Reddit
+  weight: 90
+  favorite: true
+  max_items: 2
+  max_age_days: 3
+
+- name: r/coffee
+  url: https://www.reddit.com/r/coffee/new/.rss
+  category: Reddit
+  weight: 85
+  favorite: true
+  max_items: 2
+  max_age_days: 3
+
+- name: r/zines
+  url: https://www.reddit.com/r/zines/new/.rss
+  category: Reddit
+  weight: 95
+  favorite: true
+  max_items: 2
+  max_age_days: 3
