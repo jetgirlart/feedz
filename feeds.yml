@@ -33,9 +33,9 @@
   category: Technology
   weight: 60
   favorite: true
-  max_items: 5
+  max_items: 3
   max_age_days: 3
-  top_max: 3
+  top_max: 2
 
 - name: Slow Commute Club
   url: https://www.youtube.com/feeds/videos.xml?channel_id=UC5Rh9my3NeWuLk5RxYLZDnw
@@ -75,7 +75,7 @@
   weight: 90
   favorite: true
   max_items: 3
-  max_age_days: 15
+  max_age_days: 20
 
 - name: Tolarian Community College
   url: https://www.youtube.com/feeds/videos.xml?channel_id=UC7-hR5EfgpM6oHfiGDkxfMA
@@ -220,3 +220,11 @@
   favorite: true
   max_items: 2
   max_age_days: 3
+
+- name: Probably Riding
+  url: https://www.youtube.com/feeds/videos.xml?channel_id=UCaC6R0tQ4d7tLwP6bFQ6gYQ
+  category: YouTube
+  weight: 95
+  favorite: true
+  max_items: 3
+  max_age_days: 21
