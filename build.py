@@ -120,10 +120,14 @@ def domain_from_url(url):
         return ""
 
 
-def favicon_url(feed_url):
-    """Use Google's small favicon helper for the feed's domain."""
-    domain = domain_from_url(feed_url)
-    return f"https://www.google.com/s2/favicons?domain={domain}&sz=32"
+def favicon_url(*urls):
+    """Use Google's small favicon helper for the first usable URL domain."""
+    for url in urls:
+        domain = domain_from_url(url)
+        if domain:
+            return f"https://www.google.com/s2/favicons?domain={domain}&sz=32"
+
+    return ""
 
 
 def is_reddit_feed(url):
@@ -250,7 +254,7 @@ def build_article(feed, entry, published_at, age_hours):
         "category": feed["category"],
         "date": published_at,
         "score": score_article(feed, age_hours),
-        "favicon": favicon_url(feed["url"]),
+        "favicon": favicon_url(link, feed["url"]),
         "favorite": feed["favorite"],
         "thumbnail": youtube_thumbnail_url(feed["category"], link),
         "top_max": feed["top_max"],
