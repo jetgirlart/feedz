@@ -164,6 +164,7 @@
   favorite: true
   max_items: 3
   max_age_days: 30
+  
 - name: r/xbiking
   url: https://www.reddit.com/r/xbiking/new/.rss
   category: Reddit
