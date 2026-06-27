@@ -5,6 +5,7 @@ from pathlib import Path
 from urllib.parse import parse_qs, urlparse
 
 import feedparser
+import requests
 import yaml
 from jinja2 import Environment, FileSystemLoader, select_autoescape
 
@@ -23,6 +24,10 @@ DEFAULT_MAX_AGE_DAYS = 14
 FAVORITE_BONUS = 25
 TOP_STORIES_LIMIT = 20
 DEFAULT_TOP_MAX = 1
+REQUEST_TIMEOUT = 10
+REDDIT_HEADERS = {
+    "User-Agent": "feedz/1.0 (+https://feedz.jetgirl.art)",
+}
 
 # We only look at a modest number of entries from each RSS feed. This keeps a
 # very busy feed from taking over the page while still giving scoring room to work.
@@ -117,6 +122,33 @@ def favicon_url(feed_url):
     return f"https://www.google.com/s2/favicons?domain={domain}&sz=32"
 
 
+def is_reddit_feed(url):
+    """Return True when a feed URL points at Reddit."""
+    return "reddit.com" in url.lower()
+
+
+def parse_feed(feed):
+    """Parse one RSS feed, using a custom User-Agent for Reddit."""
+    if not is_reddit_feed(feed["url"]):
+        return feedparser.parse(feed["url"]), None
+
+    try:
+        response = requests.get(
+            feed["url"],
+            headers=REDDIT_HEADERS,
+            timeout=REQUEST_TIMEOUT,
+        )
+        response.raise_for_status()
+    except requests.RequestException as error:
+        return feedparser.parse(b""), f"Reddit fetch failed: {error}"
+
+    parsed = feedparser.parse(response.content)
+    if parsed.bozo:
+        return parsed, f"Reddit parse warning: {parsed.bozo_exception}"
+
+    return parsed, None
+
+
 def youtube_video_id(link):
     """Extract a YouTube video ID from common YouTube URL formats."""
     parsed = urlparse(link)
@@ -184,7 +216,7 @@ def build_article(feed, entry, published_at, age_hours):
 
 def fetch_feed_articles(feed, now):
     """Fetch one RSS feed and return its visible articles plus status."""
-    parsed = feedparser.parse(feed["url"])
+    parsed, error = parse_feed(feed)
     entries = parsed.entries or []
 
     lookahead = max(feed["max_items"], FEED_LOOKAHEAD)
@@ -213,6 +245,7 @@ def fetch_feed_articles(feed, now):
         "max_age_days": feed["max_age_days"],
         "top_max": feed["top_max"],
         "favorite": feed["favorite"],
+        "error": error,
     }
 
     return visible_articles, status

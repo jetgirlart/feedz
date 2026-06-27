@@ -1,3 +1,4 @@
 feedparser
 pyyaml
 jinja2
+requests

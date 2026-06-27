@@ -9,7 +9,8 @@
     "max_items": 3,
     "max_age_days": 3,
     "top_max": 1,
-    "favorite": false
+    "favorite": false,
+    "error": null
   },
   {
     "name": "BearBlog",
@@ -21,7 +22,8 @@
     "max_items": 5,
     "max_age_days": 7,
     "top_max": 3,
-    "favorite": true
+    "favorite": true,
+    "error": null
   },
   {
     "name": "Plan D",
@@ -33,7 +35,8 @@
     "max_items": 3,
     "max_age_days": 15,
     "top_max": 1,
-    "favorite": false
+    "favorite": false,
+    "error": null
   },
   {
     "name": "Hacker News",
@@ -45,7 +48,8 @@
     "max_items": 5,
     "max_age_days": 3,
     "top_max": 3,
-    "favorite": true
+    "favorite": true,
+    "error": null
   },
   {
     "name": "Slow Commute Club",
@@ -57,7 +61,8 @@
     "max_items": 3,
     "max_age_days": 30,
     "top_max": 1,
-    "favorite": true
+    "favorite": true,
+    "error": null
   },
   {
     "name": "noodl.ist",
@@ -69,7 +74,8 @@
     "max_items": 3,
     "max_age_days": 5,
     "top_max": 1,
-    "favorite": true
+    "favorite": true,
+    "error": null
   },
   {
     "name": "This Does Not Compute",
@@ -81,7 +87,8 @@
     "max_items": 3,
     "max_age_days": 30,
     "top_max": 1,
-    "favorite": true
+    "favorite": true,
+    "error": null
   },
   {
     "name": "Slow Commute Club",
@@ -93,7 +100,8 @@
     "max_items": 3,
     "max_age_days": 30,
     "top_max": 1,
-    "favorite": true
+    "favorite": true,
+    "error": null
   },
   {
     "name": "DankPods",
@@ -105,7 +113,8 @@
     "max_items": 3,
     "max_age_days": 15,
     "top_max": 1,
-    "favorite": true
+    "favorite": true,
+    "error": null
   },
   {
     "name": "Tolarian Community College",
@@ -117,7 +126,8 @@
     "max_items": 3,
     "max_age_days": 7,
     "top_max": 1,
-    "favorite": true
+    "favorite": true,
+    "error": null
   },
   {
     "name": "Decoder Ring",
@@ -129,7 +139,8 @@
     "max_items": 2,
     "max_age_days": 15,
     "top_max": 1,
-    "favorite": true
+    "favorite": true,
+    "error": null
   },
   {
     "name": "Radiolab",
@@ -141,7 +152,8 @@
     "max_items": 2,
     "max_age_days": 15,
     "top_max": 1,
-    "favorite": true
+    "favorite": true,
+    "error": null
   },
   {
     "name": "Darknet Diaries",
@@ -153,7 +165,8 @@
     "max_items": 2,
     "max_age_days": 30,
     "top_max": 1,
-    "favorite": true
+    "favorite": true,
+    "error": null
   },
   {
     "name": "The Empty Bowl",
@@ -165,19 +178,21 @@
     "max_items": 2,
     "max_age_days": 30,
     "top_max": 1,
-    "favorite": true
+    "favorite": true,
+    "error": null
   },
   {
     "name": "Retroist Podcast",
     "url": "https://api.substack.com/feed/podcast/249575.rss",
     "category": "Podcasts",
-    "ok": false,
-    "count": 0,
-    "visible": 0,
+    "ok": true,
+    "count": 366,
+    "visible": 2,
     "max_items": 2,
     "max_age_days": 30,
     "top_max": 1,
-    "favorite": true
+    "favorite": true,
+    "error": null
   },
   {
     "name": "MTG Drive to Work",
@@ -189,7 +204,8 @@
     "max_items": 2,
     "max_age_days": 10,
     "top_max": 1,
-    "favorite": true
+    "favorite": true,
+    "error": null
   },
   {
     "name": "Literary Hub",
@@ -201,7 +217,8 @@
     "max_items": 5,
     "max_age_days": 21,
     "top_max": 1,
-    "favorite": true
+    "favorite": true,
+    "error": null
   },
   {
     "name": "The Paris Review",
@@ -213,7 +230,8 @@
     "max_items": 4,
     "max_age_days": 30,
     "top_max": 1,
-    "favorite": true
+    "favorite": true,
+    "error": null
   },
   {
     "name": "McSweeney's",
@@ -225,19 +243,21 @@
     "max_items": 4,
     "max_age_days": 30,
     "top_max": 1,
-    "favorite": true
+    "favorite": true,
+    "error": null
   },
   {
     "name": "novelglot",
     "url": "https://novelglot.substack.com/feed",
     "category": "Blogs",
-    "ok": false,
-    "count": 0,
-    "visible": 0,
+    "ok": true,
+    "count": 12,
+    "visible": 2,
     "max_items": 3,
     "max_age_days": 30,
     "top_max": 1,
-    "favorite": true
+    "favorite": true,
+    "error": null
   },
   {
     "name": "r/xbiking",
@@ -249,7 +269,8 @@
     "max_items": 2,
     "max_age_days": 3,
     "top_max": 1,
-    "favorite": true
+    "favorite": true,
+    "error": null
   },
   {
     "name": "r/headphones",
@@ -261,7 +282,8 @@
     "max_items": 2,
     "max_age_days": 3,
     "top_max": 1,
-    "favorite": true
+    "favorite": true,
+    "error": "Reddit fetch failed: 429 Client Error: Too Many Requests for url: https://www.reddit.com/r/headphones/new/.rss"
   },
   {
     "name": "r/meshtastic",
@@ -273,7 +295,8 @@
     "max_items": 2,
     "max_age_days": 3,
     "top_max": 1,
-    "favorite": true
+    "favorite": true,
+    "error": "Reddit fetch failed: 429 Client Error: Too Many Requests for url: https://www.reddit.com/r/meshtastic/new/.rss"
   },
   {
     "name": "r/pwnagotchi",
@@ -285,7 +308,8 @@
     "max_items": 2,
     "max_age_days": 3,
     "top_max": 1,
-    "favorite": true
+    "favorite": true,
+    "error": "Reddit fetch failed: 429 Client Error: Too Many Requests for url: https://www.reddit.com/r/pwnagotchi/new/.rss"
   },
   {
     "name": "r/mtg",
@@ -297,7 +321,8 @@
     "max_items": 2,
     "max_age_days": 3,
     "top_max": 1,
-    "favorite": true
+    "favorite": true,
+    "error": "Reddit fetch failed: 429 Client Error: Too Many Requests for url: https://www.reddit.com/r/mtg/new/.rss"
   },
   {
     "name": "r/coffee",
@@ -309,7 +334,8 @@
     "max_items": 2,
     "max_age_days": 3,
     "top_max": 1,
-    "favorite": true
+    "favorite": true,
+    "error": "Reddit fetch failed: 429 Client Error: Too Many Requests for url: https://www.reddit.com/r/coffee/new/.rss"
   },
   {
     "name": "r/zines",
@@ -321,6 +347,7 @@
     "max_items": 2,
     "max_age_days": 3,
     "top_max": 1,
-    "favorite": true
+    "favorite": true,
+    "error": "Reddit fetch failed: 429 Client Error: Too Many Requests for url: https://www.reddit.com/r/zines/new/.rss"
   }
 ]
