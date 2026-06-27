@@ -1,8 +1,8 @@
 :root {
-  --bg: #e4eeeeff;
+  --bg: #f7f7f7ff;
   --text: #111;
   --muted: #666;
-  --line: #111;
+  --line: #1e4366ff;
   --link: #1e4366ff;
   --visited: #777;
   --card: #ffffffff;
@@ -13,7 +13,7 @@ body.dark {
   --bg: #111;
   --text: #eee;
   --muted: #aaa;
-  --line: #eee;
+  --line: #9db7ff;
   --link: #9db7ff;
   --visited: #888;
   --card: #1a1a1a;
@@ -36,7 +36,8 @@ body {
 .masthead {
   margin-bottom: 16px;
   padding: 12px 0;
-  text-align: center;
+  text-align: left;
+  color: var(--link)
 }
 
 h1 {
@@ -62,7 +63,7 @@ h2 {
 .controls {
   display: flex;
   flex-wrap: wrap;
-  justify-content: center;
+  justify-content: left;
   gap: 8px;
   margin: 16px 0;
 }
@@ -125,6 +126,7 @@ button:focus-visible {
   margin-bottom: 22px;
   padding: 12px;
   background: var(--card);
+  border: 1px solid var(--line);
 }
 
 .top h2 {
@@ -137,7 +139,7 @@ button:focus-visible {
 }
 
 .layout {
-  display: grid;
+  display: block;
 }
 
 .grid {
