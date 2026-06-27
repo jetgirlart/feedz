@@ -33,7 +33,9 @@ function applyDarkMode() {
   const button = document.getElementById("darkMode");
 
   document.body.classList.toggle("dark", isDark);
-  button.textContent = isDark ? "☀️" : "🌙";
+  if (button) {
+    button.textContent = isDark ? "☀️" : "🌙";
+  }
 }
 
 function setupReadTracking() {
@@ -47,20 +49,31 @@ function setupReadTracking() {
     });
   });
 
-  document.getElementById("markRead").addEventListener("click", () => {
-    const links = allItems().map((item) => item.dataset.link);
-    saveReadLinks(links);
-    applyReadState();
-  });
+  const markReadButton = document.getElementById("markRead");
+  if (markReadButton) {
+    markReadButton.addEventListener("click", () => {
+      const links = allItems().map((item) => item.dataset.link);
+      saveReadLinks(links);
+      applyReadState();
+    });
+  }
 
-  document.getElementById("clearRead").addEventListener("click", () => {
-    localStorage.removeItem(readKey);
-    applyReadState();
-  });
+  const clearReadButton = document.getElementById("clearRead");
+  if (clearReadButton) {
+    clearReadButton.addEventListener("click", () => {
+      localStorage.removeItem(readKey);
+      applyReadState();
+    });
+  }
 }
 
 function setupSearch() {
-  document.getElementById("search").addEventListener("input", (event) => {
+  const searchInput = document.getElementById("search");
+  if (!searchInput) {
+    return;
+  }
+
+  searchInput.addEventListener("input", (event) => {
     const query = event.target.value.toLowerCase();
 
     // Search against the text we rendered into data attributes in the template.
@@ -77,7 +90,12 @@ function setupSearch() {
 }
 
 function setupDarkModeToggle() {
-  document.getElementById("darkMode").addEventListener("click", () => {
+  const darkModeButton = document.getElementById("darkMode");
+  if (!darkModeButton) {
+    return;
+  }
+
+  darkModeButton.addEventListener("click", () => {
     const isDark = !document.body.classList.contains("dark");
     localStorage.setItem(darkKey, isDark ? "1" : "0");
     applyDarkMode();
@@ -85,7 +103,12 @@ function setupDarkModeToggle() {
 }
 
 function setupRandomArticle() {
-  document.getElementById("randomLink").addEventListener("click", () => {
+  const randomButton = document.getElementById("randomLink");
+  if (!randomButton) {
+    return;
+  }
+
+  randomButton.addEventListener("click", () => {
     const links = [...document.querySelectorAll(".item:not(.hidden) a")];
     const pick = links[Math.floor(Math.random() * links.length)];
 
