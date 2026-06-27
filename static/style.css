@@ -1,11 +1,11 @@
 :root {
-  --bg: #f7f7f7ff;
+  --bg: #ffffffff
   --text: #111;
   --muted: #666;
   --line: #1e4366ff;
   --link: #1e4366ff;
   --visited: #777;
-  --card: #ffffffff;
+  --card: #f7f7f7ff;
   --shadow: rgba(0, 0, 0, 0.08);
 }
 
@@ -128,7 +128,6 @@ button:focus-visible {
   margin-bottom: 22px;
   padding: 12px;
   background: var(--card);
-  border: 1px solid var(--line);
 }
 
 .top h2 {
@@ -215,14 +214,12 @@ a:focus-visible {
   max-width: 48px;
   height: 27px;
   margin-right: 6px;
-  border: 1px solid var(--line);
   object-fit: cover;
 }
 
 .box {
   margin-bottom: 16px;
   padding: 10px;
-  border: 1px solid var(--line);
   background: var(--card);
 }
 
@@ -251,7 +248,6 @@ a:focus-visible {
 footer {
   margin-top: 30px;
   padding-top: 12px;
-  border-top: 1px solid var(--line);
   color: var(--muted);
   font-size: 12px;
   text-align: center;
