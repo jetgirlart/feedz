@@ -22,6 +22,7 @@ DEFAULT_MAX_ITEMS = 7
 DEFAULT_MAX_AGE_DAYS = 14
 FAVORITE_BONUS = 25
 TOP_STORIES_LIMIT = 20
+DEFAULT_TOP_MAX = 1
 
 # We only look at a modest number of entries from each RSS feed. This keeps a
 # very busy feed from taking over the page while still giving scoring room to work.
@@ -43,6 +44,7 @@ def clean_feed_config(feed):
     """Fill in defaults for optional feed settings."""
     max_items = feed.get("max_items", DEFAULT_MAX_ITEMS)
     max_age_days = feed.get("max_age_days", DEFAULT_MAX_AGE_DAYS)
+    top_max = feed.get("top_max", DEFAULT_TOP_MAX)
     weight = feed.get("weight", DEFAULT_WEIGHT)
 
     try:
@@ -62,6 +64,14 @@ def clean_feed_config(feed):
         max_age_days = DEFAULT_MAX_AGE_DAYS
 
     try:
+        top_max = int(top_max)
+    except (TypeError, ValueError):
+        top_max = DEFAULT_TOP_MAX
+
+    if top_max < 1:
+        top_max = DEFAULT_TOP_MAX
+
+    try:
         weight = float(weight)
     except (TypeError, ValueError):
         weight = DEFAULT_WEIGHT
@@ -74,6 +84,7 @@ def clean_feed_config(feed):
         "favorite": bool(feed.get("favorite", False)),
         "max_items": max_items,
         "max_age_days": max_age_days,
+        "top_max": top_max,
     }
 
 
@@ -167,6 +178,7 @@ def build_article(feed, entry, published_at, age_hours):
         "favicon": favicon_url(feed["url"]),
         "favorite": feed["favorite"],
         "thumbnail": youtube_thumbnail_url(feed["category"], link),
+        "top_max": feed["top_max"],
     }
 
 
@@ -199,6 +211,7 @@ def fetch_feed_articles(feed, now):
         "visible": len(visible_articles),
         "max_items": feed["max_items"],
         "max_age_days": feed["max_age_days"],
+        "top_max": feed["top_max"],
         "favorite": feed["favorite"],
     }
 
@@ -216,18 +229,20 @@ def group_articles_by_category(articles):
 
 
 def select_top_items(articles):
-    """Pick top stories from score-sorted articles, with one story per source."""
-    used_sources = set()
+    """Pick top stories from score-sorted articles, honoring each source limit."""
+    source_counts = {}
     top_items = []
 
     for article in articles:
         source = article["source"]
+        current_count = source_counts.get(source, 0)
+        top_max = article.get("top_max", DEFAULT_TOP_MAX)
 
-        if source in used_sources:
+        if current_count >= top_max:
             continue
 
         top_items.append(article)
-        used_sources.add(source)
+        source_counts[source] = current_count + 1
 
         if len(top_items) >= TOP_STORIES_LIMIT:
             break

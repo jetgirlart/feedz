@@ -1,6 +1,7 @@
 # Optional per-feed settings:
 # max_items: visible posts from that feed. Defaults to 7.
 # max_age_days: oldest posts to show from that feed. Defaults to 14.
+# top_max: Top Stories posts from that feed. Defaults to 1.
 
 - name: Hackaday
   url: https://hackaday.com/blog/feed/
