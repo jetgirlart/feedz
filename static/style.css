@@ -43,7 +43,7 @@ body {
 
 h1 {
   margin: 0;
-  font-family: Georgia, serif;
+  font-family: Arial Black, Helvetica, sans-serif;
   font-size: clamp(42px, 8vw, 86px);
   line-height: 0.9;
 }
