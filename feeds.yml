@@ -61,14 +61,6 @@
   max_items: 3
   max_age_days: 30
 
-- name: Slow Commute Club
-  url: https://www.youtube.com/feeds/videos.xml?channel_id=UC5Rh9my3NeWuLk5RxYLZDnw
-  category: YouTube
-  weight: 90
-  favorite: true
-  max_items: 3
-  max_age_days: 30
-
 - name: DankPods
   url: https://www.youtube.com/feeds/videos.xml?channel_id=UC7Jwj9fkrf1adN4fMmTkpug
   category: YouTube
