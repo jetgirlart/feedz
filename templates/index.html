@@ -18,13 +18,13 @@
   <div class="controls" aria-label="Feed controls">
     <input id="search" type="search" placeholder="Search feedz..." autocomplete="off">
     <button id="darkMode" class="tooltip-button" type="button" title="Toggle light/dark mode.">🌙</button>
-    <button id="markRead" class="tooltip-button" type="button" title="Mark all as read.">📭</button>
-    <button id="clearRead" class="tooltip-button" type="button" title="Mark all as unread.">📬</button>
-    <button id="randomLink" type="button">Random Article</button>
+    <!-- <button id="markRead" class="tooltip-button" type="button" title="Mark all as read.">📭</button>
+    <button id="clearRead" class="tooltip-button" type="button" title="Mark all as unread.">📬</button> -->
+    <button id="randomLink" type="button">Random Link</button>
   </div>
 
   <section class="top" aria-labelledby="top-stories-heading">
-    <h2 id="top-stories-heading">Top Stories</h2>
+    <h2 id="top-stories-heading">Top Links</h2>
     <div class="story-list">
       {% for item in top_items %}
         <article
@@ -104,7 +104,9 @@
   </section>
 
   <footer>
-    More nonsense by <a href="https://jetgirl.art">jetgirl.art</a>.
+    <p>What is feedz? I set this page up because I was going to multiple aggregate sites and wanted a single place to access them all. Everything here is what I personally check on and read about. If you found this, I hope you enjoy it as well.</p>
+    <p>Made with ❤️ by <a href="https://jetgirl.art">jetgirl.art</a></p>
+     
   </footer>
 </body>
 </html>
