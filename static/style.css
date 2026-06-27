@@ -115,7 +115,7 @@ button:focus-visible {
 }
 
 .grid {
-  columns: 3 240px;
+  columns: 4 220px;
   column-gap: 28px;
 }
 
