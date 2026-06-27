@@ -226,6 +226,11 @@ a:focus-visible {
   font-size: 11px;
 }
 
+.age-badge {
+  color: var(--accent);
+  font-weight: bold;
+}
+
 .favicon {
   width: 14px;
   height: 14px;

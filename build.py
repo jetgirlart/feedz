@@ -1,3 +1,4 @@
+import calendar
 import json
 import time
 from datetime import datetime, timezone
@@ -25,6 +26,7 @@ DEFAULT_MAX_AGE_DAYS = 14
 FAVORITE_BONUS = 25
 TOP_STORIES_LIMIT = 20
 DEFAULT_TOP_MAX = 1
+FRESH_LINK_MAX_AGE_HOURS = 48
 REQUEST_TIMEOUT = 10
 REDDIT_REQUEST_DELAY = 2
 REDDIT_MAX_ATTEMPTS = 2
@@ -97,19 +99,75 @@ def clean_feed_config(feed):
     }
 
 
-def parse_feed_date(entry):
-    """Return a timezone-aware published date for a feed entry."""
-    published = entry.get("published") or entry.get("updated") or ""
+def normalize_date(date):
+    """Return a UTC datetime, or None when a value is not a real date."""
+    if not date:
+        return None
 
-    try:
-        date = parsedate_to_datetime(published)
-    except (TypeError, ValueError):
-        return datetime.now(timezone.utc)
+    if isinstance(date, datetime):
+        if date.tzinfo is None:
+            date = date.replace(tzinfo=timezone.utc)
+        return date.astimezone(timezone.utc)
 
-    if date.tzinfo is None:
-        date = date.replace(tzinfo=timezone.utc)
+    if hasattr(date, "tm_year"):
+        timestamp = calendar.timegm(date)
+        return datetime.fromtimestamp(timestamp, timezone.utc)
 
-    return date.astimezone(timezone.utc)
+    if isinstance(date, (int, float)):
+        timestamp = float(date)
+        if timestamp > 10000000000:
+            timestamp = timestamp / 1000
+        return datetime.fromtimestamp(timestamp, timezone.utc)
+
+    if isinstance(date, str):
+        value = date.strip()
+        if not value:
+            return None
+
+        try:
+            return normalize_date(float(value))
+        except ValueError:
+            pass
+
+        try:
+            return normalize_date(datetime.fromisoformat(value.replace("Z", "+00:00")))
+        except ValueError:
+            pass
+
+        try:
+            return normalize_date(parsedate_to_datetime(value))
+        except (TypeError, ValueError):
+            return None
+
+    return None
+
+
+def parse_feed_date(entry, feed):
+    """Return a true published date for a feed entry, never the fetch time."""
+    if feed["category"] == "Reddit":
+        reddit_date = normalize_date(entry.get("created_utc"))
+        if reddit_date:
+            return reddit_date
+
+    date_fields = [
+        "published_parsed",
+        "published",
+        "pubDate",
+        "pubdate",
+        "updated_parsed",
+        "updated",
+        "created_parsed",
+        "created",
+        "isoDate",
+        "isodate",
+    ]
+
+    for field in date_fields:
+        published_at = normalize_date(entry.get(field))
+        if published_at:
+            return published_at
+
+    return None
 
 
 def domain_from_url(url):
@@ -234,6 +292,18 @@ def article_age_hours(published_at, now):
     return max(0, age_hours)
 
 
+def age_label(age_hours):
+    """Return a compact relative age label."""
+    if age_hours < 1:
+        minutes = max(1, int(age_hours * 60))
+        return f"{minutes}m"
+
+    if age_hours < 24:
+        return f"{int(age_hours)}h"
+
+    return f"{int(age_hours // 24)}d"
+
+
 def score_article(feed, age_hours):
     """Score an article from its feed weight and age in hours."""
     weight = float(feed["weight"])
@@ -252,7 +322,9 @@ def build_article(feed, entry, published_at, age_hours):
         "link": link,
         "source": feed["name"],
         "category": feed["category"],
-        "date": published_at,
+        "published_at": published_at,
+        "age_hours": age_hours,
+        "age_label": age_label(age_hours),
         "score": score_article(feed, age_hours),
         "favicon": favicon_url(link, feed["url"]),
         "favorite": feed["favorite"],
@@ -276,10 +348,17 @@ def build_feed_result(feed, entries, now, parsed_ok, error):
     articles = []
 
     for entry in entries[:lookahead]:
-        published_at = parse_feed_date(entry)
-        age_hours = article_age_hours(published_at, now)
+        published_at = parse_feed_date(entry, feed)
+        if not published_at:
+            continue
 
-        if age_hours > feed["max_age_days"] * 24:
+        age_hours = article_age_hours(published_at, now)
+        max_age_hours = feed["max_age_days"] * 24
+
+        if feed["category"] in {"Reddit", "YouTube"}:
+            max_age_hours = min(max_age_hours, FRESH_LINK_MAX_AGE_HOURS)
+
+        if age_hours > max_age_hours:
             continue
 
         articles.append(build_article(feed, entry, published_at, age_hours))
@@ -373,6 +452,9 @@ def select_top_items(articles):
     top_items = []
 
     for article in articles:
+        if article["age_hours"] > FRESH_LINK_MAX_AGE_HOURS:
+            continue
+
         source = article["source"]
         current_count = source_counts.get(source, 0)
         top_max = article.get("top_max", DEFAULT_TOP_MAX)
@@ -396,7 +478,8 @@ def article_to_json(article):
         "link": article["link"],
         "source": article["source"],
         "category": article["category"],
-        "date": article["date"].isoformat(),
+        "publishedAt": article["published_at"].isoformat(),
+        "age": article["age_label"],
         "score": round(article["score"], 2),
         "favicon": article["favicon"],
         "favorite": article["favorite"],

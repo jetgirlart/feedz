@@ -45,7 +45,10 @@
                 {% endif %}
                 <span>{{ item.title }}</span>
               </a>
-              <p class="meta">{{ item.source }} · {{ item.category }} · {{ item.date.strftime("%b %d, %H:%M UTC") }}</p>
+              <p class="meta">
+                {% if item.age_label %}<span class="age-badge">[{{ item.age_label }}]</span>{% endif %}
+                {{ item.source }} · {{ item.category }}
+              </p>
             </div>
           </div>
         </article>
@@ -81,9 +84,9 @@
                         <span>{{ item.title }}</span>
                       </a>
                       <p class="meta">
+                        {% if item.age_label %}<span class="age-badge">[{{ item.age_label }}]</span>{% endif %}
                         {{ item.source }}
                         {% if item.favorite %}★{% endif %}
-                        · {{ item.date.strftime("%b %d, %H:%M UTC") }}
                       </p>
                     </div>
                   </div>
