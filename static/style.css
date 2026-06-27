@@ -44,7 +44,6 @@ h1 {
   margin: 0;
   font-family: Arial Black, Helvetica, sans-serif;
   font-size: clamp(42px, 8vw, 86px);
-  text-transform: uppercase;
   line-height: 0.9;
 }
 
@@ -128,6 +127,7 @@ button:focus-visible {
   margin-bottom: 22px;
   padding: 12px;
   background: var(--card);
+   box-shadow: 0 2px 8px var(--shadow);
 }
 
 .top h2 {
@@ -225,6 +225,7 @@ a:focus-visible {
   margin-bottom: 16px;
   padding: 10px;
   background: var(--card);
+  box-shadow: 0 2px 8px var(--shadow);
 }
 
 .box p {
@@ -255,6 +256,7 @@ footer {
   color: var(--muted);
   font-size: 12px;
   text-align: center;
+  
 }
 
 @media (max-width: 900px) {
