@@ -20,7 +20,7 @@
     "visible": 5,
     "max_items": 5,
     "max_age_days": 7,
-    "top_max": 1,
+    "top_max": 3,
     "favorite": true
   },
   {
@@ -44,7 +44,7 @@
     "visible": 5,
     "max_items": 5,
     "max_age_days": 3,
-    "top_max": 1,
+    "top_max": 3,
     "favorite": true
   },
   {
@@ -188,18 +188,6 @@
     "visible": 2,
     "max_items": 2,
     "max_age_days": 10,
-    "top_max": 1,
-    "favorite": true
-  },
-  {
-    "name": "Texas Standard",
-    "url": "https://www.texasstandard.org/feed/",
-    "category": "Texas",
-    "ok": true,
-    "count": 300,
-    "visible": 5,
-    "max_items": 5,
-    "max_age_days": 14,
     "top_max": 1,
     "favorite": true
   },
