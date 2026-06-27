@@ -355,7 +355,7 @@ def build_feed_result(feed, entries, now, parsed_ok, error):
         age_hours = article_age_hours(published_at, now)
         max_age_hours = feed["max_age_days"] * 24
 
-        if feed["category"] in {"Reddit", "YouTube"}:
+        if feed["category"] == "Reddit":
             max_age_hours = min(max_age_hours, FRESH_LINK_MAX_AGE_HOURS)
 
         if age_hours > max_age_hours:

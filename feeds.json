@@ -30,7 +30,11 @@
     "category": "Reddit",
     "publishedAt": "2026-06-27T19:53:13+00:00",
     "age": "36m",
+<<<<<<< Updated upstream
     "score": 114.4,
+=======
+    "score": 114.39,
+>>>>>>> Stashed changes
     "favicon": "https://www.google.com/s2/favicons?domain=reddit.com&sz=32",
     "favorite": true,
     "thumbnail": null
@@ -54,7 +58,11 @@
     "category": "Reddit",
     "publishedAt": "2026-06-27T18:56:12+00:00",
     "age": "1h",
+<<<<<<< Updated upstream
     "score": 113.45,
+=======
+    "score": 113.44,
+>>>>>>> Stashed changes
     "favicon": "https://www.google.com/s2/favicons?domain=reddit.com&sz=32",
     "favorite": true,
     "thumbnail": null
@@ -90,7 +98,11 @@
     "category": "Reddit",
     "publishedAt": "2026-06-27T18:25:47+00:00",
     "age": "2h",
+<<<<<<< Updated upstream
     "score": 112.94,
+=======
+    "score": 112.93,
+>>>>>>> Stashed changes
     "favicon": "https://www.google.com/s2/favicons?domain=reddit.com&sz=32",
     "favorite": true,
     "thumbnail": null
@@ -126,7 +138,11 @@
     "category": "Reddit",
     "publishedAt": "2026-06-27T19:04:33+00:00",
     "age": "1h",
+<<<<<<< Updated upstream
     "score": 108.59,
+=======
+    "score": 108.58,
+>>>>>>> Stashed changes
     "favicon": "https://www.google.com/s2/favicons?domain=reddit.com&sz=32",
     "favorite": true,
     "thumbnail": null
@@ -150,7 +166,11 @@
     "category": "Personal Blogs",
     "publishedAt": "2026-06-26T19:46:00+00:00",
     "age": "1d",
+<<<<<<< Updated upstream
     "score": 90.28,
+=======
+    "score": 90.27,
+>>>>>>> Stashed changes
     "favicon": "https://www.google.com/s2/favicons?domain=fornoone.bearblog.dev&sz=32",
     "favorite": true,
     "thumbnail": null
@@ -192,6 +212,21 @@
     "thumbnail": null
   },
   {
+<<<<<<< Updated upstream
+=======
+    "title": "Why blog?",
+    "link": "https://diels-daydreams.bearblog.dev/why-blog/",
+    "source": "BearBlog",
+    "category": "Personal Blogs",
+    "publishedAt": "2026-06-26T17:50:00+00:00",
+    "age": "1d",
+    "score": 88.34,
+    "favicon": "https://www.google.com/s2/favicons?domain=diels-daydreams.bearblog.dev&sz=32",
+    "favorite": true,
+    "thumbnail": null
+  },
+  {
+>>>>>>> Stashed changes
     "title": "Let's Play The $500.00 Collector Booster Box Game! | Marvel Super Heroes | Magic: The Gathering",
     "link": "https://www.youtube.com/watch?v=pkWvyPekol0",
     "source": "Tolarian Community College",
@@ -210,7 +245,11 @@
     "category": "Personal Blogs",
     "publishedAt": "2026-06-26T16:31:00+00:00",
     "age": "1d",
+<<<<<<< Updated upstream
     "score": 87.03,
+=======
+    "score": 87.02,
+>>>>>>> Stashed changes
     "favicon": "https://www.google.com/s2/favicons?domain=naisho.bearblog.dev&sz=32",
     "favorite": true,
     "thumbnail": null
@@ -222,7 +261,11 @@
     "category": "YouTube",
     "publishedAt": "2026-06-26T16:04:39+00:00",
     "age": "1d",
+<<<<<<< Updated upstream
     "score": 86.59,
+=======
+    "score": 86.58,
+>>>>>>> Stashed changes
     "favicon": "https://www.google.com/s2/favicons?domain=youtube.com&sz=32",
     "favorite": true,
     "thumbnail": "https://img.youtube.com/vi/SoZ3u8mXoeA/mqdefault.jpg"
@@ -246,7 +289,11 @@
     "category": "Books",
     "publishedAt": "2026-06-26T15:00:23+00:00",
     "age": "1d",
+<<<<<<< Updated upstream
     "score": 85.52,
+=======
+    "score": 85.51,
+>>>>>>> Stashed changes
     "favicon": "https://www.google.com/s2/favicons?domain=theparisreview.org&sz=32",
     "favorite": true,
     "thumbnail": null
@@ -294,7 +341,11 @@
     "category": "Books",
     "publishedAt": "2026-06-26T18:28:00+00:00",
     "age": "1d",
+<<<<<<< Updated upstream
     "score": 83.98,
+=======
+    "score": 83.97,
+>>>>>>> Stashed changes
     "favicon": "https://www.google.com/s2/favicons?domain=mcsweeneys.net&sz=32",
     "favorite": true,
     "thumbnail": null
@@ -354,7 +405,11 @@
     "category": "Technology",
     "publishedAt": "2026-06-27T20:00:22+00:00",
     "age": "29m",
+<<<<<<< Updated upstream
     "score": 79.52,
+=======
+    "score": 79.51,
+>>>>>>> Stashed changes
     "favicon": "https://www.google.com/s2/favicons?domain=hackaday.com&sz=32",
     "favorite": false,
     "thumbnail": null
@@ -366,7 +421,11 @@
     "category": "Books",
     "publishedAt": "2026-06-26T12:01:00+00:00",
     "age": "1d",
+<<<<<<< Updated upstream
     "score": 77.53,
+=======
+    "score": 77.52,
+>>>>>>> Stashed changes
     "favicon": "https://www.google.com/s2/favicons?domain=mcsweeneys.net&sz=32",
     "favorite": true,
     "thumbnail": null
@@ -378,7 +437,11 @@
     "category": "Technology",
     "publishedAt": "2026-06-27T17:00:58+00:00",
     "age": "3h",
+<<<<<<< Updated upstream
     "score": 76.53,
+=======
+    "score": 76.52,
+>>>>>>> Stashed changes
     "favicon": "https://www.google.com/s2/favicons?domain=hackaday.com&sz=32",
     "favorite": false,
     "thumbnail": null
@@ -390,7 +453,11 @@
     "category": "Reddit",
     "publishedAt": "2026-06-26T10:01:47+00:00",
     "age": "1d",
+<<<<<<< Updated upstream
     "score": 75.54,
+=======
+    "score": 75.53,
+>>>>>>> Stashed changes
     "favicon": "https://www.google.com/s2/favicons?domain=reddit.com&sz=32",
     "favorite": true,
     "thumbnail": null
@@ -414,7 +481,11 @@
     "category": "Personal Blogs",
     "publishedAt": "2026-06-25T20:04:00+00:00",
     "age": "2d",
+<<<<<<< Updated upstream
     "score": 66.58,
+=======
+    "score": 66.57,
+>>>>>>> Stashed changes
     "favicon": "https://www.google.com/s2/favicons?domain=whateverthewindbrings.com&sz=32",
     "favorite": true,
     "thumbnail": null
@@ -450,7 +521,11 @@
     "category": "Personal Blogs",
     "publishedAt": "2026-06-25T14:25:00+00:00",
     "age": "2d",
+<<<<<<< Updated upstream
     "score": 60.93,
+=======
+    "score": 60.92,
+>>>>>>> Stashed changes
     "favicon": "https://www.google.com/s2/favicons?domain=blog.absurdpirate.com&sz=32",
     "favorite": true,
     "thumbnail": null
@@ -492,6 +567,18 @@
     "thumbnail": null
   },
   {
+    "title": "Top 7 Best New Commanders From Marvel Super Heroes | Magic: The Gathering",
+    "link": "https://www.youtube.com/watch?v=K0-BnV8wnjw",
+    "source": "Tolarian Community College",
+    "category": "YouTube",
+    "publishedAt": "2026-06-24T15:59:08+00:00",
+    "age": "3d",
+    "score": 38.49,
+    "favicon": "https://www.google.com/s2/favicons?domain=youtube.com&sz=32",
+    "favorite": true,
+    "thumbnail": "https://img.youtube.com/vi/K0-BnV8wnjw/mqdefault.jpg"
+  },
+  {
     "title": "Taiwan English",
     "link": "https://www.theparisreview.org/blog/2026/06/24/taiwan-english/",
     "source": "The Paris Review",
@@ -516,6 +603,7 @@
     "thumbnail": null
   },
   {
+<<<<<<< Updated upstream
     "title": "the industry of hopelessness is not working anymore",
     "link": "https://deerhoof.website/the-industry-of-hopelessness-is-not-working-anymore/",
     "source": "BearBlog",
@@ -526,6 +614,42 @@
     "favicon": "https://www.google.com/s2/favicons?domain=deerhoof.website&sz=32",
     "favorite": true,
     "thumbnail": null
+=======
+    "title": "Why Having a Hobby Matters | Feat. Gary's Projects",
+    "link": "https://www.youtube.com/watch?v=KhCnZfx-iFY",
+    "source": "Slow Commute Club",
+    "category": "YouTube",
+    "publishedAt": "2026-06-24T01:15:16+00:00",
+    "age": "3d",
+    "score": 23.76,
+    "favicon": "https://www.google.com/s2/favicons?domain=youtube.com&sz=32",
+    "favorite": true,
+    "thumbnail": "https://img.youtube.com/vi/KhCnZfx-iFY/mqdefault.jpg"
+  },
+  {
+    "title": "A Fortnite Lawsuit Just Waiting To Happen! (feat. Magic: The Gathering)",
+    "link": "https://www.youtube.com/shorts/iEv378u9sy4",
+    "source": "Tolarian Community College",
+    "category": "YouTube",
+    "publishedAt": "2026-06-23T23:54:27+00:00",
+    "age": "3d",
+    "score": 22.41,
+    "favicon": "https://www.google.com/s2/favicons?domain=youtube.com&sz=32",
+    "favorite": true,
+    "thumbnail": "https://img.youtube.com/vi/iEv378u9sy4/mqdefault.jpg"
+  },
+  {
+    "title": "Why Having a Hobby Matters | Feat. Gary's Projects",
+    "link": "https://www.youtube.com/watch?v=KhCnZfx-iFY",
+    "source": "Slow Commute Club",
+    "category": "YouTube",
+    "publishedAt": "2026-06-24T01:15:16+00:00",
+    "age": "3d",
+    "score": 18.76,
+    "favicon": "https://www.google.com/s2/favicons?domain=youtube.com&sz=32",
+    "favorite": true,
+    "thumbnail": "https://img.youtube.com/vi/KhCnZfx-iFY/mqdefault.jpg"
+>>>>>>> Stashed changes
   },
   {
     "title": "One Hundred and Thirty One",
@@ -540,6 +664,66 @@
     "thumbnail": null
   },
   {
+    "title": "방충망 교체 3만원으로 해결하기✨",
+    "link": "https://www.youtube.com/shorts/LAtXHf0vNK4",
+    "source": "Plan D",
+    "category": "YouTube",
+    "publishedAt": "2026-06-24T05:09:19+00:00",
+    "age": "3d",
+    "score": -17.34,
+    "favicon": "https://www.google.com/s2/favicons?domain=youtube.com&sz=32",
+    "favorite": false,
+    "thumbnail": "https://img.youtube.com/vi/LAtXHf0vNK4/mqdefault.jpg"
+  },
+  {
+    "title": "Gu père",
+    "link": "https://novelglot.substack.com/p/gu-pere",
+    "source": "novelglot",
+    "category": "Blogs",
+    "publishedAt": "2026-06-22T00:40:42+00:00",
+    "age": "5d",
+    "score": -19.82,
+    "favicon": "https://www.google.com/s2/favicons?domain=novelglot.substack.com&sz=32",
+    "favorite": true,
+    "thumbnail": null
+  },
+  {
+    "title": "Cup Noodles Beef #foodshorts #noodles #instantramen #food",
+    "link": "https://www.youtube.com/shorts/5iy0ag3Upso",
+    "source": "noodl.ist",
+    "category": "YouTube",
+    "publishedAt": "2026-06-24T02:36:01+00:00",
+    "age": "3d",
+    "score": -19.89,
+    "favicon": "https://www.google.com/s2/favicons?domain=youtube.com&sz=32",
+    "favorite": true,
+    "thumbnail": "https://img.youtube.com/vi/5iy0ag3Upso/mqdefault.jpg"
+  },
+  {
+    "title": "I was finally scammed on AliExpress 🕊️",
+    "link": "https://www.youtube.com/watch?v=wyhSRSI6bzU",
+    "source": "DankPods",
+    "category": "YouTube",
+    "publishedAt": "2026-06-20T16:48:45+00:00",
+    "age": "7d",
+    "score": -56.68,
+    "favicon": "https://www.google.com/s2/favicons?domain=youtube.com&sz=32",
+    "favorite": true,
+    "thumbnail": "https://img.youtube.com/vi/wyhSRSI6bzU/mqdefault.jpg"
+  },
+  {
+    "title": "These network adapters COOKED themselves",
+    "link": "https://www.youtube.com/watch?v=Lx7QcNUtZv8",
+    "source": "This Does Not Compute",
+    "category": "YouTube",
+    "publishedAt": "2026-06-19T14:58:48+00:00",
+    "age": "8d",
+    "score": -77.51,
+    "favicon": "https://www.google.com/s2/favicons?domain=youtube.com&sz=32",
+    "favorite": true,
+    "thumbnail": "https://img.youtube.com/vi/Lx7QcNUtZv8/mqdefault.jpg"
+  },
+  {
     "title": "This is Your Brain on Hormones",
     "link": "https://www.radiolab.org/",
     "source": "Radiolab",
@@ -550,6 +734,42 @@
     "favicon": "https://www.google.com/s2/favicons?domain=radiolab.org&sz=32",
     "favorite": true,
     "thumbnail": null
+  },
+  {
+    "title": "Retroist Action Park Podcast",
+    "link": "https://www.retroist.com/p/retroist-action-park-podcast",
+    "source": "Retroist Podcast",
+    "category": "Podcasts",
+    "publishedAt": "2026-06-19T13:20:38+00:00",
+    "age": "8d",
+    "score": -84.15,
+    "favicon": "https://www.google.com/s2/favicons?domain=retroist.com&sz=32",
+    "favorite": true,
+    "thumbnail": null
+  },
+  {
+    "title": "Supporting a Local Bike Shop | Bombora Build Update",
+    "link": "https://www.youtube.com/watch?v=tT0IrmdjQwc",
+    "source": "Slow Commute Club",
+    "category": "YouTube",
+    "publishedAt": "2026-06-19T10:12:55+00:00",
+    "age": "8d",
+    "score": -87.28,
+    "favicon": "https://www.google.com/s2/favicons?domain=youtube.com&sz=32",
+    "favorite": true,
+    "thumbnail": "https://img.youtube.com/vi/tT0IrmdjQwc/mqdefault.jpg"
+  },
+  {
+    "title": "Supporting a Local Bike Shop | Bombora Build Update",
+    "link": "https://www.youtube.com/watch?v=tT0IrmdjQwc",
+    "source": "Slow Commute Club",
+    "category": "YouTube",
+    "publishedAt": "2026-06-19T10:12:55+00:00",
+    "age": "8d",
+    "score": -92.28,
+    "favicon": "https://www.google.com/s2/favicons?domain=youtube.com&sz=32",
+    "favorite": true,
+    "thumbnail": "https://img.youtube.com/vi/tT0IrmdjQwc/mqdefault.jpg"
   },
   {
     "title": "The Tootsie Shot (Encore)",
@@ -564,6 +784,54 @@
     "thumbnail": null
   },
   {
+    "title": "입맛회복! 😋새콤매콤 여름메뉴 만들어먹는 자취일상. 몸보신 전복파티│광장시장, 서촌 나들이",
+    "link": "https://www.youtube.com/watch?v=1S-a9mMhbpg",
+    "source": "Plan D",
+    "category": "YouTube",
+    "publishedAt": "2026-06-16T12:02:52+00:00",
+    "age": "11d",
+    "score": -202.45,
+    "favicon": "https://www.google.com/s2/favicons?domain=youtube.com&sz=32",
+    "favorite": false,
+    "thumbnail": "https://img.youtube.com/vi/1S-a9mMhbpg/mqdefault.jpg"
+  },
+  {
+    "title": "My Morning Commute (and Why I Love It)",
+    "link": "https://www.youtube.com/watch?v=_edTUwelxS4",
+    "source": "Slow Commute Club",
+    "category": "YouTube",
+    "publishedAt": "2026-06-13T09:18:09+00:00",
+    "age": "14d",
+    "score": -232.19,
+    "favicon": "https://www.google.com/s2/favicons?domain=youtube.com&sz=32",
+    "favorite": true,
+    "thumbnail": "https://img.youtube.com/vi/_edTUwelxS4/mqdefault.jpg"
+  },
+  {
+    "title": "My Morning Commute (and Why I Love It)",
+    "link": "https://www.youtube.com/watch?v=_edTUwelxS4",
+    "source": "Slow Commute Club",
+    "category": "YouTube",
+    "publishedAt": "2026-06-13T09:18:09+00:00",
+    "age": "14d",
+    "score": -237.19,
+    "favicon": "https://www.google.com/s2/favicons?domain=youtube.com&sz=32",
+    "favorite": true,
+    "thumbnail": "https://img.youtube.com/vi/_edTUwelxS4/mqdefault.jpg"
+  },
+  {
+    "title": "When Samsung became a tech GOD.",
+    "link": "https://www.youtube.com/watch?v=REWWYpg4VOo",
+    "source": "DankPods",
+    "category": "YouTube",
+    "publishedAt": "2026-06-11T14:56:17+00:00",
+    "age": "16d",
+    "score": -274.56,
+    "favicon": "https://www.google.com/s2/favicons?domain=youtube.com&sz=32",
+    "favorite": true,
+    "thumbnail": "https://img.youtube.com/vi/REWWYpg4VOo/mqdefault.jpg"
+  },
+  {
     "title": "175: Bayrob",
     "link": "https://darknetdiaries.com/episode/175/",
     "source": "Darknet Diaries",
@@ -572,6 +840,42 @@
     "age": "25d",
     "score": -493.49,
     "favicon": "https://www.google.com/s2/favicons?domain=darknetdiaries.com&sz=32",
+    "favorite": true,
+    "thumbnail": null
+  },
+  {
+    "title": "I ask out the waitress from the vegetarian restaurant",
+    "link": "https://novelglot.substack.com/p/scenes-from-the-love-life-of-john-0ba",
+    "source": "novelglot",
+    "category": "Blogs",
+    "publishedAt": "2026-05-31T15:42:10+00:00",
+    "age": "27d",
+    "score": -532.79,
+    "favicon": "https://www.google.com/s2/favicons?domain=novelglot.substack.com&sz=32",
+    "favorite": true,
+    "thumbnail": null
+  },
+  {
+    "title": "I restored Apple's AWFUL but awesome 90s laptop",
+    "link": "https://www.youtube.com/watch?v=gTbXq2hX5uo",
+    "source": "This Does Not Compute",
+    "category": "YouTube",
+    "publishedAt": "2026-05-29T15:31:10+00:00",
+    "age": "29d",
+    "score": -580.98,
+    "favicon": "https://www.google.com/s2/favicons?domain=youtube.com&sz=32",
+    "favorite": true,
+    "thumbnail": "https://img.youtube.com/vi/gTbXq2hX5uo/mqdefault.jpg"
+  },
+  {
+    "title": "Retroist Perfect Strangers Podcast",
+    "link": "https://www.retroist.com/p/retroist-perfect-strangers-podcast",
+    "source": "Retroist Podcast",
+    "category": "Podcasts",
+    "publishedAt": "2026-05-29T10:00:00+00:00",
+    "age": "29d",
+    "score": -591.49,
+    "favicon": "https://www.google.com/s2/favicons?domain=retroist.com&sz=32",
     "favorite": true,
     "thumbnail": null
   }

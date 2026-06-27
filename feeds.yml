@@ -222,7 +222,7 @@
   max_age_days: 3
 
 - name: Probably Riding
-  url: https://www.youtube.com/feeds/videos.xml?channel_id=UCaC6R0tQ4d7tLwP6bFQ6gYQ
+  url: https://www.youtube.com/feeds/videos.xml?channel_id=UCQEDB9BVgbMKF8gaOW75WGQ
   category: YouTube
   weight: 95
   favorite: true
