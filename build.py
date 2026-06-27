@@ -228,6 +228,24 @@ def group_articles_by_category(articles):
     return categories
 
 
+def distribute_category_columns(categories):
+    """Balance categories into four display columns by estimated height."""
+    category_columns = [[], [], [], []]
+    column_heights = [0, 0, 0, 0]
+
+    for category, links in categories.items():
+        estimated_height = 2 + len(links)
+        shortest_column_index = column_heights.index(min(column_heights))
+
+        category_columns[shortest_column_index].append({
+            "name": category,
+            "links": links,
+        })
+        column_heights[shortest_column_index] += estimated_height
+
+    return category_columns
+
+
 def select_top_items(articles):
     """Pick top stories from score-sorted articles, honoring each source limit."""
     source_counts = {}
@@ -279,9 +297,11 @@ def render_site(articles, feed_status, feeds, now):
         autoescape=select_autoescape(["html", "xml"]),
     )
     template = environment.get_template("index.html")
+    categories = group_articles_by_category(articles)
+    category_columns = distribute_category_columns(categories)
 
     html = template.render(
-        categories=group_articles_by_category(articles),
+        category_columns=category_columns,
         top_items=select_top_items(articles),
         total=len(articles),
         feed_count=len(feeds),
