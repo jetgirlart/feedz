@@ -1,11 +1,11 @@
 :root {
-  --bg: #fff;
+  --bg: #dbffffff;
   --text: #111;
   --muted: #666;
   --line: #111;
-  --link: #2286e4ff;
+  --link: #1e4366ff;
   --visited: #777;
-  --card: #fffdf7;
+  --card: #ffffffff;
   --shadow: rgba(0, 0, 0, 0.08);
 }
 
