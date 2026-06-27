@@ -1,5 +1,5 @@
 :root {
-  --bg: #dbffffff;
+  --bg: #e4eeeeff;
   --text: #111;
   --muted: #666;
   --line: #111;
@@ -128,7 +128,7 @@ button:focus-visible {
 }
 
 .top h2 {
-  text-align: center;
+  text-align: left;
 }
 
 .story-list {
@@ -137,7 +137,7 @@ button:focus-visible {
 }
 
 .layout {
-  display: block;
+  display: grid;
 }
 
 .grid {
