@@ -16,7 +16,7 @@
   category: Personal Blogs
   weight: 90
   favorite: true
-  max_items: 5
+  max_items: 10
   max_age_days: 7
   top_max: 3
 
@@ -48,9 +48,9 @@
 - name: noodl.ist
   url: https://www.youtube.com/feeds/videos.xml?channel_id=UCLm7zWZX5TZdArkESVpV0Vg
   category: YouTube
-  weight: 100
+  weight: 45
   favorite: true
-  max_items: 3
+  max_items: 2
   max_age_days: 5
 
 - name: This Does Not Compute
@@ -138,7 +138,7 @@
   category: Books
   weight: 95
   favorite: true
-  max_items: 5
+  max_items: 4
   max_age_days: 21
 
 - name: The Paris Review
@@ -154,7 +154,7 @@
   category: Books
   weight: 85
   favorite: true
-  max_items: 4
+  max_items: 3
   max_age_days: 30
 
 - name: novelglot
@@ -164,7 +164,7 @@
   favorite: true
   max_items: 3
   max_age_days: 30
-  
+
 - name: r/xbiking
   url: https://www.reddit.com/r/xbiking/.rss
   category: Reddit
