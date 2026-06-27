@@ -1,23 +1,29 @@
 :root {
-  --bg: #ffffffff
+  --bg: #fbfbf8;
   --text: #111;
-  --muted: #666;
-  --line: #1e4366ff;
-  --link: #1e4366ff;
-  --visited: #777;
-  --card: #f7f7f7ff;
-  --shadow: rgba(0, 0, 0, 0.08);
+  --muted: #5d6872;
+  --line: #c9d4df;
+  --accent: #1e4366;
+  --accent-dark: #142f48;
+  --link: #174f7f;
+  --visited: #6d7480;
+  --card: #f2f6f9;
+  --button-text: #fff;
+  --focus: rgba(30, 67, 102, 0.22);
 }
 
 body.dark {
   --bg: #111;
   --text: #eee;
-  --muted: #686868ff;
-  --line: #aaaaaaff;
-  --link: #eee;
-  --visited: #616161ff;
-  --card: #1a1a1a;
-  --shadow: rgba(255, 255, 255, 0.08);
+  --muted: #aaa;
+  --line: #3f4f5f;
+  --accent: #9cc7ee;
+  --accent-dark: #d6ebff;
+  --link: #b8d9ff;
+  --visited: #8a95a0;
+  --card: #191f25;
+  --button-text: #101418;
+  --focus: rgba(156, 199, 238, 0.24);
 }
 
 * {
@@ -30,28 +36,30 @@ body {
   padding: 0 18px;
   background: var(--bg);
   color: var(--text);
-  font-family: Verdana, Geneva, sans-serif;;
+  font-family: Verdana, Geneva, sans-serif;
 }
 
 .masthead {
   margin-bottom: 16px;
   padding: 12px 0;
   text-align: left;
-  color: var(--link)
+  color: var(--accent);
 }
 
 h1 {
   margin: 0;
-  font-family: Arial Black, Helvetica, sans-serif;
   font-size: clamp(42px, 8vw, 86px);
+  font-weight: 700;
   line-height: 0.9;
 }
 
 h2 {
   margin: 0 0 8px;
-  font-family: Arial Black, Helvetica, sans-serif;
-  border-bottom: 2px solid var(--line);
-  font-size: 17px;
+  padding-bottom: 4px;
+  border-bottom: 2px solid var(--accent);
+  color: var(--accent);
+  font-size: 15px;
+  letter-spacing: 0;
   text-transform: uppercase;
 }
 
@@ -72,7 +80,6 @@ h2 {
 input,
 button {
   border: 1px solid var(--line);
-  background: var(--card);
   color: var(--text);
   font: inherit;
 }
@@ -80,18 +87,31 @@ button {
 input {
   min-width: min(100%, 320px);
   padding: 8px 10px;
+  background: var(--bg);
+  border-color: var(--line);
 }
 
 button {
   min-height: 38px;
   padding: 8px 10px;
+  border-color: var(--accent);
+  background: var(--accent);
+  color: var(--button-text);
   cursor: pointer;
   font-weight: bold;
 }
 
 button:hover,
 button:focus-visible {
-  box-shadow: 0 2px 8px var(--shadow);
+  background: var(--accent-dark);
+  border-color: var(--accent-dark);
+}
+
+input:focus-visible,
+button:focus-visible,
+a:focus-visible {
+  outline: 3px solid var(--focus);
+  outline-offset: 2px;
 }
 
 .tooltip-button {
@@ -104,9 +124,9 @@ button:focus-visible {
   left: 50%;
   z-index: 10;
   padding: 4px 6px;
-  border: 1px solid var(--line);
-  background: var(--card);
-  color: var(--text);
+  border: 1px solid var(--accent);
+  background: var(--bg);
+  color: var(--accent);
   content: attr(title);
   font-size: 11px;
   font-weight: normal;
@@ -127,7 +147,8 @@ button:focus-visible {
   margin-bottom: 22px;
   padding: 12px;
   background: var(--card);
-   box-shadow: 0 2px 8px var(--shadow);
+  border: 1px solid var(--line);
+  border-left: 5px solid var(--accent);
 }
 
 .top h2 {
@@ -225,7 +246,8 @@ a:focus-visible {
   margin-bottom: 16px;
   padding: 10px;
   background: var(--card);
-  box-shadow: 0 2px 8px var(--shadow);
+  border: 1px solid var(--line);
+  border-left: 5px solid var(--accent);
 }
 
 .box p {
@@ -253,10 +275,10 @@ a:focus-visible {
 footer {
   margin-top: 30px;
   padding-top: 12px;
+  border-top: 1px solid var(--line);
   color: var(--muted);
   font-size: 12px;
   text-align: center;
-  
 }
 
 @media (max-width: 900px) {
