@@ -12,10 +12,10 @@
 body.dark {
   --bg: #111;
   --text: #eee;
-  --muted: #aaa;
-  --line: #9db7ff;
-  --link: #9db7ff;
-  --visited: #888;
+  --muted: #686868ff;
+  --line: #aaaaaaff;
+  --link: #868992ff;
+  --visited: #616161ff;
   --card: #1a1a1a;
   --shadow: rgba(255, 255, 255, 0.08);
 }
@@ -30,7 +30,7 @@ body {
   padding: 0 18px;
   background: var(--bg);
   color: var(--text);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: Verdana, Geneva, sans-serif;;
 }
 
 .masthead {
@@ -44,11 +44,13 @@ h1 {
   margin: 0;
   font-family: Arial Black, Helvetica, sans-serif;
   font-size: clamp(42px, 8vw, 86px);
+  text-transform: uppercase;
   line-height: 0.9;
 }
 
 h2 {
   margin: 0 0 8px;
+  font-family: Arial Black, Helvetica, sans-serif;
   border-bottom: 2px solid var(--line);
   font-size: 17px;
   text-transform: uppercase;
@@ -157,7 +159,7 @@ button:focus-visible {
 .item {
   break-inside: avoid;
   margin: 0 0 10px;
-  font-size: 15px;
+  font-size: 14px;
   line-height: 1.25;
 }
 
