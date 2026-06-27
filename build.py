@@ -1,4 +1,5 @@
 import json
+import time
 from datetime import datetime, timezone
 from email.utils import parsedate_to_datetime
 from pathlib import Path
@@ -25,9 +26,12 @@ FAVORITE_BONUS = 25
 TOP_STORIES_LIMIT = 20
 DEFAULT_TOP_MAX = 1
 REQUEST_TIMEOUT = 10
+REDDIT_REQUEST_DELAY = 2
+REDDIT_MAX_ATTEMPTS = 2
 REDDIT_HEADERS = {
     "User-Agent": "feedz/1.0 (+https://feedz.jetgirl.art)",
 }
+last_reddit_request_at = 0
 
 # We only look at a modest number of entries from each RSS feed. This keeps a
 # very busy feed from taking over the page while still giving scoring room to work.
@@ -127,20 +131,59 @@ def is_reddit_feed(url):
     return "reddit.com" in url.lower()
 
 
+def reddit_subreddit_from_url(url):
+    """Extract the subreddit name from a Reddit URL."""
+    path_parts = [part for part in urlparse(url).path.split("/") if part]
+
+    for index, part in enumerate(path_parts):
+        if part.lower() == "r" and index + 1 < len(path_parts):
+            return path_parts[index + 1].lower()
+
+    return None
+
+
+def reddit_combined_feed_url(feeds):
+    """Build one RSS URL for all configured Reddit feeds."""
+    subreddits = []
+
+    for feed in feeds:
+        subreddit = reddit_subreddit_from_url(feed["url"])
+        if subreddit and subreddit not in subreddits:
+            subreddits.append(subreddit)
+
+    return f"https://www.reddit.com/r/{'+'.join(subreddits)}/.rss?limit=100"
+
+
+def wait_for_reddit_request_slot():
+    """Space out Reddit requests to avoid quick 429 rate-limit responses."""
+    global last_reddit_request_at
+
+    if last_reddit_request_at:
+        elapsed = time.monotonic() - last_reddit_request_at
+        if elapsed < REDDIT_REQUEST_DELAY:
+            time.sleep(REDDIT_REQUEST_DELAY - elapsed)
+
+    last_reddit_request_at = time.monotonic()
+
+
 def parse_feed(feed):
     """Parse one RSS feed, using a custom User-Agent for Reddit."""
     if not is_reddit_feed(feed["url"]):
         return feedparser.parse(feed["url"]), None
 
-    try:
-        response = requests.get(
-            feed["url"],
-            headers=REDDIT_HEADERS,
-            timeout=REQUEST_TIMEOUT,
-        )
-        response.raise_for_status()
-    except requests.RequestException as error:
-        return feedparser.parse(b""), f"Reddit fetch failed: {error}"
+    for attempt in range(REDDIT_MAX_ATTEMPTS):
+        try:
+            wait_for_reddit_request_slot()
+            response = requests.get(
+                feed["url"],
+                headers=REDDIT_HEADERS,
+                timeout=REQUEST_TIMEOUT,
+            )
+            response.raise_for_status()
+            break
+        except requests.RequestException as error:
+            if attempt == REDDIT_MAX_ATTEMPTS - 1:
+                return feedparser.parse(b""), f"Reddit fetch failed: {error}"
 
     parsed = feedparser.parse(response.content)
     if parsed.bozo:
@@ -219,6 +262,12 @@ def fetch_feed_articles(feed, now):
     parsed, error = parse_feed(feed)
     entries = parsed.entries or []
 
+    return build_feed_result(feed, entries, now, not parsed.bozo, error)
+
+
+def build_feed_result(feed, entries, now, parsed_ok, error):
+    """Build visible articles and status from parsed feed entries."""
+
     lookahead = max(feed["max_items"], FEED_LOOKAHEAD)
     articles = []
 
@@ -238,7 +287,7 @@ def fetch_feed_articles(feed, now):
         "name": feed["name"],
         "url": feed["url"],
         "category": feed["category"],
-        "ok": not parsed.bozo and len(entries) > 0,
+        "ok": parsed_ok and len(entries) > 0,
         "count": len(entries),
         "visible": len(visible_articles),
         "max_items": feed["max_items"],
@@ -249,6 +298,41 @@ def fetch_feed_articles(feed, now):
     }
 
     return visible_articles, status
+
+
+def fetch_reddit_feed_articles(feeds, now):
+    """Fetch all Reddit feeds with one combined Reddit RSS request."""
+    if not feeds:
+        return {}
+
+    combined_feed = {"url": reddit_combined_feed_url(feeds)}
+    parsed, error = parse_feed(combined_feed)
+    combined_entries = parsed.entries or []
+    entries_by_subreddit = {}
+    results = {}
+
+    for entry in combined_entries:
+        subreddit = reddit_subreddit_from_url(entry.get("link", ""))
+        if subreddit:
+            entries_by_subreddit.setdefault(subreddit, []).append(entry)
+
+    for feed in feeds:
+        subreddit = reddit_subreddit_from_url(feed["url"])
+        feed_error = error
+
+        if not subreddit:
+            feed_error = "Could not determine subreddit from Reddit feed URL."
+
+        entries = entries_by_subreddit.get(subreddit, []) if not feed_error else []
+        results[feed["url"]] = build_feed_result(
+            feed,
+            entries,
+            now,
+            not parsed.bozo,
+            feed_error,
+        )
+
+    return results
 
 
 def group_articles_by_category(articles):
@@ -351,9 +435,15 @@ def main():
 
     articles = []
     feed_status = []
+    reddit_feeds = [feed for feed in feeds if is_reddit_feed(feed["url"])]
+    reddit_results = fetch_reddit_feed_articles(reddit_feeds, now)
 
     for feed in feeds:
-        feed_articles, status = fetch_feed_articles(feed, now)
+        if is_reddit_feed(feed["url"]):
+            feed_articles, status = reddit_results[feed["url"]]
+        else:
+            feed_articles, status = fetch_feed_articles(feed, now)
+
         articles.extend(feed_articles)
         feed_status.append(status)
 

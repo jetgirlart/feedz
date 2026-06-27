@@ -166,7 +166,7 @@
   max_age_days: 30
   
 - name: r/xbiking
-  url: https://www.reddit.com/r/xbiking/new/.rss
+  url: https://www.reddit.com/r/xbiking/.rss
   category: Reddit
   weight: 90
   favorite: true
@@ -174,7 +174,7 @@
   max_age_days: 3
 
 - name: r/headphones
-  url: https://www.reddit.com/r/headphones/new/.rss
+  url: https://www.reddit.com/r/headphones/.rss
   category: Reddit
   weight: 85
   favorite: true
@@ -182,7 +182,7 @@
   max_age_days: 3
 
 - name: r/meshtastic
-  url: https://www.reddit.com/r/meshtastic/new/.rss
+  url: https://www.reddit.com/r/meshtastic/.rss
   category: Reddit
   weight: 90
   favorite: true
@@ -190,7 +190,7 @@
   max_age_days: 3
 
 - name: r/pwnagotchi
-  url: https://www.reddit.com/r/pwnagotchi/new/.rss
+  url: https://www.reddit.com/r/pwnagotchi/.rss
   category: Reddit
   weight: 85
   favorite: true
@@ -198,7 +198,7 @@
   max_age_days: 3
 
 - name: r/mtg
-  url: https://www.reddit.com/r/mtg/new/.rss
+  url: https://www.reddit.com/r/mtg/.rss
   category: Reddit
   weight: 90
   favorite: true
@@ -206,7 +206,7 @@
   max_age_days: 3
 
 - name: r/coffee
-  url: https://www.reddit.com/r/coffee/new/.rss
+  url: https://www.reddit.com/r/coffee/.rss
   category: Reddit
   weight: 85
   favorite: true
@@ -214,7 +214,7 @@
   max_age_days: 3
 
 - name: r/zines
-  url: https://www.reddit.com/r/zines/new/.rss
+  url: https://www.reddit.com/r/zines/.rss
   category: Reddit
   weight: 95
   favorite: true
