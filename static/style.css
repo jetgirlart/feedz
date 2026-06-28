@@ -177,8 +177,43 @@ a:focus-visible {
 }
 
 .category {
+  --category-color: var(--accent);
   break-inside: avoid;
   margin-bottom: 28px;
+  padding-left: 10px;
+  border-left: 5px solid var(--category-color);
+}
+
+.category h2 {
+  border-bottom-color: var(--category-color);
+  color: var(--category-color);
+}
+
+.category-youtube {
+  --category-color: #c93535;
+}
+
+.category-personal-blogs,
+.category-bear-blog,
+.category-blogs {
+  --category-color: #2268a8;
+}
+
+.category-technology {
+  --category-color: #2f7b44;
+}
+
+.category-reddit {
+  --category-color: #d96524;
+}
+
+.category-books,
+.category-writing {
+  --category-color: #b98a00;
+}
+
+.category-podcasts {
+  --category-color: #7555a6;
 }
 
 .item {

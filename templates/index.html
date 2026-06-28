@@ -62,7 +62,7 @@
         {% set column_index = loop.index %}
         <div class="feed-column">
           {% for category in column %}
-            <section class="category" aria-labelledby="category-{{ column_index }}-{{ loop.index }}">
+            <section class="category category-{{ category.slug }}" data-category="{{ category.name }}" aria-labelledby="category-{{ column_index }}-{{ loop.index }}">
               <h2 id="category-{{ column_index }}-{{ loop.index }}">{{ category.name }}</h2>
               {% for item in category.links %}
                 <article

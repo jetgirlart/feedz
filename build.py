@@ -38,6 +38,7 @@ last_reddit_request_at = 0
 # We only look at a modest number of entries from each RSS feed. This keeps a
 # very busy feed from taking over the page while still giving scoring room to work.
 FEED_LOOKAHEAD = 25
+CATEGORY_WRAP_AFTER = 7
 
 
 def read_feeds():
@@ -428,20 +429,52 @@ def group_articles_by_category(articles):
     return categories
 
 
+def category_slug(category):
+    """Make a category name safe to use as a CSS class."""
+    slug = []
+    previous_was_dash = False
+
+    for character in category.lower():
+        if character.isalnum():
+            slug.append(character)
+            previous_was_dash = False
+        elif not previous_was_dash:
+            slug.append("-")
+            previous_was_dash = True
+
+    return "".join(slug).strip("-") or "other"
+
+
+def split_category_links(links):
+    """Split long categories so they can wrap across display columns."""
+    if len(links) <= CATEGORY_WRAP_AFTER:
+        return [links]
+
+    chunk_count = (len(links) + CATEGORY_WRAP_AFTER - 1) // CATEGORY_WRAP_AFTER
+    chunk_size = (len(links) + chunk_count - 1) // chunk_count
+
+    return [
+        links[start : start + chunk_size]
+        for start in range(0, len(links), chunk_size)
+    ]
+
+
 def distribute_category_columns(categories):
-    """Balance categories into four display columns by estimated height."""
+    """Balance category blocks into four display columns by estimated height."""
     category_columns = [[], [], [], []]
     column_heights = [0, 0, 0, 0]
 
     for category, links in categories.items():
-        estimated_height = 2 + len(links)
-        shortest_column_index = column_heights.index(min(column_heights))
+        for link_group in split_category_links(links):
+            estimated_height = 2 + len(link_group)
+            shortest_column_index = column_heights.index(min(column_heights))
 
-        category_columns[shortest_column_index].append({
-            "name": category,
-            "links": links,
-        })
-        column_heights[shortest_column_index] += estimated_height
+            category_columns[shortest_column_index].append({
+                "name": category,
+                "slug": category_slug(category),
+                "links": link_group,
+            })
+            column_heights[shortest_column_index] += estimated_height
 
     return category_columns
 
