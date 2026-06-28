@@ -190,30 +190,30 @@ a:focus-visible {
 }
 
 .category-youtube {
-  --category-color: #9c4a4a;
+  --category-color: #c93535;
 }
 
 .category-personal-blogs,
 .category-bear-blog,
 .category-blogs {
-  --category-color: #4f6f8d;
+  --category-color: #2268a8;
 }
 
 .category-technology {
-  --category-color: #55775f;
+  --category-color: #2f7b44;
 }
 
 .category-reddit {
-  --category-color: #a86b46;
+  --category-color: #d96524;
 }
 
 .category-books,
 .category-writing {
-  --category-color: #907b3f;
+  --category-color: #b98a00;
 }
 
 .category-podcasts {
-  --category-color: #71628f;
+  --category-color: #7555a6;
 }
 
 .item {
