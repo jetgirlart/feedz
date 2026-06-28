@@ -38,7 +38,6 @@ last_reddit_request_at = 0
 # We only look at a modest number of entries from each RSS feed. This keeps a
 # very busy feed from taking over the page while still giving scoring room to work.
 FEED_LOOKAHEAD = 25
-CATEGORY_WRAP_AFTER = 7
 
 
 def read_feeds():
@@ -445,36 +444,26 @@ def category_slug(category):
     return "".join(slug).strip("-") or "other"
 
 
-def split_category_links(links):
-    """Split long categories so they can wrap across display columns."""
-    if len(links) <= CATEGORY_WRAP_AFTER:
-        return [links]
-
-    chunk_count = (len(links) + CATEGORY_WRAP_AFTER - 1) // CATEGORY_WRAP_AFTER
-    chunk_size = (len(links) + chunk_count - 1) // chunk_count
-
-    return [
-        links[start : start + chunk_size]
-        for start in range(0, len(links), chunk_size)
-    ]
-
-
 def distribute_category_columns(categories):
-    """Balance category blocks into four display columns by estimated height."""
+    """Balance whole categories into four display columns by estimated height."""
     category_columns = [[], [], [], []]
     column_heights = [0, 0, 0, 0]
+    sorted_categories = sorted(
+        categories.items(),
+        key=lambda category: len(category[1]),
+        reverse=True,
+    )
 
-    for category, links in categories.items():
-        for link_group in split_category_links(links):
-            estimated_height = 2 + len(link_group)
-            shortest_column_index = column_heights.index(min(column_heights))
+    for category, links in sorted_categories:
+        estimated_height = 2 + len(links)
+        shortest_column_index = column_heights.index(min(column_heights))
 
-            category_columns[shortest_column_index].append({
-                "name": category,
-                "slug": category_slug(category),
-                "links": link_group,
-            })
-            column_heights[shortest_column_index] += estimated_height
+        category_columns[shortest_column_index].append({
+            "name": category,
+            "slug": category_slug(category),
+            "links": links,
+        })
+        column_heights[shortest_column_index] += estimated_height
 
     return category_columns
 
