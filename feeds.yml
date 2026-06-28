@@ -187,7 +187,7 @@
   weight: 85
   favorite: true
   max_items: 2
-  max_age_days: 3
+  max_age_days: 9
 
 - name: r/mtg
   url: https://www.reddit.com/r/mtg/.rss
