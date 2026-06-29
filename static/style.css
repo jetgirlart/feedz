@@ -227,6 +227,13 @@ a:focus-visible {
   line-height: 1.25;
 }
 
+.empty-category {
+  margin: 0;
+  color: var(--muted);
+  font-size: 12px;
+  font-style: italic;
+}
+
 .item-row {
   display: flex;
   align-items: flex-start;

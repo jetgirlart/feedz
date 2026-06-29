@@ -418,9 +418,13 @@ def fetch_reddit_feed_articles(feeds, now):
     return results
 
 
-def group_articles_by_category(articles):
+def group_articles_by_category(articles, feeds=None):
     """Group articles by category for template rendering."""
     categories = {}
+
+    if feeds:
+        for feed in feeds:
+            categories.setdefault(feed["category"], [])
 
     for article in articles:
         categories.setdefault(article["category"], []).append(article)
@@ -523,7 +527,7 @@ def render_site(articles, feed_status, feeds, now):
         autoescape=select_autoescape(["html", "xml"]),
     )
     template = environment.get_template("index.html")
-    categories = group_articles_by_category(articles)
+    categories = group_articles_by_category(articles, feeds)
     category_columns = distribute_category_columns(categories)
 
     html = template.render(

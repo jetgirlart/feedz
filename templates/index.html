@@ -64,34 +64,38 @@
           {% for category in column %}
             <section class="category category-{{ category.slug }}" data-category="{{ category.name }}" aria-labelledby="category-{{ column_index }}-{{ loop.index }}">
               <h2 id="category-{{ column_index }}-{{ loop.index }}">{{ category.name }}</h2>
-              {% for item in category.links %}
-                <article
-                  class="item"
-                  data-link="{{ item.link }}"
-                  data-title="{{ item.title|lower }}"
-                  data-source="{{ item.source|lower }}"
-                  data-category="{{ item.category|lower }}"
-                >
-                  <div class="item-row">
-                    {% if item.thumbnail %}
-                      <img class="thumbnail" src="{{ item.thumbnail }}" alt="" width="48" height="27" loading="lazy" onerror="this.style.display='none'">
-                    {% endif %}
-                    <div class="item-copy">
-                      <a href="{{ item.link }}" target="_blank" rel="noopener noreferrer">
-                        {% if item.favicon %}
-                          <img class="favicon" src="{{ item.favicon }}" alt="" loading="lazy" onerror="this.style.display='none'">
-                        {% endif %}
-                        <span>{{ item.title }}</span>
-                      </a>
-                      <p class="meta">
-                        {% if item.age_label %}<span class="age-badge">[{{ item.age_label }}]</span>{% endif %}
-                        {{ item.source }}
-                        {% if item.favorite %}★{% endif %}
-                      </p>
+              {% if category.links %}
+                {% for item in category.links %}
+                  <article
+                    class="item"
+                    data-link="{{ item.link }}"
+                    data-title="{{ item.title|lower }}"
+                    data-source="{{ item.source|lower }}"
+                    data-category="{{ item.category|lower }}"
+                  >
+                    <div class="item-row">
+                      {% if item.thumbnail %}
+                        <img class="thumbnail" src="{{ item.thumbnail }}" alt="" width="48" height="27" loading="lazy" onerror="this.style.display='none'">
+                      {% endif %}
+                      <div class="item-copy">
+                        <a href="{{ item.link }}" target="_blank" rel="noopener noreferrer">
+                          {% if item.favicon %}
+                            <img class="favicon" src="{{ item.favicon }}" alt="" loading="lazy" onerror="this.style.display='none'">
+                          {% endif %}
+                          <span>{{ item.title }}</span>
+                        </a>
+                        <p class="meta">
+                          {% if item.age_label %}<span class="age-badge">[{{ item.age_label }}]</span>{% endif %}
+                          {{ item.source }}
+                          {% if item.favorite %}★{% endif %}
+                        </p>
+                      </div>
                     </div>
-                  </div>
-                </article>
-              {% endfor %}
+                  </article>
+                {% endfor %}
+              {% else %}
+                <p class="empty-category">No recent links</p>
+              {% endif %}
             </section>
           {% endfor %}
         </div>
