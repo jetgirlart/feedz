@@ -227,7 +227,7 @@
   weight: 45
   favorite: false
   max_items: 3
-  max_age_days: 400
+  max_age_days: 21
 
 - name: SwiftOnSecurity
   url: https://rss.gurify.com/SwiftOnSecurity/rss
@@ -235,7 +235,7 @@
   weight: 45
   favorite: false
   max_items: 3
-  max_age_days: 400
+  max_age_days: 21
 
 - name: Evil_Mog
   url: https://rss.gurify.com/Evil_Mog/rss
@@ -243,7 +243,7 @@
   weight: 45
   favorite: false
   max_items: 3
-  max_age_days: 400
+  max_age_days: 21
 
 - name: dtoxmilenko
   url: https://rss.gurify.com/dtoxmilenko/rss
@@ -251,4 +251,4 @@
   weight: 45
   favorite: false
   max_items: 3
-  max_age_days: 400
+  max_age_days: 21
