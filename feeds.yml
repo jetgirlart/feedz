@@ -220,3 +220,43 @@
   favorite: true
   max_items: 3
   max_age_days: 21
+
+- name: HAD
+  url: https://rss.gurify.com/havehadhavehad/rss
+  category: Twitter
+  weight: 45
+  favorite: false
+  max_items: 3
+  max_age_days: 21
+
+- name: TBQuarterly
+  url: https://rss.gurify.com/TBQuarterly/rss
+  category: Twitter
+  weight: 45
+  favorite: false
+  max_items: 3
+  max_age_days: 21
+
+- name: SwiftOnSecurity
+  url: https://rss.gurify.com/SwiftOnSecurity/rss
+  category: Twitter
+  weight: 45
+  favorite: false
+  max_items: 3
+  max_age_days: 21
+
+- name: Evil_Mog
+  url: https://rss.gurify.com/Evil_Mog/rss
+  category: Twitter
+  weight: 45
+  favorite: false
+  max_items: 3
+  max_age_days: 21
+
+- name: dtoxmilenko
+  url: https://rss.gurify.com/dtoxmilenko/rss
+  category: Twitter
+  weight: 45
+  favorite: false
+  max_items: 3
+  max_age_days: 21
