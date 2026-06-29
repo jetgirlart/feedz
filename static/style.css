@@ -216,6 +216,10 @@ a:focus-visible {
   --category-color: #7555a6;
 }
 
+.category-twitter {
+  --category-color: #1d7fc9;
+}
+
 .item {
   break-inside: avoid;
   margin: 0 0 10px;
