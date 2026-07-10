@@ -43,7 +43,7 @@
   weight: 85
   favorite: true
   max_items: 3
-  max_age_days: 30
+  max_age_days: 10
 
 - name: noodl.ist
   url: https://www.youtube.com/feeds/videos.xml?channel_id=UCLm7zWZX5TZdArkESVpV0Vg
@@ -59,7 +59,7 @@
   weight: 95
   favorite: true
   max_items: 3
-  max_age_days: 30
+  max_age_days: 10
 
 - name: DankPods
   url: https://www.youtube.com/feeds/videos.xml?channel_id=UC7Jwj9fkrf1adN4fMmTkpug
@@ -67,7 +67,7 @@
   weight: 90
   favorite: true
   max_items: 3
-  max_age_days: 20
+  max_age_days: 10
 
 - name: Tolarian Community College
   url: https://www.youtube.com/feeds/videos.xml?channel_id=UC7-hR5EfgpM6oHfiGDkxfMA
@@ -131,7 +131,7 @@
   weight: 95
   favorite: true
   max_items: 4
-  max_age_days: 21
+  max_age_days: 10
 
 - name: The Paris Review
   url: https://www.theparisreview.org/blog/feed/
@@ -155,7 +155,7 @@
   weight: 95
   favorite: true
   max_items: 3
-  max_age_days: 30
+  max_age_days: 10
 
 - name: r/xbiking
   url: https://www.reddit.com/r/xbiking/.rss
@@ -219,4 +219,4 @@
   weight: 95
   favorite: true
   max_items: 3
-  max_age_days: 21
+  max_age_days: 10
