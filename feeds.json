@@ -6,7 +6,7 @@
     "category": "Reddit",
     "publishedAt": "2026-07-12T18:23:30+00:00",
     "age": "1h",
-    "score": 118.45,
+    "score": 118.37,
     "favicon": "https://www.google.com/s2/favicons?domain=reddit.com&sz=32",
     "favorite": true,
     "thumbnail": null
@@ -18,7 +18,19 @@
     "category": "Reddit",
     "publishedAt": "2026-07-12T16:46:46+00:00",
     "age": "3h",
-    "score": 116.83,
+    "score": 116.76,
+    "favicon": "https://www.google.com/s2/favicons?domain=reddit.com&sz=32",
+    "favorite": true,
+    "thumbnail": null
+  },
+  {
+    "title": "I have some on one midge bars in the mail",
+    "link": "https://www.reddit.com/r/xbiking/comments/1uupjvo/i_have_some_on_one_midge_bars_in_the_mail/",
+    "source": "r/xbiking",
+    "category": "Reddit",
+    "publishedAt": "2026-07-12T19:48:54+00:00",
+    "age": "12m",
+    "score": 114.79,
     "favicon": "https://www.google.com/s2/favicons?domain=reddit.com&sz=32",
     "favorite": true,
     "thumbnail": null
@@ -29,8 +41,8 @@
     "source": "r/xbiking",
     "category": "Reddit",
     "publishedAt": "2026-07-12T19:30:50+00:00",
-    "age": "25m",
-    "score": 114.57,
+    "age": "30m",
+    "score": 114.49,
     "favicon": "https://www.google.com/s2/favicons?domain=reddit.com&sz=32",
     "favorite": true,
     "thumbnail": null
@@ -41,8 +53,8 @@
     "source": "r/mtg",
     "category": "Reddit",
     "publishedAt": "2026-07-12T19:04:26+00:00",
-    "age": "52m",
-    "score": 114.13,
+    "age": "56m",
+    "score": 114.05,
     "favicon": "https://www.google.com/s2/favicons?domain=reddit.com&sz=32",
     "favorite": true,
     "thumbnail": null
@@ -53,20 +65,8 @@
     "source": "r/meshtastic",
     "category": "Reddit",
     "publishedAt": "2026-07-12T19:03:35+00:00",
-    "age": "53m",
-    "score": 114.11,
-    "favicon": "https://www.google.com/s2/favicons?domain=reddit.com&sz=32",
-    "favorite": true,
-    "thumbnail": null
-  },
-  {
-    "title": "Say goodbye",
-    "link": "https://www.reddit.com/r/xbiking/comments/1uuoa3k/say_goodbye/",
-    "source": "r/xbiking",
-    "category": "Reddit",
-    "publishedAt": "2026-07-12T19:00:50+00:00",
-    "age": "55m",
-    "score": 114.07,
+    "age": "57m",
+    "score": 114.04,
     "favicon": "https://www.google.com/s2/favicons?domain=reddit.com&sz=32",
     "favorite": true,
     "thumbnail": null
@@ -78,7 +78,7 @@
     "category": "Reddit",
     "publishedAt": "2026-07-12T18:50:58+00:00",
     "age": "1h",
-    "score": 113.9,
+    "score": 113.83,
     "favicon": "https://www.google.com/s2/favicons?domain=reddit.com&sz=32",
     "favorite": true,
     "thumbnail": null
@@ -90,7 +90,7 @@
     "category": "Reddit",
     "publishedAt": "2026-07-12T17:56:15+00:00",
     "age": "2h",
-    "score": 112.99,
+    "score": 112.92,
     "favicon": "https://www.google.com/s2/favicons?domain=reddit.com&sz=32",
     "favorite": true,
     "thumbnail": null
@@ -101,8 +101,8 @@
     "source": "r/headphones",
     "category": "Reddit",
     "publishedAt": "2026-07-12T19:49:35+00:00",
-    "age": "7m",
-    "score": 109.88,
+    "age": "11m",
+    "score": 109.81,
     "favicon": "https://www.google.com/s2/favicons?domain=reddit.com&sz=32",
     "favorite": true,
     "thumbnail": null
@@ -113,8 +113,8 @@
     "source": "r/headphones",
     "category": "Reddit",
     "publishedAt": "2026-07-12T19:44:45+00:00",
-    "age": "12m",
-    "score": 109.8,
+    "age": "16m",
+    "score": 109.72,
     "favicon": "https://www.google.com/s2/favicons?domain=reddit.com&sz=32",
     "favorite": true,
     "thumbnail": null
@@ -126,7 +126,7 @@
     "category": "Reddit",
     "publishedAt": "2026-07-12T10:01:42+00:00",
     "age": "9h",
-    "score": 100.08,
+    "score": 100.01,
     "favicon": "https://www.google.com/s2/favicons?domain=reddit.com&sz=32",
     "favorite": true,
     "thumbnail": null
@@ -138,7 +138,7 @@
     "category": "Books",
     "publishedAt": "2026-07-11T10:30:06+00:00",
     "age": "1d",
-    "score": 86.56,
+    "score": 86.48,
     "favicon": "https://www.google.com/s2/favicons?domain=lithub.com&sz=32",
     "favorite": true,
     "thumbnail": null
@@ -150,7 +150,7 @@
     "category": "YouTube",
     "publishedAt": "2026-07-11T15:28:47+00:00",
     "age": "1d",
-    "score": 86.53,
+    "score": 86.46,
     "favicon": "https://www.google.com/s2/favicons?domain=youtube.com&sz=32",
     "favorite": true,
     "thumbnail": "https://img.youtube.com/vi/JvgBErahTTc/mqdefault.jpg"
@@ -162,7 +162,7 @@
     "category": "Personal Blogs",
     "publishedAt": "2026-07-11T13:43:00+00:00",
     "age": "1d",
-    "score": 84.77,
+    "score": 84.7,
     "favicon": "https://www.google.com/s2/favicons?domain=sweaterpockets.bearblog.dev&sz=32",
     "favorite": true,
     "thumbnail": null
@@ -174,7 +174,7 @@
     "category": "Personal Blogs",
     "publishedAt": "2026-07-11T13:00:00+00:00",
     "age": "1d",
-    "score": 84.05,
+    "score": 83.98,
     "favicon": "https://www.google.com/s2/favicons?domain=elmc.at&sz=32",
     "favorite": true,
     "thumbnail": null
@@ -186,7 +186,7 @@
     "category": "Technology",
     "publishedAt": "2026-07-12T18:41:15+00:00",
     "age": "1h",
-    "score": 83.74,
+    "score": 83.67,
     "favicon": "https://www.google.com/s2/favicons?domain=incompleteideas.net&sz=32",
     "favorite": true,
     "thumbnail": null
@@ -198,7 +198,7 @@
     "category": "Technology",
     "publishedAt": "2026-07-12T18:31:56+00:00",
     "age": "1h",
-    "score": 83.59,
+    "score": 83.51,
     "favicon": "https://www.google.com/s2/favicons?domain=geohot.github.io&sz=32",
     "favorite": true,
     "thumbnail": null
@@ -210,7 +210,7 @@
     "category": "Technology",
     "publishedAt": "2026-07-12T18:25:51+00:00",
     "age": "1h",
-    "score": 83.48,
+    "score": 83.41,
     "favicon": "https://www.google.com/s2/favicons?domain=systima.ai&sz=32",
     "favorite": true,
     "thumbnail": null
@@ -221,8 +221,8 @@
     "source": "Hackaday",
     "category": "Technology",
     "publishedAt": "2026-07-12T17:00:49+00:00",
-    "age": "2h",
-    "score": 77.07,
+    "age": "3h",
+    "score": 76.99,
     "favicon": "https://www.google.com/s2/favicons?domain=hackaday.com&sz=32",
     "favorite": false,
     "thumbnail": null
@@ -234,7 +234,7 @@
     "category": "Reddit",
     "publishedAt": "2026-07-11T10:01:18+00:00",
     "age": "1d",
-    "score": 76.08,
+    "score": 76.0,
     "favicon": "https://www.google.com/s2/favicons?domain=reddit.com&sz=32",
     "favorite": true,
     "thumbnail": null
@@ -246,7 +246,7 @@
     "category": "Personal Blogs",
     "publishedAt": "2026-07-11T04:09:00+00:00",
     "age": "1d",
-    "score": 75.2,
+    "score": 75.13,
     "favicon": "https://www.google.com/s2/favicons?domain=binarydigit.net&sz=32",
     "favorite": true,
     "thumbnail": null
@@ -257,8 +257,8 @@
     "source": "Hackaday",
     "category": "Technology",
     "publishedAt": "2026-07-12T14:00:37+00:00",
-    "age": "5h",
-    "score": 74.06,
+    "age": "6h",
+    "score": 73.99,
     "favicon": "https://www.google.com/s2/favicons?domain=hackaday.com&sz=32",
     "favorite": false,
     "thumbnail": null
@@ -269,8 +269,8 @@
     "source": "Hackaday",
     "category": "Technology",
     "publishedAt": "2026-07-12T11:00:42+00:00",
-    "age": "8h",
-    "score": 71.07,
+    "age": "9h",
+    "score": 70.99,
     "favicon": "https://www.google.com/s2/favicons?domain=hackaday.com&sz=32",
     "favorite": false,
     "thumbnail": null
@@ -282,7 +282,7 @@
     "category": "Personal Blogs",
     "publishedAt": "2026-07-10T23:38:00+00:00",
     "age": "1d",
-    "score": 70.69,
+    "score": 70.61,
     "favicon": "https://www.google.com/s2/favicons?domain=blog.saiyanshinobi.com&sz=32",
     "favorite": true,
     "thumbnail": null
@@ -294,7 +294,7 @@
     "category": "Books",
     "publishedAt": "2026-07-10T17:54:12+00:00",
     "age": "2d",
-    "score": 69.96,
+    "score": 69.88,
     "favicon": "https://www.google.com/s2/favicons?domain=lithub.com&sz=32",
     "favorite": true,
     "thumbnail": null
@@ -306,7 +306,7 @@
     "category": "Personal Blogs",
     "publishedAt": "2026-07-10T20:02:09+00:00",
     "age": "1d",
-    "score": 67.09,
+    "score": 67.01,
     "favicon": "https://www.google.com/s2/favicons?domain=notes.jeddacp.com&sz=32",
     "favorite": true,
     "thumbnail": null
@@ -318,7 +318,7 @@
     "category": "Podcasts",
     "publishedAt": "2026-07-10T14:30:00+00:00",
     "age": "2d",
-    "score": 66.55,
+    "score": 66.48,
     "favicon": "https://www.google.com/s2/favicons?domain=share.transistor.fm&sz=32",
     "favorite": true,
     "thumbnail": null
@@ -330,7 +330,7 @@
     "category": "Podcasts",
     "publishedAt": "2026-07-10T14:29:00+00:00",
     "age": "2d",
-    "score": 66.54,
+    "score": 66.46,
     "favicon": "https://www.google.com/s2/favicons?domain=share.transistor.fm&sz=32",
     "favorite": true,
     "thumbnail": null
@@ -342,7 +342,7 @@
     "category": "Personal Blogs",
     "publishedAt": "2026-07-10T19:12:11+00:00",
     "age": "2d",
-    "score": 66.26,
+    "score": 66.18,
     "favicon": "https://www.google.com/s2/favicons?domain=rnotte.art&sz=32",
     "favorite": true,
     "thumbnail": null
@@ -354,7 +354,7 @@
     "category": "Podcasts",
     "publishedAt": "2026-07-10T14:00:00+00:00",
     "age": "2d",
-    "score": 66.05,
+    "score": 65.98,
     "favicon": "https://www.google.com/s2/favicons?domain=radiolab.org&sz=32",
     "favorite": true,
     "thumbnail": null
@@ -366,7 +366,7 @@
     "category": "Personal Blogs",
     "publishedAt": "2026-07-10T17:58:00+00:00",
     "age": "2d",
-    "score": 65.02,
+    "score": 64.95,
     "favicon": "https://www.google.com/s2/favicons?domain=doodhpeda.bearblog.dev&sz=32",
     "favorite": true,
     "thumbnail": null
@@ -378,7 +378,7 @@
     "category": "YouTube",
     "publishedAt": "2026-07-10T16:23:32+00:00",
     "age": "2d",
-    "score": 63.45,
+    "score": 63.37,
     "favicon": "https://www.google.com/s2/favicons?domain=youtube.com&sz=32",
     "favorite": true,
     "thumbnail": "https://img.youtube.com/vi/KU7psDDZkyU/mqdefault.jpg"
@@ -390,7 +390,7 @@
     "category": "Personal Blogs",
     "publishedAt": "2026-07-10T15:56:00+00:00",
     "age": "2d",
-    "score": 62.99,
+    "score": 62.91,
     "favicon": "https://www.google.com/s2/favicons?domain=murugappan.com&sz=32",
     "favorite": true,
     "thumbnail": null
@@ -402,7 +402,7 @@
     "category": "Books",
     "publishedAt": "2026-07-10T10:30:16+00:00",
     "age": "2d",
-    "score": 62.56,
+    "score": 62.48,
     "favicon": "https://www.google.com/s2/favicons?domain=lithub.com&sz=32",
     "favorite": true,
     "thumbnail": null
@@ -414,7 +414,7 @@
     "category": "Books",
     "publishedAt": "2026-07-10T09:29:35+00:00",
     "age": "2d",
-    "score": 61.55,
+    "score": 61.47,
     "favicon": "https://www.google.com/s2/favicons?domain=lithub.com&sz=32",
     "favorite": true,
     "thumbnail": null
@@ -426,7 +426,7 @@
     "category": "Books",
     "publishedAt": "2026-07-10T14:27:27+00:00",
     "age": "2d",
-    "score": 61.51,
+    "score": 61.44,
     "favicon": "https://www.google.com/s2/favicons?domain=theparisreview.org&sz=32",
     "favorite": true,
     "thumbnail": null
@@ -438,7 +438,7 @@
     "category": "Books",
     "publishedAt": "2026-07-10T17:01:00+00:00",
     "age": "2d",
-    "score": 59.07,
+    "score": 59.0,
     "favicon": "https://www.google.com/s2/favicons?domain=mcsweeneys.net&sz=32",
     "favorite": true,
     "thumbnail": null
@@ -450,7 +450,7 @@
     "category": "Personal Blogs",
     "publishedAt": "2026-07-10T07:01:00+00:00",
     "age": "2d",
-    "score": 54.07,
+    "score": 54.0,
     "favicon": "https://www.google.com/s2/favicons?domain=gogumapizza.bearblog.dev&sz=32",
     "favorite": true,
     "thumbnail": null
@@ -462,7 +462,7 @@
     "category": "Books",
     "publishedAt": "2026-07-10T12:00:00+00:00",
     "age": "2d",
-    "score": 54.05,
+    "score": 53.98,
     "favicon": "https://www.google.com/s2/favicons?domain=mcsweeneys.net&sz=32",
     "favorite": true,
     "thumbnail": null
@@ -474,7 +474,7 @@
     "category": "Books",
     "publishedAt": "2026-07-09T23:29:00+00:00",
     "age": "2d",
-    "score": 41.54,
+    "score": 41.46,
     "favicon": "https://www.google.com/s2/favicons?domain=mcsweeneys.net&sz=32",
     "favorite": true,
     "thumbnail": null
@@ -486,7 +486,7 @@
     "category": "Personal Blogs",
     "publishedAt": "2026-07-09T16:44:00+00:00",
     "age": "3d",
-    "score": 39.79,
+    "score": 39.71,
     "favicon": "https://www.google.com/s2/favicons?domain=skaetlett.bearblog.dev&sz=32",
     "favorite": true,
     "thumbnail": null
@@ -498,7 +498,7 @@
     "category": "Books",
     "publishedAt": "2026-07-09T15:51:04+00:00",
     "age": "3d",
-    "score": 38.91,
+    "score": 38.83,
     "favicon": "https://www.google.com/s2/favicons?domain=theparisreview.org&sz=32",
     "favorite": true,
     "thumbnail": null
@@ -510,7 +510,7 @@
     "category": "YouTube",
     "publishedAt": "2026-07-09T15:02:08+00:00",
     "age": "3d",
-    "score": 38.09,
+    "score": 38.01,
     "favicon": "https://www.google.com/s2/favicons?domain=youtube.com&sz=32",
     "favorite": true,
     "thumbnail": "https://img.youtube.com/vi/VR129SnzURA/mqdefault.jpg"
@@ -522,7 +522,7 @@
     "category": "Podcasts",
     "publishedAt": "2026-07-08T15:44:32+00:00",
     "age": "4d",
-    "score": 19.8,
+    "score": 19.72,
     "favicon": "https://www.google.com/s2/favicons?domain=radiolab.org&sz=32",
     "favorite": true,
     "thumbnail": null
@@ -534,7 +534,7 @@
     "category": "YouTube",
     "publishedAt": "2026-07-08T15:54:30+00:00",
     "age": "4d",
-    "score": 14.96,
+    "score": 14.89,
     "favicon": "https://www.google.com/s2/favicons?domain=youtube.com&sz=32",
     "favorite": true,
     "thumbnail": "https://img.youtube.com/vi/blENQoPwEhA/mqdefault.jpg"
@@ -546,7 +546,7 @@
     "category": "Books",
     "publishedAt": "2026-07-08T14:00:14+00:00",
     "age": "4d",
-    "score": 13.06,
+    "score": 12.98,
     "favicon": "https://www.google.com/s2/favicons?domain=theparisreview.org&sz=32",
     "favorite": true,
     "thumbnail": null
@@ -558,7 +558,7 @@
     "category": "Podcasts",
     "publishedAt": "2026-07-07T07:00:00+00:00",
     "age": "5d",
-    "score": -12.95,
+    "score": -13.02,
     "favicon": "https://www.google.com/s2/favicons?domain=darknetdiaries.com&sz=32",
     "favorite": true,
     "thumbnail": null
@@ -570,7 +570,7 @@
     "category": "Books",
     "publishedAt": "2026-07-06T14:00:29+00:00",
     "age": "6d",
-    "score": -34.94,
+    "score": -35.01,
     "favicon": "https://www.google.com/s2/favicons?domain=theparisreview.org&sz=32",
     "favorite": true,
     "thumbnail": null
@@ -582,7 +582,7 @@
     "category": "YouTube",
     "publishedAt": "2026-07-05T16:13:31+00:00",
     "age": "7d",
-    "score": -56.72,
+    "score": -56.8,
     "favicon": "https://www.google.com/s2/favicons?domain=youtube.com&sz=32",
     "favorite": true,
     "thumbnail": "https://img.youtube.com/vi/41cSBt7ZCNE/mqdefault.jpg"
@@ -594,7 +594,7 @@
     "category": "YouTube",
     "publishedAt": "2026-07-04T13:13:30+00:00",
     "age": "8d",
-    "score": -88.72,
+    "score": -88.8,
     "favicon": "https://www.google.com/s2/favicons?domain=youtube.com&sz=32",
     "favorite": true,
     "thumbnail": "https://img.youtube.com/vi/-LDb3XGZ3mE/mqdefault.jpg"
@@ -606,7 +606,7 @@
     "category": "Podcasts",
     "publishedAt": "2026-07-01T07:00:00+00:00",
     "age": "11d",
-    "score": -161.95,
+    "score": -162.02,
     "favicon": "https://www.google.com/s2/favicons?domain=shows.acast.com&sz=32",
     "favorite": true,
     "thumbnail": null
@@ -618,7 +618,7 @@
     "category": "Podcasts",
     "publishedAt": "2026-06-22T23:27:41+00:00",
     "age": "19d",
-    "score": -361.48,
+    "score": -361.56,
     "favicon": "https://www.google.com/s2/favicons?domain=podcasters.spotify.com&sz=32",
     "favorite": true,
     "thumbnail": null
