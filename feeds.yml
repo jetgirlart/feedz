@@ -151,7 +151,7 @@
 
 - name: novelglot
   url: https://novelglot.substack.com/feed
-  category: Blogs
+  category: Personal Blogs
   weight: 95
   favorite: true
   max_items: 3
