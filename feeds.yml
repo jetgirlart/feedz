@@ -220,3 +220,11 @@
   favorite: true
   max_items: 3
   max_age_days: 10
+
+- name: Field Notes
+  url: https://rickw.bearblog.dev/feed/
+  category: Personal Blogs
+  weight: 95
+  favorite: true
+  max_items: 3
+  max_age_days: 10
